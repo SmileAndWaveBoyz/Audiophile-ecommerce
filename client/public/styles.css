@@ -1,0 +1,138 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+    /* outline: 1px solid wheat; */
+}
+
+:root{
+    --colour-dark: rgb(11, 13, 23);
+    --colour-primary: rgb(208, 214, 249);
+}
+
+html{
+    font-size: 62.5%;;
+}
+
+
+body{
+    font-family: 'Manrope', sans-serif;
+    
+}
+
+header{
+    background: #191919;
+}
+
+.hero{
+    max-width: 1110px;
+    margin: 0 auto;
+    overflow: visible;
+}
+
+.navBar{
+    background: #191919;
+    height: 7.44rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    overflow: visible;
+}
+
+.navBar__button{
+    outline: 0;
+    border: 0;
+    background-color: rgb(0, 0, 0, 0);
+    margin: 0 24px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.buttonSVG{
+    fill: rgb(255, 255, 255);
+    transition: all 0.2s;
+}
+
+.buttonSVG:hover{
+    fill: #D87D4A;
+}
+
+.navBar__link-container{
+    display: flex; 
+    opacity: 0;
+    list-style: none;
+    flex-direction: column;
+    position: absolute;
+    background-color: rgb(25, 25, 25);
+    top: 0;
+    left: 0px;
+    width: 0%;
+    transition: all 0.2s;
+    padding-top: 10px;
+    height: 100%;
+    z-index: 0;
+}
+
+.navBar__link-container.expanded{
+    opacity: 1;
+    width: 70%;
+    z-index: 1;
+}
+
+.navBar__link-container li{
+    margin-bottom: 4rem;
+}
+
+.navBar__link-container li a{
+    color: #FFF;
+    font-size: 1.3rem;
+    font-weight: 700;
+    line-height: 25px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    list-style: none;
+    margin: 0 3.4rem;
+    transition: all 0.2s;
+}
+
+.navBar__link-container li a:hover{
+    color: #D87D4A;
+}
+
+.x-button{
+    outline: 0;
+    background: rgb(0, 0, 0, 0);
+    border: 0;
+    color: #FFF;
+    font-size: 30px;
+    padding: 10px 0;
+    padding-bottom: 40px;
+    width: 30px;
+    margin-left: 50%;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 1280px) {
+    .navBar__button.button--menu{
+        display: none;
+    }
+
+    .navBar__link-container, .navBar__link-container.expanded{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        position: static;
+        padding-top: 0px;
+        opacity: 1;
+        width: 70%;
+    }
+
+    .navBar__link-container li{
+        margin-bottom: 0rem;
+    }
+
+    .x-button{
+        display: none;
+    }
+}
