@@ -111,6 +111,23 @@ header{
     cursor: pointer;
 }
 
+@media screen and (min-width: 768px) {
+    .navBar{
+        justify-content: start;
+        align-items: center;
+    }
+
+    .navBar__button.button--cart{
+        margin-left: auto;
+        margin-right: 40px;
+    }
+
+    .navBar__button.button--menu{
+        margin-left: 40px;
+        margin-right: 42px;
+    }
+}
+
 @media screen and (min-width: 1280px) {
     .navBar__button.button--menu{
         display: none;
@@ -119,13 +136,15 @@ header{
     .navBar__link-container, .navBar__link-container.expanded{
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-evenly;
         align-items: center;
         flex-direction: row;
         position: static;
         padding-top: 0px;
+        padding-left: 0;
         opacity: 1;
-        width: 70%;
+        width: 55%;
+        margin-left: 105px;
     }
 
     .navBar__link-container li{
@@ -134,5 +153,159 @@ header{
 
     .x-button{
         display: none;
+    }
+}
+
+/* Home block  */
+.homeBlock{
+    border-top: 1px solid rgb(255, 255, 255, 0.2);
+    padding-top: 1px;
+    background-image: url("/assets/home/mobile/image-header.jpg");
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.homeBlock h2{
+    color: #FFF;
+    opacity: 0.5;
+    text-align: center;
+    text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    font-size: 1.4rem;
+    font-family: Manrope;
+    letter-spacing: 10px;
+    margin-top: 10.8rem;
+    margin: 0 25px;
+    margin-bottom: 1.6rem;
+}
+
+.homeBlock h1{
+    color: #FFF;
+    text-align: center;
+    font-size: 3.6rem;
+    font-family: Manrope;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: 1.286px;
+    margin: 0 25px;
+    margin-bottom: 2.4rem;
+}
+
+.homeBlock p{
+    color: #FFF;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: Manrope;
+    font-weight: 500;
+    line-height: 25px;
+    margin: 0 25px;
+    margin-bottom: 4.3rem;
+    opacity: 0.75;
+}
+
+.homeBlock__product-button{
+    color: #FFF;
+    font-size: 13px;
+    font-family: Manrope;
+    font-weight: 700;
+    letter-spacing: 1px;
+    background-color: #D87D4A;
+    width: 16rem;
+    text-align: center;
+    height: 4.8rem;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.homeBlock__product-button:hover{
+    background-color: #FBAF85;
+}
+
+.line{
+    display: none;
+    background-color: rgb(255, 255, 255, 0.2);
+    height: 1px;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+    .line{
+        display: block;
+        width: 689px;
+    }
+
+    .homeBlock{
+        background-image: url("/assets/home/tablet/image-header.jpg");
+        border-top: none;
+        background-position: 50% 130%;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        height: 67rem;
+        justify-content: start;
+    }
+
+    .homeBlock h2{
+        margin-bottom: 2.4rem;
+        margin-top: 12.6rem;
+    }
+    
+    .homeBlock h1{
+        width: 39.6rem;
+        font-size: 5.6rem;
+        line-height: 58px;
+        letter-spacing: 2px;
+        margin-bottom: 2.4rem;
+
+    }
+    
+    .homeBlock p{
+        margin-bottom: 4rem;
+        opacity: 0.75;
+        line-height: 25px;
+        width: 34.9rem;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .line{
+        width: 1110px;
+    }
+
+    .homeBlock{
+        background-image: url("/assets/home/desktop/image-hero.jpg");
+        background-position: 50% 300%;
+        background-size: 120%;
+        height: 65rem;
+        display: block;
+
+        max-width: 1110px;
+        margin: 0 auto;
+    }
+
+    .homeBlock h2{
+        margin-bottom: 2.4rem;
+        margin-top: 12.8rem;
+        margin-left: 0;
+        text-align: left;
+    }
+    
+    .homeBlock h1{
+        margin-left: 0;
+        text-align: left;
+        width: 39.6rem;
+    }
+    
+    .homeBlock p{
+        margin-left: 0;
+        text-align: left;
     }
 }
