@@ -335,6 +335,7 @@ a{
     border-radius: 20px;
     margin: 1rem;
     margin-bottom: 6.8rem;
+    cursor: pointer;
 }
 
 .card__headphones-image, .card__speakers-image, .card__earphones-image{
@@ -372,8 +373,9 @@ a{
     opacity: 0.5;
 }
 
-.card__link:hover{
+.card:hover .card__link{
     color:  #D87D4A;
+    opacity: 1;
 }
 
 .arrowSVG{
@@ -383,7 +385,7 @@ a{
     opacity: 1;
 }
 
-.card__link:hover .arrowSVG{
+.card:hover .card__link .arrowSVG{
     transform: translate(5px);
 }
 
