@@ -15,11 +15,15 @@ html{
 
 body{
     font-family: 'Manrope', sans-serif;
-    
 }
 
 header{
     background: #191919;
+    margin-bottom: 10rem;
+}
+
+a{
+    text-decoration: none;
 }
 
 .hero{
@@ -128,7 +132,7 @@ header{
     }
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
     .navBar__button.button--menu{
         display: none;
     }
@@ -275,7 +279,7 @@ header{
     }
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
     .line{
         width: 1110px;
     }
@@ -307,5 +311,139 @@ header{
     .homeBlock p{
         margin-left: 0;
         text-align: left;
+    }
+}
+
+/* Links block  */
+.linksBlock{
+    margin: 0 auto;
+    margin-top: 52px;
+    margin-bottom: 12rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.card{
+    width: 32.7rem;
+    height: 16.5rem;
+    background: #FAFAFA;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    margin: 1rem;
+    margin-bottom: 6.8rem;
+}
+
+.card__headphones-image, .card__speakers-image, .card__earphones-image{
+    height: 125px;
+    position: absolute;
+    left: 50%;
+    top: -65%;
+    transform: translate(-50%, 50%);
+}
+
+.card__earphones-image{
+    height: 130px;
+}
+
+.linksBlock h3{
+    font-size: 1.5rem;
+    line-height: normal;
+    letter-spacing: 1.071px;
+    margin-bottom: 1.7rem;
+    margin-top: 8.8rem;
+}
+
+.card__link{
+    margin-bottom: 2.2rem;
+    color: #000;
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    transition: all 0.2s;
+    opacity: 0.5;
+}
+
+.card__link:hover{
+    color:  #D87D4A;
+}
+
+.arrowSVG{
+    margin-left: 1.3rem;
+    scale: 1;
+    transition: all 0.2s;
+    opacity: 1;
+}
+
+.card__link:hover .arrowSVG{
+    transform: translate(5px);
+}
+
+@media screen and (min-width: 768px) {
+    .linksBlock{
+        flex-direction: row;
+        margin-bottom: 9.6rem;
+        justify-content: center;
+    }
+
+    .card{
+        width: 22.3rem;
+        height: 16.5rem;
+    }
+
+    .linksBlock h3{
+        letter-spacing: 1.071px;
+        margin-bottom: 1.7rem;
+        margin-top: 11.6rem;
+    }
+    
+    .card__link{
+        margin-bottom: 2.2rem;
+        letter-spacing: 1px
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .linksBlock{
+        margin-bottom: 16.8rem;
+    }
+
+    .card{
+        width: 22.3rem;
+        height: 16.5rem;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    .card__headphones-image, .card__speakers-image, .card__earphones-image{
+        height: 145px;
+        position: absolute;
+        left: 50%;
+        top: -65%;
+        transform: translate(-50%, 50%);
+    }
+    
+    .card__earphones-image{
+        height: 150px;
+    }
+
+    .linksBlock h3{
+        font-size: 1.8rem;
+        letter-spacing: 1.286px;
+        margin-bottom: 1.5rem;
+        margin-top: 11.6rem;
+    }
+    
+    .card__link{
+        margin-bottom: 3rem;
+        letter-spacing: 1px
     }
 }
