@@ -318,7 +318,7 @@ a{
 .linksBlock{
     margin: 0 auto;
     margin-top: 52px;
-    margin-bottom: 12rem;
+    margin-bottom: 5.2rem;
     display: flex;
     flex-direction: column;
 }
@@ -335,7 +335,6 @@ a{
     border-radius: 20px;
     margin: 1rem;
     margin-bottom: 6.8rem;
-    cursor: pointer;
 }
 
 .card__headphones-image, .card__speakers-image, .card__earphones-image{
@@ -415,7 +414,7 @@ a{
 
 @media screen and (min-width: 1024px) {
     .linksBlock{
-        margin-bottom: 16.8rem;
+        margin-bottom: 7rem;
     }
 
     .card{
@@ -448,4 +447,212 @@ a{
         margin-bottom: 3rem;
         letter-spacing: 1px
     }
+}
+
+
+/* ZX9 Block  */
+.zx9Block{
+    width: 32.7rem;
+    height: 60.0rem;
+    border-radius: 15px;
+    background: #D87D4A;
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.zx9Block__speaker-image{
+    width: 172.248px;
+    height: 207px;
+    margin-top: 55px;
+    position: relative;
+    z-index: 1;
+}
+
+.zx9Block__ringSVG1{
+    width: 279px;
+    height: 279px;
+    position: absolute;
+    top: 20px;
+    opacity: 0.2;
+    z-index: 0;
+}
+
+.zx9Block__ringSVG2{
+    width: 320px;
+    height: 318px;
+    position: absolute;
+    top: -3px;
+    opacity: 0.2;
+    z-index: 0;
+}
+
+.zx9Block__ringSVG3{
+    display: none;
+    position: absolute;
+    opacity: 0.2;
+    z-index: 0;
+}
+
+.zx9Block__text-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.zx9Block .zx9Block__text-box h3{
+    width: 24.0rem;
+    color: #FFF;
+    text-align: center;
+    font-size: 3.6rem;
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: 1.286px;
+    margin-bottom: 2.4rem;
+    position: relative;
+    z-index: 1;
+}
+
+.zx9Block .zx9Block__text-box p{
+    width: 28.0rem;
+    color: #FFF;
+    text-align: center;
+    font-size: 15px;
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 25px;
+    opacity: 0.75;
+    margin-bottom: 2.4rem;
+    position: relative;
+    z-index: 1;
+}
+
+.zx9Block__button{
+    width: 16.0rem;
+    height: 4.8rem;
+    background: #000;
+    color: #FFF;
+    font-size: 1.3rem;
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1px;
+    padding: 1.5rem 3rem;
+    transition: all 0.2s;
+    position: relative;
+    z-index: 1;
+}
+
+.zx9Block__button:hover{
+    background: #4C4C4C;
+}
+
+@media screen and (min-width: 768px) {
+    .zx9Block{
+        width: 68.9rem;
+        height: 72.0rem;
+    }
+    
+    .zx9Block__speaker-image{
+        width: 197.212px;
+        height: 237px;
+        margin-top: 52px;
+    }
+    
+    .zx9Block__ringSVG1{
+        top: -60px;
+        width: 472px;
+        height: 472px;
+    }
+    
+    .zx9Block__ringSVG2{
+        top: -92px;
+        width: 542px;
+        height: 542px;
+    }
+    
+    .zx9Block__ringSVG3{
+        display: block;
+        top: 20px;
+        width: 689px;
+        height: 656px;
+    }
+    
+    .zx9Block .zx9Block__text-box h3{
+        width: 34.9rem;
+        font-size: 5.6rem;
+        line-height: 5.8rem;
+        letter-spacing: 2px;
+        margin-bottom: 4rem;
+    }
+    
+    .zx9Block .zx9Block__text-box p{
+        font-size: 1.5rem;
+        line-height: 25px;
+        margin-bottom: 4rem;
+        width: 35.0rem;
+    }
+    
+    .zx9Block__button{
+        width: 16.0rem;
+        height: 4.8rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .zx9Block{
+        width: 111.0rem;
+        height: 56.0rem;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+        overflow: hidden;
+        margin-bottom: 2rem;
+    }
+    
+    .zx9Block__speaker-image{
+        width: 410.234px;
+        height: 493px;
+        margin-left: 117.49px;
+        transform: translateY(20px);
+    }
+    
+    .zx9Block__ringSVG1{
+        top: 200px;
+        left: 145px
+    }
+    
+    .zx9Block__ringSVG2{
+        top: 160px;
+        left: 110px
+    }
+    
+    .zx9Block__ringSVG3{
+        width: 944px;
+        height: 944px;
+        top: -10px;
+    }
+
+    .zx9Block__text-box{
+        align-items: flex-start;
+    }
+    
+    .zx9Block .zx9Block__text-box h3{
+        margin-top: 133px;
+        text-align: left;
+        margin-bottom: 2.4rem;
+    }
+    
+    .zx9Block .zx9Block__text-box p{
+        text-align: left;
+    }
+    
+
 }

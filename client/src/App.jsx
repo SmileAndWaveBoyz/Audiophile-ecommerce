@@ -70,6 +70,19 @@ function App() {
           <Link className='card__link' to="/">SHOP <svg className='arrowSVG' width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path id="Path 2" d="M1.32178 1L6.32178 6L1.32178 11" stroke="#D87D4A" stroke-width="2"/></svg></Link>
         </div>
       </div>
+
+      <div className="zx9Block">
+        <img className='zx9Block__speaker-image' src="./assets/home/mobile/image-speaker-zx9.png" alt="ZX9 Speaker" />
+        <svg className='zx9Block__ringSVG1' viewBox="0 0 279 279" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="139.5" cy="139.5" r="139" stroke="white"/></svg>
+        <svg className='zx9Block__ringSVG2' viewBox="0 0 320 318" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="160" cy="158" r="159.5" stroke="white"/></svg>
+        <svg className='zx9Block__ringSVG3' viewBox="0 0 689 656" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="345" cy="184" r="471.5" stroke="white"/></svg>
+
+        <div className="zx9Block__text-box">
+          <h3>ZX9 SPEAKER</h3>
+          <p>Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.</p>
+          <Link className='zx9Block__button' to="/">SEE PRODUCT</Link>
+        </div>
+      </div>
     </main>
     </>
   )
