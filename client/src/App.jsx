@@ -90,7 +90,14 @@ function App() {
           <Link to="/">SEE PRODUCT</Link>
         </div>
         <img src="./assets/home/mobile/image-speaker-zx7.png" alt="ZX9 Speaker on table" />
-        
+      </div>
+
+      <div className="YX1Block">
+        <img src="./assets/home/mobile/image-earphones-yx1.png" alt="" />
+        <div className="YX1Block__text-box">
+          <h3>YX1 EARPHONES</h3>
+          <Link>SEE PRODUCT</Link>
+        </div>
       </div>
     </main>
     </>
