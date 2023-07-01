@@ -75,13 +75,17 @@ function App() {
         <img className='zx9Block__speaker-image' src="./assets/home/mobile/image-speaker-zx9.png" alt="ZX9 Speaker" />
         <svg className='zx9Block__ringSVG1' viewBox="0 0 279 279" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="139.5" cy="139.5" r="139" stroke="white"/></svg>
         <svg className='zx9Block__ringSVG2' viewBox="0 0 320 318" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="160" cy="158" r="159.5" stroke="white"/></svg>
-        <svg className='zx9Block__ringSVG3' viewBox="0 0 689 656" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="345" cy="184" r="471.5" stroke="white"/></svg>
+        <svg className='zx9Block__ringSVG3' viewBox="0 0 700 300" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="345" cy="184" r="300" stroke="white"/></svg>
 
         <div className="zx9Block__text-box">
           <h3>ZX9 SPEAKER</h3>
           <p>Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.</p>
           <Link className='zx9Block__button' to="/">SEE PRODUCT</Link>
         </div>
+      </div>
+
+      <div className="zx9SpeakerBlock">
+        
       </div>
     </main>
     </>

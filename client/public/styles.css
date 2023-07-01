@@ -477,7 +477,7 @@ a{
     height: 279px;
     position: absolute;
     top: 20px;
-    opacity: 0.2;
+    opacity: 0.1;
     z-index: 0;
 }
 
@@ -486,14 +486,14 @@ a{
     height: 318px;
     position: absolute;
     top: -3px;
-    opacity: 0.2;
+    opacity: 0.1;
     z-index: 0;
 }
 
 .zx9Block__ringSVG3{
     display: none;
     position: absolute;
-    opacity: 0.2;
+    opacity: 0.1;
     z-index: 0;
 }
 
@@ -580,9 +580,9 @@ a{
     
     .zx9Block__ringSVG3{
         display: block;
-        top: 20px;
-        width: 689px;
-        height: 656px;
+        top: -500px;
+        width: 1200px;
+        height: 1200px;
     }
     
     .zx9Block .zx9Block__text-box h3{
@@ -621,7 +621,7 @@ a{
         width: 410.234px;
         height: 493px;
         margin-left: 117.49px;
-        transform: translateY(20px);
+        transform: translateY(30px);
     }
     
     .zx9Block__ringSVG1{
@@ -635,9 +635,11 @@ a{
     }
     
     .zx9Block__ringSVG3{
-        width: 944px;
-        height: 944px;
-        top: -10px;
+        width: 1200px;
+        height: 1200px;
+        top: -280px;
+        left: -300px;
+        z-index: 0;
     }
 
     .zx9Block__text-box{
@@ -655,4 +657,10 @@ a{
     }
     
 
+}
+
+/* zx9SpeakerBlock */
+
+.zx9SpeakerBlock{
+    height: 20px;
 }
