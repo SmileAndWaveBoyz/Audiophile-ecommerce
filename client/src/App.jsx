@@ -85,6 +85,11 @@ function App() {
       </div>
 
       <div className="zx9SpeakerBlock">
+        <div className="zx9SpeakerBlock__text-block">
+          <h3>ZX9 SPEAKER</h3>
+          <Link to="/">SEE PRODUCT</Link>
+        </div>
+        <img src="./assets/home/mobile/image-speaker-zx7.png" alt="ZX9 Speaker on table" />
         
       </div>
     </main>
