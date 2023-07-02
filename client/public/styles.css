@@ -746,7 +746,7 @@ a{
     width: 32.7rem;
     height: 42.4rem;
     margin: 0 auto;
-    
+    margin-bottom: 2.4rem;
 }
 
 .YX1Block img{
@@ -862,5 +862,277 @@ a{
     
     .YX1Block__text-box a{
         margin-left: 9.5rem;
+    }
+}
+
+/* Gear block  */
+.gearBlock{
+    width: 32.7rem;
+    height: 69.8rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gearBlock__text-box{
+    order: 2;
+}
+
+.gearBlock img{
+    border-radius: 15px;
+    order: 1;
+}
+
+.gearBlock h3{
+    color: #000;
+    text-align: center;
+    font-size: 2.8rem;
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+}
+
+.gearBlock h3 strong{
+    color: #D87D4A;
+    font-weight: 700;
+}
+
+.gearBlock p{
+    width: 32.7rem;
+    opacity: 0.5;
+    color: #000;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 2.5rem;
+    padding-bottom: 12rem;
+}
+
+@media screen and (min-width: 768px) {
+    .gearBlock{
+        width: 68.9rem;
+        height: 63.3rem;
+    }
+    
+    .gearBlock img{
+        content: url("./assets/shared/tablet/image-best-gear.png");
+        margin-bottom: 6.3rem;
+    }
+    
+    .gearBlock h3{
+        width: 57.3rem;
+        text-align: center;
+        font-size: 4rem;
+        line-height: 4.4rem;
+        letter-spacing: 0.1429rem;
+        margin-bottom: 3.2rem;
+    }
+    
+    .gearBlock p{
+        width: 57.3rem;
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 2.5rem;
+        padding-bottom: 9.6rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .gearBlock{
+        width: 111rem;
+        height: 58.8rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 20rem;
+    }
+
+    .gearBlock__text-box{
+        width: 44.5rem;
+        height: 29.5rem;
+        order: 1;
+    }
+    
+    .gearBlock img{
+        content: url("./assets/shared/desktop/image-best-gear.png");
+        margin-bottom: 0rem;
+        width: 540px;
+        height: 588px;
+        order: 2;
+    }
+    
+    .gearBlock h3{
+        width: 44.5rem;
+        text-align: left;
+    }
+    
+    .gearBlock p{
+        width: 44.5rem;
+        text-align: left;
+    }
+}
+
+/* Home footer  */
+.homeFooter{
+    height: 65.4rem;
+    width: 100%;
+    outline: 1px solid wheat;
+    background: #101010;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.homeFooter__rectangle{
+    width: 10.1rem;
+    height: 0.4rem;
+    background: #D87D4A;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.homeFooter__SVG-heading{
+    margin-top: 52px;
+    margin-bottom: 4.8rem;
+}
+
+.homeFooter__nav-bar {
+    margin: 0 auto;
+    margin-bottom: 4.8rem;
+    padding: 0;
+}
+
+.homeFooter__nav-bar li{
+    margin-bottom: 1.6rem;
+    text-align: center;
+}
+
+.homeFooter__nav-bar li a{
+    color: #FFF;
+    font-size: 1.3rem;
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 2.5rem;
+    letter-spacing: 0.2rem;
+}
+
+.homeFooter__paragraph{
+    color: #FFF;
+    width: 32.7rem;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 2.5rem;
+    opacity: 0.5;
+    margin-bottom: 4.8rem;
+}
+
+.homeFooter__copyright{
+    color: #FFF;
+    font-size: 1.5rem;
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 2.5rem;
+    opacity: 0.5;
+}
+
+.homeFooter__socal-buttons{
+    width: 10.4rem;
+    height: 2.4rem;
+    flex-shrink: 0;
+}
+
+.homeFooter__socal-buttons a{
+    width: 10.4rem;
+    height: 2.4rem;
+    flex-shrink: 0;
+    margin-right: 10px;
+}
+
+@media screen and (min-width: 768px) {
+    .homeFooter{
+        height: 65.4rem;
+        width: 100%;
+        outline: 1px solid wheat;
+        background: #101010;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .homeFooter__SVG-heading{
+        margin-top: 52px;
+        margin-bottom: 4.8rem;
+    }
+    
+    .homeFooter__nav-bar {
+        margin: 0 auto;
+        margin-bottom: 4.8rem;
+        padding: 0;
+    }
+    
+    .homeFooter__nav-bar li{
+        margin-bottom: 1.6rem;
+        text-align: center;
+    }
+    
+    .homeFooter__nav-bar li a{
+        color: #FFF;
+        font-size: 1.3rem;
+        font-family: Manrope;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 2.5rem;
+        letter-spacing: 0.2rem;
+    }
+    
+    .homeFooter__paragraph{
+        color: #FFF;
+        width: 32.7rem;
+        text-align: center;
+        font-size: 1.5rem;
+        font-family: Manrope;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 2.5rem;
+        opacity: 0.5;
+        margin-bottom: 4.8rem;
+    }
+    
+    .homeFooter__copyright{
+        color: #FFF;
+        font-size: 1.5rem;
+        font-family: Manrope;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 2.5rem;
+        opacity: 0.5;
+    }
+    
+    .homeFooter__socal-buttons{
+        width: 10.4rem;
+        height: 2.4rem;
+        flex-shrink: 0;
+    }
+    
+    .homeFooter__socal-buttons a{
+        width: 10.4rem;
+        height: 2.4rem;
+        flex-shrink: 0;
+        margin-right: 10px;
     }
 }
