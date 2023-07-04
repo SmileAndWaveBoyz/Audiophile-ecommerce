@@ -1240,6 +1240,7 @@ a{
 
 /* Heaphones page  */
 .headphones__hero{
+    border-top: 1px solid rgb(255, 255, 255, 0.2);
     padding: 1px;
     margin-bottom: 6.4rem;
     background: #191919;
@@ -1259,7 +1260,7 @@ a{
     text-transform: uppercase;
 }
 
-.xx99Block{
+.showBlock{
     margin: 0 auto;
     width: 32.7rem;
     height: 72.4rem;
@@ -1269,7 +1270,7 @@ a{
     margin-bottom: 12rem;
 }
 
-.xx99Block__image-container{
+.showBlock__image-container{
     width: 327px;
     height: 352px;
     flex-shrink: 0;
@@ -1281,7 +1282,7 @@ a{
     justify-content: center;
 }
 
-.xx99Block__text-container{
+.showBlock__text-container{
     display: flex;
     width: 32.7rem;
     flex-direction: column;
@@ -1289,7 +1290,7 @@ a{
     align-items: center;
 }
 
-.xx99Block__text-container-title{
+.showBlock__text-container-title{
     color: #D87D4A;
     text-align: center;
     font-size: 1.4rem;
@@ -1301,7 +1302,7 @@ a{
     text-transform: uppercase;
 }
 
-.xx99Block__text-container-heading{
+.showBlock__text-container-heading{
     width: 32.7rem;
     color: #000;
     text-align: center;
@@ -1314,7 +1315,7 @@ a{
     text-transform: uppercase;
 }
 
-.xx99Block__text-container-paragraph{
+.showBlock__text-container-paragraph{
     width: 32.7rem;
     color: #000;
     text-align: center;
@@ -1325,7 +1326,7 @@ a{
     line-height: 2.5rem;
 }
 
-.xx99Block__text-container-button{
+.showBlock__text-container-button{
     background: #D87D4A;
     width: 16rem;
     height: 4.8rem;
@@ -1342,29 +1343,44 @@ a{
     transition: all 0.2s;
 }
 
-.xx99Block__text-container-button:hover{
+.showBlock__text-container-button:hover{
     background: #FBAF85;
 }
 
 @media screen and (min-width: 768px) {
-    .xx99Block{
-        width: 76.8rem;
-        height: 435.4rem;
+    .headphones__hero{
+        border: none;
+    }
+    .showBlock{
+        width: 32.7rem;
+        height: 68.1rem;
         margin-bottom: 12rem;
     }
     
-    .xx99Block__image-container{
+    .showBlock__image-container{
         width: 100%;
         height: 35.2rem;
         margin-bottom: 5.2rem;
     }
+
+    .showBlock__image-container-mk2{
+        content: url("./assets/product-xx99-mark-two-headphones/tablet/mk1.png");
+    }
+
+    .showBlock__image-container-mk1{
+        content: url("./assets/product-xx99-mark-two-headphones/tablet/mk1.png");
+    }
     
-    .xx99Block__text-container{
+    .showBlock__image-container-xx59{
+        content: url("./assets/product-xx99-mark-two-headphones/tablet/xx59.png");
+    }
+    
+    .showBlock__text-container{
         width: 57.2rem;
         height: 30.2rem;
     }
     
-    .xx99Block__text-container-heading{
+    .showBlock__text-container-heading{
         width: 30rem;
         font-size: 4rem;
         font-family: Manrope;
@@ -1376,7 +1392,7 @@ a{
         margin-bottom: 3.2rem;
     }
     
-    .xx99Block__text-container-paragraph{
+    .showBlock__text-container-paragraph{
         width: 57.2rem;
         color: #000;
         text-align: center;
@@ -1390,29 +1406,42 @@ a{
 }
 
 @media screen and (min-width: 1024px) {
-    .xx99Block{
+    .showBlock{
         width: 144rem;
         height: 56rem;
         margin-bottom: 16rem;
         flex-direction: row;
     }
     
-    .xx99Block__image-container{
+    .showBlock__image-container{
         width: 54rem;
         height: 56rem;
         margin-right: 12.5rem;
     }
-    
-    .xx99Block__image-container img{
+
+    .showBlock__image-container.odd{
+        order: 1;
+    }
+
+    .showBlock__image-container-mk2{
         content: url("./assets/product-xx99-mark-two-headphones/desktop/image-removebg-preview.png");
     }
-    
-    .xx99Block__text-container{
-        width: 57.2rem;
-        height: 30.2rem;
+
+    .showBlock__image-container-mk1{
+        content: url("./assets/product-xx99-mark-two-headphones/desktop/mk1.png");
     }
     
-    .xx99Block__text-container-heading{
+    .showBlock__image-container-xx59{
+        content: url("./assets/product-xx99-mark-two-headphones/desktop/xx59.png");
+    }
+    
+    .showBlock__text-container{
+        width: 57.2rem;
+        height: 30.2rem;
+        align-items: flex-start;
+    }
+    
+    .showBlock__text-container-heading{
         width: 30rem;
         font-size: 4rem;
         font-family: Manrope;
@@ -1422,10 +1451,11 @@ a{
         letter-spacing: 0.1429rem;
         text-transform: uppercase;
         margin-bottom: 3.2rem;
+        text-align: left;
     }
     
-    .xx99Block__text-container-paragraph{
-        width: 57.2rem;
+    .showBlock__text-container-paragraph{
+        width: 44.5rem;
         color: #000;
         text-align: center;
         font-size: 1.5rem;
@@ -1434,6 +1464,7 @@ a{
         font-weight: 500;
         line-height: 2.5rem;
         margin-bottom: 2.4rem;
+        text-align: left;
     }
 
 }
