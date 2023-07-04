@@ -1374,6 +1374,14 @@ a{
     .showBlock__image-container-xx59{
         content: url("./assets/product-xx99-mark-two-headphones/tablet/xx59.png");
     }
+
+    .showBlock__image-container-zx9{
+        content: url("./assets/product-zx9-speaker/tablet/zx9.png");
+    }
+
+    .showBlock__image-container-zx7{
+        content: url("./assets/product-zx7-speaker/tablet/zx7.png");
+    }
     
     .showBlock__text-container{
         width: 57.2rem;
@@ -1433,6 +1441,15 @@ a{
     
     .showBlock__image-container-xx59{
         content: url("./assets/product-xx99-mark-two-headphones/desktop/xx59.png");
+    }
+        
+    .showBlock__image-container-zx7{
+        content: url("./assets/product-zx7-speaker/desktop/zx7.png");
+    }
+    
+    
+    .showBlock__image-container-zx9{
+        content: url("./assets/product-zx9-speaker/desktop/zx9.png");
     }
     
     .showBlock__text-container{

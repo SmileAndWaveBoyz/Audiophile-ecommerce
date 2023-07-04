@@ -2,6 +2,7 @@ import { Footer } from './components/Footer';
 import Gear from "./components/Gear";
 import Home from "./pages/Home"
 import Headphones from './pages/Headphones';
+import Speakers from './pages/Speakers';
 import NavBar from "./components/Navbar"
 import React, {useEffect, useState} from 'react';
 import {NavLink, Link, Route, Routes, useLocation } from 'react-router-dom';
@@ -31,7 +32,7 @@ function App() {
 
           <Route path='/' element={<Home/>}/>
           <Route path='/headphones' element={<Headphones/>}/>
-          
+          <Route path='/speakers' element={<Speakers/>}/>          
         </Routes>
 
     
