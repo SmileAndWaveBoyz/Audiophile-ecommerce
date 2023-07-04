@@ -11,7 +11,7 @@ function Speakers() {
             <header>
             <div className="line"></div>
                 <div className="headphones__hero">
-                    <h1>HEADPHONES</h1>
+                    <h1>SPEAKERS</h1>
                 </div>
             </header>
             <main>
