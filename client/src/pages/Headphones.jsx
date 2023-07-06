@@ -26,7 +26,7 @@ function Headphones() {
                             <p className='showBlock__text-container-title'>NEW PRODUCT</p>
                             <h2 className='showBlock__text-container-heading'>XX99 Mark II Headphones</h2>
                             <p className='showBlock__text-container-paragraph'>The new XX99 Mark II headphones is the pinnacle of pristine audio. It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound.</p>
-                            <Link className='showBlock__text-container-button'>SEE PRODUCT</Link>
+                            <Link className='showBlock__text-container-button' to="./xx99mii">SEE PRODUCT</Link>
                         </div>
                     </div>
 
