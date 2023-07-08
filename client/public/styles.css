@@ -335,7 +335,7 @@ a{
 .card{
     width: 32.7rem;
     height: 16.5rem;
-    background: #FAFAFA;
+    background: #F1F1F1;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -1497,6 +1497,7 @@ a{
 .xx99miiPage-blockContainer{
     max-width: 327px;
     margin: 0 auto;
+
 }
 
 .goBackLink{
@@ -1527,8 +1528,7 @@ a{
 }
 
 .xx99miiPage{
-    display: flex;
-    justify-content: center;
+    display: block;
 }
 
 .xx99miiPage__new-heading{
@@ -1646,6 +1646,14 @@ a{
     letter-spacing: 0.1rem;
     text-transform: uppercase;
     margin-left: 1.6rem;
+    border: none;
+    outline: none;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.xx99miipage__cart-button:hover{
+    background: #FBAF85;
 }
 
 .xx99miipage__feature-heading{
@@ -1669,6 +1677,10 @@ a{
     line-height: 2.5rem;
     opacity: 0.5;
     margin-bottom: 8.8rem;
+}
+
+.xx99miipage__list-container{
+    margin-bottom: 10rem;
 }
 
 .xx99miipage__list-container strong{
@@ -1697,6 +1709,11 @@ a{
     display: grid;  
     grid-template-rows: 1fr 1fr 1fr;
     margin-bottom: 120px;
+}
+
+.xx99miiPage-blockContainer-image-box img{
+    border-radius: 8px;
+    margin-top: 20px;
 }
 
 .recomendation__block{
@@ -1731,6 +1748,7 @@ a{
     line-height: 3.6rem;
     letter-spacing: 0.0857rem;
     text-transform: uppercase;
+    margin-bottom: 1rem;
 }
 
 .recomendation__block-container-image-box-image.xx99mi{
@@ -1789,4 +1807,319 @@ a{
     margin: 0 auto;
     flex-direction: column;
     align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+    
+    .xx99miiPage-blockContainer{
+        max-width: 689px;
+    }
+
+    .xx99miiPage{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 12rem;
+    }
+    
+    .goBackLink{
+        margin-top: 3.3rem;
+        margin-bottom: 2.4rem;
+    }
+    
+    .xx99miiPage__image-box{
+        width: 281px;
+        height: 480px;
+        margin-bottom: 3.2rem;
+    }
+    
+    .xx99miiPage__heading{
+        width: 33.9rem;
+        margin-bottom: 3.2rem;
+    }
+    
+    .xx99miiPage__paragraph{
+        width: 33.9rem;
+        margin-bottom: 3.2rem;
+    }
+    
+    .xx99miiPage__price{
+        margin-bottom: 3.1rem;
+    }
+    
+    .xx99miipage__feature-heading{
+        margin-bottom: 3.2rem;
+        font-size: 3.2rem;
+        line-height: 3.6rem;
+        letter-spacing: 0.1143rem;
+        margin-top: 0;
+    }
+    
+    .xx99miipage__description{
+        margin-bottom: 12rem;
+    }
+
+    .xx99miipage__box-block{
+        height: 15.7rem;
+        margin-bottom: 12rem;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .xx99miipage__list-container{
+        margin-right: 141px;
+    }
+    
+    .xx99miipage__list-container-item{
+        margin-top: 0;
+    }
+    
+    .xx99miiPage-blockContainer-image-box{
+        width: 100%;
+        height: 370px; 
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 120px;
+    }
+
+    .xx99miiPage-blockContainer-image-box-small-images{
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .xx99miiPage-blockContainer-image-box img{
+        margin-top: 0px;
+    }
+
+    .xx99miiPage-image-headphone-guy{
+        content: url("../assets/shared/tablet/grid1.png");
+    }
+
+    .xx99miiPage-blockContainer-image-box-small-images .xx99miiPage-image-table{
+        content: url("../assets/shared/tablet/grid2.png");
+        margin-top: auto;
+    }
+
+    .xx99miiPage-image-headphone-close{
+        content: url("../assets/shared/tablet/grid3.png");
+    }
+    
+    .recomendation__block{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4rem;
+        flex-shrink: 0;
+        margin-bottom: 0rem;
+    }
+    
+    .recomendation__block-container-image-box{
+        width: 223px;
+        height: 318px;
+        flex-shrink: 0;
+        margin-bottom: 3.2rem;
+        margin-right: 1.1rem;
+    }
+
+    .recomendation__block-flex-box{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 10rem;
+    }
+    
+    .recomendation__block-heading{
+        margin-bottom: 2rem;
+    }
+    
+    .recomendation__block-container-image-box-image.xx99mi{
+        width: 148.305px;
+        height: 193px;
+    }
+    
+    .recomendation__block-container-image-box-image.xx59{
+        width: 190.806px;
+        height: 199px;
+    }
+    
+    .recomendation__block-container-image-box-image.zx9{
+        width: 143.124px;
+        height: 172px;
+    }    
+    
+    .seeProductButton:hover{
+        background-color: #FBAF85;
+    }
+    
+    .recomendation__block-container{
+        display: flex;
+        margin: 0 auto;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .xx99miiPage-blockContainer{
+        max-width: 1110px;
+    }
+
+    .xx99miiPage{
+        margin-bottom: 16rem;
+    }
+    
+    .goBackLink{
+        margin-top: 7.9rem;
+        margin-bottom: 5.6rem;
+    }
+    
+    .xx99miiPage__image-box{
+        width: 540px;
+        height: 560px;
+    }
+
+    .xx99miiPage__image-box img{
+        content: url("./assets/shared/desktop/xx99mii.png");
+        width: 349.238px;
+        height: 386px;
+    }
+
+    .xx99miiPage__new-heading{
+        margin-bottom: 1.6rem;
+    }
+    
+    .xx99miiPage__heading{
+        color: #000;
+        font-family: Manrope;
+        font-size: 4rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 4.4rem;
+        letter-spacing: 0.1429rem;
+        text-transform: uppercase;
+        margin-bottom: 3.2rem;
+    }
+    
+    .xx99miiPage__paragraph{
+        width: 44.5rem;
+    }
+    
+    .xx99miiPage__price{
+        margin-bottom: 4.7rem;
+    }
+    
+    .xx99miipage__feature-heading{
+        margin-bottom: 3.2rem;
+        font-size: 3.2rem;
+        line-height: 3.6rem;
+        letter-spacing: 0.1143rem;
+        margin-top: 0;
+    }
+    
+    .xx99miipage__description{
+        margin-bottom: 16rem;
+    }
+
+    .xx99miipage__box-block{
+        height: 15.7rem;
+        margin-bottom: 16rem;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .xx99miipage__list-container{
+        margin-right: 141px;
+    }
+    
+    .xx99miipage__list-container-item{
+        margin-top: 0;
+    }
+
+    .xx99miiPage-blockContainer-image-box{
+        width: 100%;
+        height: 370px; 
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 120px;
+    }
+
+    .xx99miiPage-blockContainer-image-box-small-images{
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .xx99miiPage-blockContainer-image-box img{
+        margin-top: 0px;
+    }
+
+    .xx99miiPage-image-headphone-guy{
+        content: url("../assets/shared/tablet/grid1.png");
+    }
+
+    .xx99miiPage-blockContainer-image-box-small-images .xx99miiPage-image-table{
+        content: url("../assets/shared/tablet/grid2.png");
+        margin-top: auto;
+    }
+
+    .xx99miiPage-image-headphone-close{
+        content: url("../assets/shared/tablet/grid3.png");
+    }
+    
+    .recomendation__block{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4rem;
+        flex-shrink: 0;
+        margin-bottom: 0rem;
+    }
+    
+    .recomendation__block-container-image-box{
+        width: 223px;
+        height: 318px;
+        flex-shrink: 0;
+        margin-bottom: 3.2rem;
+        margin-right: 1.1rem;
+    }
+
+    .recomendation__block-flex-box{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 10rem;
+    }
+    
+    .recomendation__block-heading{
+        margin-bottom: 2rem;
+    }
+    
+    .recomendation__block-container-image-box-image.xx99mi{
+        width: 148.305px;
+        height: 193px;
+    }
+    
+    .recomendation__block-container-image-box-image.xx59{
+        width: 190.806px;
+        height: 199px;
+    }
+    
+    .recomendation__block-container-image-box-image.zx9{
+        width: 143.124px;
+        height: 172px;
+    }    
+
+    
+    .recomendation__block-container{
+        display: flex;
+        margin: 0 auto;
+        flex-direction: column;
+        align-items: center;
+    }
 }
