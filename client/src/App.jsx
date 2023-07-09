@@ -1,13 +1,13 @@
-import { Footer } from './components/Footer';
-import Gear from "./components/Gear";
 import Home from "./pages/Home"
 import Headphones from './pages/Headphones';
 import Speakers from './pages/Speakers';
 import Earphones from './pages/Earphones';
-import Xx99ii from './pages/Xxi99ii';
+import Xx99ii from './pages/Xx99ii';
+import Xx99i from './pages/Xx99i';
+import Xx59 from "./pages/Xx59";
 import NavBar from "./components/Navbar"
 import React, {useEffect, useState} from 'react';
-import {NavLink, Link, Route, Routes, useLocation } from 'react-router-dom';
+import {Route, Routes} from 'react-router-dom';
 
 function App() {
   const [backendData, setBackEndData] = useState([{}]);
@@ -31,9 +31,9 @@ function App() {
         <Routes>
           <Route path='/' element={<Home/>}/>
           <Route path='/headphones' element={<Headphones/>}/>
-          <Route path='/xx99mii' element={<Xx99ii/>}/>
-      
-
+          <Route path='/headphones/xx99mii' element={<Xx99ii/>}/>
+          <Route path='/headphones/xx99mi' element={<Xx99i/>}/>
+          <Route path='/headphones/xx59' element={<Xx59/>}/>
           <Route path='/speakers' element={<Speakers/>}/>          
           <Route path='/earphones' element={<Earphones/>}/>          
         </Routes>

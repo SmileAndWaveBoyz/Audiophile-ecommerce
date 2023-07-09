@@ -1364,7 +1364,7 @@ a{
     }
 
     .showBlock__image-container-mk2{
-        content: url("./assets/product-xx99-mark-two-headphones/tablet/mk1.png");
+        content: url("./assets/product-xx99-mark-two-headphones/tablet/mk2.png");
     }
 
     .showBlock__image-container-mk1{
@@ -1436,7 +1436,7 @@ a{
     }
 
     .showBlock__image-container-mk2{
-        content: url("./assets/product-xx99-mark-two-headphones/desktop/image-removebg-preview.png");
+        content: url("./assets/product-xx99-mark-two-headphones/desktop/mk2.png");
     }
 
     .showBlock__image-container-mk1{
@@ -1494,10 +1494,9 @@ a{
 }
 
 /* XXii page  */
-.xx99miiPage-blockContainer{
+.productPage-blockContainer{
     max-width: 327px;
     margin: 0 auto;
-
 }
 
 .goBackLink{
@@ -1512,7 +1511,7 @@ a{
     display: block;
 }
 
-.xx99miiPage__image-box{
+.productPage__image-box{
     width: 32.7rem;
     height: 32.7rem;
     border-radius: 0.8rem;
@@ -1522,16 +1521,16 @@ a{
     margin-bottom: 3.2rem;
 }
 
-.xx99miiPage__image-box img{
+.productPage__image-box img{
     width: 181px;
     height: 201px;
 }
 
-.xx99miiPage{
+.productPage{
     display: block;
 }
 
-.xx99miiPage__new-heading{
+.productPage__new-heading{
     color: #D87D4A;
     font-family: Manrope;
     font-size: 1.4rem;
@@ -1543,7 +1542,7 @@ a{
     margin-bottom: 2.4rem;
 }
 
-.xx99miiPage__heading{
+.productPage__heading{
     color: #000;
     font-family: Manrope;
     font-size: 2.8rem;
@@ -1555,7 +1554,7 @@ a{
     margin-bottom: 2.4rem;
 }
 
-.xx99miiPage__paragraph{
+.productPage__paragraph{
     color: #000;
     font-family: Manrope;
     font-size: 1.5rem;
@@ -1565,7 +1564,7 @@ a{
     opacity: 0.5;
 }
 
-.xx99miiPage__price{
+.productPage__price{
     color: #000;
     font-family: Manrope;
     font-size: 1.8rem;
@@ -1577,13 +1576,13 @@ a{
     margin-bottom: 3.1rem;
 }
 
-.xx99miiPage__buttons{
+.productPage__buttons{
     display: flex;
     flex-direction: row;
     width: 100%;
 }
 
-.xx99miipage__quantity-buttons{
+.productPage__quantity-buttons{
     width: 12rem;
     height: 4.8rem;
     flex-shrink: 0;
@@ -1595,15 +1594,15 @@ a{
     align-items: center;
 }
 
-.xx99miipage__quantity-buttons-one{
+.productPage__quantity-buttons-one{
     margin-left: 15.5px;
 }
 
-.xx99miipage__quantity-buttons-two{
+.productPage__quantity-buttons-two{
     margin-right: 15.5px;
 }
 
-.xx99miipage__quantity-buttons-one, .xx99miipage__quantity-buttons-two{
+.productPage__quantity-buttons-one, .productPage__quantity-buttons-two{
     outline: 0;
     background: 0;
     border: 0;
@@ -1618,7 +1617,7 @@ a{
     text-transform: uppercase;
 }
 
-.xx99miipage__quantity-buttons-number{
+.productPage__quantity-buttons-number{
     margin: 0 20px;
     color: #000;
     text-align: center;
@@ -1631,7 +1630,7 @@ a{
     text-transform: uppercase;
 }
 
-.xx99miipage__cart-button{
+.productPage__cart-button{
     width: 16rem;
     height: 4.8rem;
     background: #D87D4A;
@@ -1652,11 +1651,11 @@ a{
     cursor: pointer;
 }
 
-.xx99miipage__cart-button:hover{
+.productPage__cart-button:hover{
     background: #FBAF85;
 }
 
-.xx99miipage__feature-heading{
+.productPage__feature-heading{
     margin-bottom: 2.4rem;
     color: #000;
     font-family: Manrope;
@@ -1668,7 +1667,7 @@ a{
     text-transform: uppercase;
 }
 
-.xx99miipage__description{
+.productPage__description{
     color: #000;
     font-family: Manrope;
     font-size: 1.5rem;
@@ -1679,11 +1678,11 @@ a{
     margin-bottom: 8.8rem;
 }
 
-.xx99miipage__list-container{
+.productPage__list-container{
     margin-bottom: 10rem;
 }
 
-.xx99miipage__list-container strong{
+.productPage__list-container strong{
     color: #D87D4A;
     font-family: Manrope;
     font-size: 1.5rem;
@@ -1694,7 +1693,7 @@ a{
     margin-right: 2.4rem;
 }
 
-.xx99miipage__list-container-item{
+.productPage__list-container-item{
     color: #000;
     font-family: Manrope;
     font-size: 1.5rem;
@@ -1703,7 +1702,7 @@ a{
     line-height: 2.5rem;
 }
 
-.xx99miiPage-blockContainer-image-box{
+.productPage-blockContainer-image-box{
     width: 327px;
     height: 756px; 
     display: grid;  
@@ -1711,7 +1710,7 @@ a{
     margin-bottom: 120px;
 }
 
-.xx99miiPage-blockContainer-image-box img{
+.productPage-blockContainer-image-box img{
     border-radius: 8px;
     margin-top: 20px;
 }
@@ -1754,6 +1753,11 @@ a{
 .recomendation__block-container-image-box-image.xx99mi{
     width: 73px;
     height: 95px;
+}
+
+.recomendation__block-container-image-box-image.xx99mii{
+    width: 87px;
+    height: 96px;
 }
 
 .recomendation__block-container-image-box-image.xx59{
@@ -1811,11 +1815,11 @@ a{
 
 @media screen and (min-width: 768px) {
     
-    .xx99miiPage-blockContainer{
+    .productPage-blockContainer{
         max-width: 689px;
     }
 
-    .xx99miiPage{
+    .productPage{
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -1828,27 +1832,44 @@ a{
         margin-bottom: 2.4rem;
     }
     
-    .xx99miiPage__image-box{
+    .productPage__image-box{
         width: 281px;
         height: 480px;
         margin-bottom: 3.2rem;
     }
+
+    .productPage__image-box img{
+        width: 185.053px;
+        height: 193px;
+    }
+
+    .productPage__image-box-xx99mii{
+        content: url("../assets/product-xx99-mark-two-headphones/tablet/mk2.png");
+    }
+
+    .productPage__image-box-xx99mi{
+        content: ("../assets/product-xx99-mark-one-headphones/tablet/product-page.png");
+    }
+
+    .productPage__image-box-xx59{
+        content: ("../assets/product-xx59-headphones/tablet/xx59.png");
+    }
     
-    .xx99miiPage__heading{
+    .productPage__heading{
         width: 33.9rem;
         margin-bottom: 3.2rem;
     }
     
-    .xx99miiPage__paragraph{
+    .productPage__paragraph{
         width: 33.9rem;
         margin-bottom: 3.2rem;
     }
     
-    .xx99miiPage__price{
+    .productPage__price{
         margin-bottom: 3.1rem;
     }
     
-    .xx99miipage__feature-heading{
+    .productPage__feature-heading{
         margin-bottom: 3.2rem;
         font-size: 3.2rem;
         line-height: 3.6rem;
@@ -1856,26 +1877,26 @@ a{
         margin-top: 0;
     }
     
-    .xx99miipage__description{
+    .productPage__description{
         margin-bottom: 12rem;
     }
 
-    .xx99miipage__box-block{
+    .productPage__box-block{
         height: 15.7rem;
         margin-bottom: 12rem;
         display: flex;
         justify-content: space-between;
     }
     
-    .xx99miipage__list-container{
+    .productPage__list-container{
         margin-right: 141px;
     }
     
-    .xx99miipage__list-container-item{
+    .productPage__list-container-item{
         margin-top: 0;
     }
     
-    .xx99miiPage-blockContainer-image-box{
+    .productPage-blockContainer-image-box{
         width: 100%;
         height: 370px; 
         display: flex;
@@ -1885,29 +1906,59 @@ a{
         margin-bottom: 120px;
     }
 
-    .xx99miiPage-blockContainer-image-box-small-images{
+    .productPage-blockContainer-image-box-small-images{
         display: flex;
         align-items: flex-start;
         flex-direction: column;
     }
 
-    .xx99miiPage-blockContainer-image-box img{
+    .productPage-blockContainer-image-box img{
         margin-top: 0px;
     }
 
-    .xx99miiPage-image-headphone-guy{
-        content: url("../assets/shared/tablet/grid1.png");
+    /* Mark 2 page tablet*/
+    .productPage-image-headphone-guy{
+        content: url("../assets/shared/tablet/grid-page-one-1.png");
     }
 
-    .xx99miiPage-blockContainer-image-box-small-images .xx99miiPage-image-table{
-        content: url("../assets/shared/tablet/grid2.png");
+    .productPage-blockContainer-image-box-small-images .productPage-image-table{
+        content: url("../assets/shared/tablet/grid-page-one-2.png");
         margin-top: auto;
     }
 
-    .xx99miiPage-image-headphone-close{
-        content: url("../assets/shared/tablet/grid3.png");
+    .productPage-image-headphone-close{
+        content: url("../assets/shared/tablet/grid-page-one-3.png");
     }
     
+    /* Mark 1 page tablet*/
+    .productPage-image-mic-stand{
+        content: url("../assets/shared/tablet/grid-page-two-1.png");
+    }
+
+    .productPage-blockContainer-image-box-small-images .productPage-image-shoe{
+        content: url("../assets/shared/tablet/grid-page-two-2.png");
+        margin-top: auto;
+    }
+
+    .productPage-image-fairy-lights{
+        content: url("../assets/shared/tablet/grid-page-two-3.png");
+    }
+
+    /*XX59 page tablet  */
+    .productPage-image-girl-dancing{
+        content: url("../assets/shared/tablet/grid-page-three-1.png");
+    }
+
+    .productPage-blockContainer-image-box-small-images .productPage-image-books{
+        content: url("../assets/shared/tablet/grid-page-three-2.png");
+        margin-top: auto;
+    }
+
+    .productPage-image-finger-xx59{
+        content: url("../assets/shared/tablet/grid-page-three-3.png");
+    }
+
+
     .recomendation__block{
         display: flex;
         flex-direction: column;
@@ -1939,6 +1990,12 @@ a{
     .recomendation__block-container-image-box-image.xx99mi{
         width: 148.305px;
         height: 193px;
+    }
+    
+    
+    .recomendation__block-container-image-box-image.xx99mii{
+        width: 176px;
+        height: 194px;
     }
     
     .recomendation__block-container-image-box-image.xx59{
@@ -1964,11 +2021,11 @@ a{
 }
 
 @media screen and (min-width: 1024px) {
-    .xx99miiPage-blockContainer{
+    .productPage-blockContainer{
         max-width: 1110px;
     }
 
-    .xx99miiPage{
+    .productPage{
         margin-bottom: 16rem;
     }
     
@@ -1977,22 +2034,33 @@ a{
         margin-bottom: 5.6rem;
     }
     
-    .xx99miiPage__image-box{
+    .productPage__image-box{
         width: 540px;
         height: 560px;
     }
 
-    .xx99miiPage__image-box img{
-        content: url("./assets/shared/desktop/xx99mii.png");
+    .productPage__image-box img{
         width: 349.238px;
         height: 386px;
     }
 
-    .xx99miiPage__new-heading{
+    .productPage__image-box-xx99mii{
+        content: url("./assets/shared/desktop/xx99mii.png");
+    }
+
+    .productPage__image-box-xx99mi{
+        content: url("../assets/product-xx99-mark-one-headphones/desktop/product-page.png");
+    }
+
+    .productPage__image-box-xx59{
+        content: ("../assets/product-xx59-headphones/desktop/xx59.png");
+    }
+    
+    .productPage__new-heading{
         margin-bottom: 1.6rem;
     }
     
-    .xx99miiPage__heading{
+    .productPage__heading{
         color: #000;
         font-family: Manrope;
         font-size: 4rem;
@@ -2004,15 +2072,28 @@ a{
         margin-bottom: 3.2rem;
     }
     
-    .xx99miiPage__paragraph{
+    .productPage__paragraph{
         width: 44.5rem;
     }
     
-    .xx99miiPage__price{
+    .productPage__price{
         margin-bottom: 4.7rem;
     }
+
+    .productPage__feature-box-block{
+        width: 100%;
+        height: 31.8rem;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 16rem;
+    }
+
+    .productPage__feature-block{
+        width: 63.5rem;
+        height: 31.8rem;
+    }
     
-    .xx99miipage__feature-heading{
+    .productPage__feature-heading{
         margin-bottom: 3.2rem;
         font-size: 3.2rem;
         line-height: 3.6rem;
@@ -2020,89 +2101,106 @@ a{
         margin-top: 0;
     }
     
-    .xx99miipage__description{
+    .productPage__description{
+        width: 63.5rem;
         margin-bottom: 16rem;
     }
 
-    .xx99miipage__box-block{
-        height: 15.7rem;
-        margin-bottom: 16rem;
+    .productPage__box-block{
+        width: 35rem;
+        height: 22.5rem;
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
     }
     
-    .xx99miipage__list-container{
+    .productPage__list-container{
         margin-right: 141px;
     }
     
-    .xx99miipage__list-container-item{
+    .productPage__list-container-item{
         margin-top: 0;
     }
 
-    .xx99miiPage-blockContainer-image-box{
-        width: 100%;
-        height: 370px; 
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: space-between;
-        margin-bottom: 120px;
+    .productPage-blockContainer-image-box{
+        height: 59.2rem;
+        margin-bottom: 160px;
     }
 
-    .xx99miiPage-blockContainer-image-box-small-images{
+    .productPage-blockContainer-image-box-small-images{
         display: flex;
         align-items: flex-start;
         flex-direction: column;
     }
 
-    .xx99miiPage-blockContainer-image-box img{
-        margin-top: 0px;
+    /* Mark 2 page desktop*/
+    .productPage-image-headphone-guy{
+        content: url("../assets/shared/desktop/grid-page-one-1.png");
     }
 
-    .xx99miiPage-image-headphone-guy{
-        content: url("../assets/shared/tablet/grid1.png");
-    }
-
-    .xx99miiPage-blockContainer-image-box-small-images .xx99miiPage-image-table{
-        content: url("../assets/shared/tablet/grid2.png");
+    .productPage-blockContainer-image-box-small-images .productPage-image-table{
+        content: url("../assets/shared/desktop/grid-page-one-2.png");
         margin-top: auto;
     }
 
-    .xx99miiPage-image-headphone-close{
-        content: url("../assets/shared/tablet/grid3.png");
+    .productPage-image-headphone-close{
+        content: url("../assets/shared/desktop/grid-page-one-3.png");
+    }
+    
+    /* Mark 1 page desktop*/
+    .productPage-image-mic-stand{
+        content: url("../assets/shared/desktop/grid-page-two-1.png");
+    }
+
+    .productPage-blockContainer-image-box-small-images .productPage-image-shoe{
+        content: url("../assets/shared/desktop/grid-page-two-2.png");
+        margin-top: auto;
+    }
+
+    .productPage-image-fairy-lights{
+        content: url("../assets/shared/desktop/grid-page-two-3.png");
+    }
+
+    /*XX59 page desktop  */
+    .productPage-image-girl-dancing{
+        content: url("../assets/shared/desktop/grid-page-three-1.png");
+    }
+
+    .productPage-blockContainer-image-box-small-images .productPage-image-books{
+        content: url("../assets/shared/desktop/grid-page-three-2.png");
+        margin-top: auto;
+    }
+
+    .productPage-image-finger-xx59{
+        content: url("../assets/shared/desktop/grid-page-three-3.png");
     }
     
     .recomendation__block{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 4rem;
-        flex-shrink: 0;
-        margin-bottom: 0rem;
+        width: 100%;
+    }
+
+    .recomendation__block-heading{
+        margin-bottom: 6.4rem;
+        font-size: 3.2rem;
+        line-height: 3.6rem;
+        letter-spacing: 0.1143rem;
     }
     
     .recomendation__block-container-image-box{
-        width: 223px;
+        width: 350px;
         height: 318px;
-        flex-shrink: 0;
-        margin-bottom: 3.2rem;
-        margin-right: 1.1rem;
-    }
-
-    .recomendation__block-flex-box{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        margin-bottom: 10rem;
-    }
-    
-    .recomendation__block-heading{
-        margin-bottom: 2rem;
-    }
+        margin-bottom: 4rem;
+        margin-right: 30px;
+    }    
     
     .recomendation__block-container-image-box-image.xx99mi{
         width: 148.305px;
         height: 193px;
+    }
+    
+    
+    .recomendation__block-container-image-box-image.xx99mii{
+        width: 175.524px;
+        height: 194px;
     }
     
     .recomendation__block-container-image-box-image.xx59{
@@ -2114,12 +2212,4 @@ a{
         width: 143.124px;
         height: 172px;
     }    
-
-    
-    .recomendation__block-container{
-        display: flex;
-        margin: 0 auto;
-        flex-direction: column;
-        align-items: center;
-    }
 }
