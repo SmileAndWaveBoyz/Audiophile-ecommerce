@@ -1531,6 +1531,11 @@ a{
     height: 202px;
 }
 
+.productPage__image-box .productPage__image-box-yx1{
+    width: 263px;
+    height: 238px;
+}
+
 .productPage{
     display: block;
 }
@@ -1869,6 +1874,12 @@ a{
         width: 140.624px;
         height: 202px;
     }
+
+    .productPage__image-box .productPage__image-box-yx1{
+        content: ("../assets/product-yx1-earphones/tablet/yx1.png");
+        width: 263px;
+        height: 238px;
+    }
     
     .productPage__heading{
         width: 33.9rem;
@@ -2001,6 +2012,20 @@ a{
         content: url("../assets/shared/tablet/grid-page-five-3.png");
     }
 
+    /*YX1 page tablet  */
+    .productPage-image-yx1-buds{
+        content: url("../assets/shared/tablet/grid-page-six-1.png");
+    }
+
+    .productPage-blockContainer-image-box-small-images .productPage-image-yx1-charger{
+        content: url("../assets/shared/tablet/grid-page-six-2.png");
+        margin-top: auto;
+    }
+
+    .productPage-image-yx1-case{
+        content: url("../assets/shared/tablet/grid-page-six-3.png");
+    }
+
     .recomendation__block{
         display: flex;
         flex-direction: column;
@@ -2106,6 +2131,12 @@ a{
         content: ("../assets/product-zx7-speaker/desktop/zx7.png");
         width: 268.022px;
         height: 385px;
+    }
+
+    .productPage__image-box .productPage__image-box-yx1{
+        content: ("../assets/product-yx1-earphones/desktop/yx1.png");
+        width: 421px;
+        height: 381px;
     }
     
     .productPage__new-heading{
@@ -2254,6 +2285,19 @@ a{
         content: url("../assets/shared/desktop/grid-page-five-3.png");
     }
     
+    /*YX1 page desktop  */
+    .productPage-image-yx1-buds{
+        content: url("../assets/shared/desktop/grid-page-six-1.png");
+    }
+
+    .productPage-blockContainer-image-box-small-images .productPage-image-yx1-charger{
+        content: url("../assets/shared/desktop/grid-page-six-2.png");
+        margin-top: auto;
+    }
+
+    .productPage-image-yx1-case{
+        content: url("../assets/shared/desktop/grid-page-six-3.png");
+    }
 
     .recomendation__block{
         width: 100%;

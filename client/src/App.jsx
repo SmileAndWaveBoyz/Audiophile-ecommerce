@@ -7,6 +7,7 @@ import Xx99i from './pages/Xx99i';
 import Xx59 from "./pages/Xx59";
 import Zx9 from "./pages/Zx9";
 import Zx7 from "./pages/Zx7";
+import Yx1 from "./pages/Yx1";
 import NavBar from "./components/Navbar"
 import React, {useEffect, useState} from 'react';
 import {Route, Routes} from 'react-router-dom';
@@ -42,6 +43,8 @@ function App() {
           <Route path='/speakers/zx7' element={<Zx7/>}/>      
 
           <Route path='/earphones' element={<Earphones/>}/>          
+          <Route path='/earphones/yx1' element={<Yx1/>}/>          
+
         </Routes>
 
     </>
