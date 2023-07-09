@@ -5,6 +5,8 @@ import Earphones from './pages/Earphones';
 import Xx99ii from './pages/Xx99ii';
 import Xx99i from './pages/Xx99i';
 import Xx59 from "./pages/Xx59";
+import Zx9 from "./pages/Zx9";
+import Zx7 from "./pages/Zx7";
 import NavBar from "./components/Navbar"
 import React, {useEffect, useState} from 'react';
 import {Route, Routes} from 'react-router-dom';
@@ -34,7 +36,11 @@ function App() {
           <Route path='/headphones/xx99mii' element={<Xx99ii/>}/>
           <Route path='/headphones/xx99mi' element={<Xx99i/>}/>
           <Route path='/headphones/xx59' element={<Xx59/>}/>
-          <Route path='/speakers' element={<Speakers/>}/>          
+
+          <Route path='/speakers' element={<Speakers/>}/>    
+          <Route path='/speakers/zx9' element={<Zx9/>}/>      
+          <Route path='/speakers/zx7' element={<Zx7/>}/>      
+
           <Route path='/earphones' element={<Earphones/>}/>          
         </Routes>
 

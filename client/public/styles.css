@@ -1526,6 +1526,11 @@ a{
     height: 201px;
 }
 
+.productPage__image-box .productPage__image-box-zx7{
+    width: 140.624px;
+    height: 202px;
+}
+
 .productPage{
     display: block;
 }
@@ -1855,6 +1860,16 @@ a{
         content: ("../assets/product-xx59-headphones/tablet/xx59.png");
     }
     
+    .productPage__image-box-zx9{
+        content: ("../assets/product-zx9-speaker/tablet/zx9.png");
+    }
+    
+    .productPage__image-box .productPage__image-box-zx7{
+        content: ("../assets/product-zx7-speaker/tablet/zx7.png");
+        width: 140.624px;
+        height: 202px;
+    }
+    
     .productPage__heading{
         width: 33.9rem;
         margin-bottom: 3.2rem;
@@ -1958,6 +1973,33 @@ a{
         content: url("../assets/shared/tablet/grid-page-three-3.png");
     }
 
+    /*ZX9 page tablet  */
+    .productPage-image-zx9-woofer{
+        content: url("../assets/shared/tablet/grid-page-four-1.png");
+    }
+
+    .productPage-blockContainer-image-box-small-images .productPage-image-shelf-plants{
+        content: url("../assets/shared/tablet/grid-page-four-2.png");
+        margin-top: auto;
+    }
+
+    .productPage-image-zx9-dual{
+        content: url("../assets/shared/tablet/grid-page-four-3.png");
+    }
+
+    /*ZX7 page tablet  */
+    .productPage-image-zx7-woofer{
+        content: url("../assets/shared/tablet/grid-page-five-1.png");
+    }
+
+    .productPage-blockContainer-image-box-small-images .productPage-image-studio-zx7{
+        content: url("../assets/shared/tablet/grid-page-five-2.png");
+        margin-top: auto;
+    }
+
+    .productPage-image-zx7-close{
+        content: url("../assets/shared/tablet/grid-page-five-3.png");
+    }
 
     .recomendation__block{
         display: flex;
@@ -2054,6 +2096,16 @@ a{
 
     .productPage__image-box-xx59{
         content: ("../assets/product-xx59-headphones/desktop/xx59.png");
+    }
+  
+    .productPage__image-box-zx9{
+        content: ("../assets/product-zx9-speaker/desktop/zx9.png");
+    }
+    
+    .productPage__image-box .productPage__image-box-zx7{
+        content: ("../assets/product-zx7-speaker/desktop/zx7.png");
+        width: 268.022px;
+        height: 385px;
     }
     
     .productPage__new-heading{
@@ -2174,6 +2226,35 @@ a{
         content: url("../assets/shared/desktop/grid-page-three-3.png");
     }
     
+    /*ZX9 page desktop  */
+    .productPage-image-zx9-woofer{
+        content: url("../assets/shared/desktop/grid-page-four-1.png");
+    }
+
+    .productPage-blockContainer-image-box-small-images .productPage-image-shelf-plants{
+        content: url("../assets/shared/desktop/grid-page-four-2.png");
+        margin-top: auto;
+    }
+
+    .productPage-image-zx9-dual{
+        content: url("../assets/shared/desktop/grid-page-four-3.png");
+    }
+
+    /*ZX7 page desktop  */
+    .productPage-image-zx7-woofer{
+        content: url("../assets/shared/desktop/grid-page-five-1.png");
+    }
+
+    .productPage-blockContainer-image-box-small-images .productPage-image-studio-zx7{
+        content: url("../assets/shared/desktop/grid-page-five-2.png");
+        margin-top: auto;
+    }
+
+    .productPage-image-zx7-close{
+        content: url("../assets/shared/desktop/grid-page-five-3.png");
+    }
+    
+
     .recomendation__block{
         width: 100%;
     }
