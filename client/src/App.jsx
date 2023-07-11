@@ -31,6 +31,76 @@ function App() {
     <>
 
         <NavBar/>
+        <div className="fadeDiv"></div>
+        <div className="checkOutBox">
+          <div className="checkOutBox__heading-box">
+            <h2 className="checkOutBox__heading-box-heading">CART (3)</h2>
+            <button className="checkOutBox__heading-box-remove-button">Remove all</button>
+          </div>
+          
+          <div className="checkOutBox__scrollbox">
+          <div className="checkOutBox__item-container">
+              <div className="checkOutBox__item-container-image-box">
+                <img src="../assets/product-xx99-mark-two-headphones/mobile/mk2.png" alt="XX99 MK 2 headphones"/>
+              </div>
+
+              <div className="checkOutBox__item-container-text-box">
+                <p className="checkOutBox__item-container-title">XX99 MK II</p>
+                <p className="checkOutBox__item-container-price">$2,999</p>
+              </div>
+
+              <div className="checkOutBox__quantity-box">
+                <button>-</button>
+                <p>1</p>
+                <button>+</button>
+              </div>
+          </div>
+          
+          
+          <div className="checkOutBox__item-container">
+              <div className="checkOutBox__item-container-image-box">
+                <img src="../assets/product-xx99-mark-two-headphones/mobile/mk2.png" alt="XX99 MK 2 headphones"/>
+              </div>
+
+              <div className="checkOutBox__item-container-text-box">
+                <p className="checkOutBox__item-container-title">XX99 MK II</p>
+                <p className="checkOutBox__item-container-price">$2,999</p>
+              </div>
+
+              <div className="checkOutBox__quantity-box">
+                <button>-</button>
+                <p>1</p>
+                <button>+</button>
+              </div>
+          </div>
+          
+          <div className="checkOutBox__item-container">
+              <div className="checkOutBox__item-container-image-box">
+                <img src="../assets/product-xx99-mark-two-headphones/mobile/mk2.png" alt="XX99 MK 2 headphones"/>
+              </div>
+
+              <div className="checkOutBox__item-container-text-box">
+                <p className="checkOutBox__item-container-title">XX99 MK II</p>
+                <p className="checkOutBox__item-container-price">$2,999</p>
+              </div>
+
+              <div className="checkOutBox__quantity-box">
+                <button>-</button>
+                <p>1</p>
+                <button>+</button>
+              </div>
+          </div>
+          
+          </div>
+
+          <div className="checkOutBox__total-text-box">
+            <p className="checkOutBox__total-text-box-total">TOTAL</p>
+            <p className="checkOutBox__total-text-box-price">$5,396</p>
+          </div>
+
+          <button className="checkOutBox__checkout-button">CHECKOUT</button>
+        </div>
+
         <Routes>
           <Route path='/' element={<Home/>}/>
           <Route path='/headphones' element={<Headphones/>}/>
@@ -46,6 +116,8 @@ function App() {
           <Route path='/earphones/yx1' element={<Yx1/>}/>          
 
         </Routes>
+
+
 
     </>
   )

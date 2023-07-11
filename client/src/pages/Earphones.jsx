@@ -1,9 +1,8 @@
 import { Footer } from '../components/Footer';
 import Gear from "../components/Gear";
-import NavBar from "../components/Navbar"
 import Links from '../components/Links';
-import React, {useEffect, useState} from 'react';
-import {NavLink, Link, Route, Routes, useLocation } from 'react-router-dom';
+import React from 'react';
+import {Link} from 'react-router-dom';
 
 function Earphones() {
     return ( 

@@ -1516,7 +1516,8 @@ a{
     height: 32.7rem;
     border-radius: 0.8rem;
     background: #F1F1F1;
-    display: flex;justify-content: center;
+    display: flex;
+    justify-content: center;
     align-items: center;
     margin-bottom: 3.2rem;
 }
@@ -2337,4 +2338,190 @@ a{
         width: 143.124px;
         height: 172px;
     }    
+}
+
+/* Check out box  */
+.fadeDiv{
+    position: absolute;
+    width: 100%;
+    height: 680vh;
+    z-index: 3;
+    background-color: rgb(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.checkOutBox{
+    padding: 32px 28px;
+    padding-bottom: 31px;
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 4;
+    width: 32.7rem;
+    border-radius: 0.8rem;
+    background: #FFF;
+}
+
+.checkOutBox__heading-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+}
+
+.checkOutBox__heading-box-heading{
+    color: #000;
+    font-family: Manrope;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.1286rem;
+    text-transform: uppercase;   
+}
+
+.checkOutBox__heading-box-remove-button{
+    color: #000;
+    font-family: Manrope;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 2.5rem;
+    text-decoration-line: underline;
+    background-color: rgb(0, 0, 0, 0);
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.checkOutBox__scrollbox{
+    overflow-y: auto;
+    min-height: 20rem;
+    
+}
+
+.checkOutBox__item-container{
+    display: flex;
+    align-items: center;
+    margin-bottom: 2.4rem;
+}
+
+.checkOutBox__item-container-image-box{
+    width: 6.4rem;
+    height: 6.4rem;
+    border-radius: 0.8rem;
+    background: #F1F1F1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 16px;
+}
+
+.checkOutBox__item-container-image-box img{
+    width: 3.619rem;
+    height: 4rem;
+}
+
+.checkOutBox__item-container-text-box{
+    margin-right: 20px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 5rem;
+}
+
+.checkOutBox__item-container-title{
+    color: #000;
+    font-family: Manrope;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 700;
+    margin: 0;
+}
+
+.checkOutBox__item-container-price{
+    color: #000;
+    font-family: Manrope;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 700;
+    opacity: 0.5;
+    margin: 0;
+}
+
+.checkOutBox__quantity-box{
+    padding: 0.7rem 1.15rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #F1F1F1;
+    width: 9.6rem;
+    height: 3.2rem;
+}
+
+.checkOutBox__quantity-box button{
+    border: 0;
+    outline: 0;
+    background-color: rgb(0,0,0,0);
+    color: #000;
+    text-align: center;
+    font-family: Manrope;
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+}
+
+.checkOutBox__quantity-box p{
+    color: #000;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+}
+
+.checkOutBox__total-text-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.checkOutBox__total-text-box-total{
+    color: #000;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 2.5rem;
+    opacity: 0.5;
+}
+
+.checkOutBox__total-text-box-price{
+    color: #000;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.checkOutBox__checkout-button{
+    width: 27.1rem;
+    height: 4.8rem;
+    flex-shrink: 0;
+    background: #D87D4A;
+    color: #FFF;
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
 }
