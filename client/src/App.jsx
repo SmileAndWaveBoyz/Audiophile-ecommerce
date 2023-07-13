@@ -14,8 +14,10 @@ import {Route, Routes} from 'react-router-dom';
 
 function App() {
   const [backendData, setBackEndData] = useState([{}]);
+  const [cartDisplayBox, setCartDisplayBox] = useState("none");
+  const [cartDisplayFadeOpacity, setCartDisplayFadeOpacity] = useState(0);
+  const [cartDisplayFadeZindex, setCartDisplayFadeZindex] =useState(-1);
   
-
   useEffect(()=>{
     fetch("/api").then(
       response => response.json()
@@ -26,13 +28,25 @@ function App() {
     )
   }, [])
 
+  function cartClick() {
+    if (cartDisplayBox === "none") {
+      setCartDisplayBox("block")
+      setCartDisplayFadeOpacity(0.5)
+      setCartDisplayFadeZindex(1)
+    } else{
+      setCartDisplayBox("none")
+      setCartDisplayFadeOpacity(0.0)
+      setCartDisplayFadeZindex(-1)
+    }
+  }
+
 
   return (
     <>
 
-        <NavBar/>
-        <div className="fadeDiv"></div>
-        <div className="checkOutBox">
+        <NavBar onCartClick={cartClick}/>
+        <div className="fadeDiv" style={{opacity: cartDisplayFadeOpacity, zIndex: cartDisplayFadeZindex}}></div>
+        <div className="checkOutBox" style={{display: cartDisplayBox}}>
           <div className="checkOutBox__heading-box">
             <h2 className="checkOutBox__heading-box-heading">CART (3)</h2>
             <button className="checkOutBox__heading-box-remove-button">Remove all</button>
