@@ -2546,3 +2546,193 @@ a{
         transform: translate(40%, 5%);
     }
 }
+
+/* Checkout  */
+.checkOutBackground{
+    background: #F1F1F1;
+    padding-top: 1px;
+}
+
+.checkoutFlexContainer{
+    margin: 0 auto;
+}
+
+.checkout{
+    width: 32.7rem;
+    height: 137.8rem;
+    border-radius: 0.8rem;
+    background: #FFF;
+    padding: 24px 31px 24px 24px;
+}
+
+.checkout-heading{
+    color: #000;
+    font-size: 2.8rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 3.6rem; /* 112.5% */
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    margin-bottom: 3.2rem;
+}
+
+.checkout-info-heading{
+    color: #D87D4A;
+    font-family: Manrope;
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 2.5rem; /* 192.308% */
+    letter-spacing: 0.0929rem;
+    text-transform: uppercase;
+    margin-bottom: 1.6rem;
+}
+
+@media screen and (min-width: 1024px) {
+    .checkoutFlexContainer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 14.1rem;
+    }
+
+    .checkout{
+        width: 73rem;
+        height: 112.6rem;
+        padding: 54px 48px 48px 48px;
+    }
+    
+    .checkout-heading{
+        color: #000;
+        font-size: 3.2rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 3.6rem; /* 112.5% */
+        letter-spacing: 0.1143rem;
+        text-transform: uppercase;
+        margin-bottom: 4.1rem;
+    }
+    
+    .checkout-info-heading{
+        color: #D87D4A;
+        font-family: Manrope;
+        font-size: 1.3rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 2.5rem; /* 192.308% */
+        letter-spacing: 0.0929rem;
+        text-transform: uppercase;
+        margin-bottom: 1.6rem;
+    }
+
+    .summary{
+        width: 35rem;
+        height: 61.2rem;
+        border-radius: 0.8rem;
+        background: #FFF;
+    }
+
+    .inputGroupShort{
+        width: 30.9rem;
+        height: 8.1rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    label{
+        color: #000;
+        font-family: Manrope;
+        font-size: 1.2rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: -0.0214rem;
+        margin-bottom: 0.9rem;
+    }
+
+    .inputs-container{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 2.4rem;
+    }
+
+    .textInputShort{
+        border-radius: 0.8rem;
+        border: 1px solid #CFCFCF;
+        background: #FFF;
+        height: 5.6rem;
+    }
+
+    .textInputShort:hover{
+        border-radius: 0.8rem;
+        border: 1px solid #D87D4A;
+    }
+
+    .checkout-info-heading.shipping{
+        margin-top: 5.3rem;
+    }
+
+    .inputGroupLong{
+        width: 100%;
+        height: 8.1rem;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2.4rem;
+    }
+
+    .paymentInfoDisplayContainer{
+        display: flex;
+        margin-bottom: 3rem;
+    }
+
+    .paymentInfoDisplayBox{
+        width: 31rem;
+    }
+
+    .bigRadioButton{
+        width: 100%;
+        height: 5.6rem;
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.6rem;
+        border-radius: 0.8rem;
+        border: 1px solid #CFCFCF;
+        background: #FFF;
+        transition: all 0.2s;
+        color: #000;
+        font-family: Manrope;
+        font-size: 1.4rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: -0.025rem;
+        cursor: pointer;
+    }
+
+    .bigRadioButton:hover{
+        border: 1px solid #D87D4A;
+    }
+
+    .radioSVG{
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+
+    .paymentFooterBox{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 48px;
+    }
+
+    .paymentFooterBox-description{
+        margin-left: 3.2rem;
+        color: #000;
+        font-family: Manrope;
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 2.5rem; /* 166.667% */
+        opacity: 0.5;
+    }
+}
