@@ -29,14 +29,14 @@ function Home() {
                 <div className="zx9Block__text-box">
                 <h3>ZX9 SPEAKER</h3>
                 <p>Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.</p>
-                <Link className='zx9Block__button' to="/">SEE PRODUCT</Link>
+                <Link className='zx9Block__button' to="/speakers/zx9">SEE PRODUCT</Link>
                 </div>
             </div>
 
             <div className="zx9SpeakerBlock">
                 <div className="zx9SpeakerBlock__text-block">
-                <h3>ZX9 SPEAKER</h3>
-                <Link to="/">SEE PRODUCT</Link>
+                <h3>ZX7 SPEAKER</h3>
+                <Link to="/speakers/zx7">SEE PRODUCT</Link>
                 </div>
                 <img src="./assets/home/mobile/image-speaker-zx7.png" alt="ZX9 Speaker on table" />
             </div>

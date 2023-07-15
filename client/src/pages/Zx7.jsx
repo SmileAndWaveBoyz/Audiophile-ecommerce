@@ -9,7 +9,7 @@ function Zx7() {
         <>
             <main>
                 <div className="productPage-blockContainer">
-                    <Link className='goBackLink' to="/headphones">Go Back</Link>
+                    <Link className='goBackLink' to="/speakers">Go Back</Link>
 
                     <div className="productPage">
                             <div className="productPage__image-box">

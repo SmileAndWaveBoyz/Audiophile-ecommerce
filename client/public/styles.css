@@ -1877,7 +1877,7 @@ a{
     }
 
     .productPage__image-box .productPage__image-box-yx1{
-        content: ("../assets/product-yx1-earphones/tablet/yx1.png");
+        content: url("./assets/product-yx1-earphones/tablet/yx1.png");
         width: 263px;
         height: 238px;
     }
@@ -2113,7 +2113,7 @@ a{
     }
 
     .productPage__image-box-xx99mii{
-        content: url("./assets/shared/desktop/xx99mii.png");
+        content: url("../assets/product-xx99-mark-two-headphones/desktop/mk2.png");
     }
 
     .productPage__image-box-xx99mi{
@@ -2135,9 +2135,8 @@ a{
     }
 
     .productPage__image-box .productPage__image-box-yx1{
-        content: ("../assets/product-yx1-earphones/desktop/yx1.png");
-        width: 421px;
-        height: 381px;
+        content: url("../assets/product-yx1-earphones/desktop/yx1.png");
+        scale: 1.2;
     }
     
     .productPage__new-heading{
@@ -2550,12 +2549,13 @@ a{
 
 /* Checkout  */
 .checkOutBackground{
+    padding-top: 1px;
     background: #FAFAFA;
 }
 
 .checkout{
     width: 32.7rem;
-    height: 137.8rem;
+    height: 140rem;
     border-radius: 0.8rem;
     background: #FFF;
     padding: 24px 31px 24px 24px;
@@ -2805,13 +2805,31 @@ label{
 @media screen and (min-width: 768px) {
     .checkout{
         width: 68.9rem;
+        height: 108.4rem;
         padding: 30px 30px 28px 28px;
+    }
+
+    .checkout-heading{
+        margin-top: 0;
     }
 
     .paymentInfoDisplayContainer{
         flex-direction: row;
         justify-content: space-between;
     }
+
+    .inputs-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 2.4rem;
+    }
+
+    .inputGroupShort{
+        width: 30.9rem;
+        height: 8.1rem;
+    }
+
 
     .paymentInfoDisplayBox{
         width: 50%;

@@ -64,7 +64,7 @@ From the handcrafted microfiber ear cushions to the robust metal headband with i
                         <div className="recomendation__block-flex-box">
                             <div className="recomendation__block-container">
                                 <div className="recomendation__block-container-image-box">
-                                    <img className='recomendation__block-container-image-box-image xx99mii' src="../assets/product-xx99-mark-two-headphones/mobile/image-removebg-preview(47).png" alt="XX99 Mark II Headphones" />
+                                    <img className='recomendation__block-container-image-box-image xx99mii' src="../assets/product-xx99-mark-two-headphones/mobile/mk2.png" alt="XX99 Mark II Headphones" />
                                 </div>
 
                                 <h3 className='recomendation__block-product-heading'>XX99 MARK II</h3>

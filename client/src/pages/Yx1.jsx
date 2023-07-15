@@ -9,11 +9,11 @@ function Yx1() {
         <>
             <main>
                 <div className="productPage-blockContainer">
-                    <Link className='goBackLink' to="/headphones">Go Back</Link>
+                    <Link className='goBackLink' to="/earphones">Go Back</Link>
 
                     <div className="productPage">
                             <div className="productPage__image-box">
-                                <img className='productPage__image-box-yx1' src="../assets/product-yx1-earphones/mobile/yx1.png" alt="ZX9 Speaker" />
+                                <img className='productPage__image-box-yx1' src="../assets/product-yx1-earphones/mobile/yx1.png" alt="YX1 Earphones" />
                             </div>
                         
 

@@ -13,7 +13,7 @@ function Xx99ii() {
 
                     <div className="productPage">
                             <div className="productPage__image-box">
-                                <img className='productPage__image-box-xx99mii' src="../assets/product-xx99-mark-two-headphones/mobile/image-removebg-preview(47).png" alt="XX99 Mark 2 Headphones" />
+                                <img className='productPage__image-box-xx99mii' src="../assets/product-xx99-mark-two-headphones/mobile/mk2.png" alt="XX99 Mark 2 Headphones" />
                             </div>
                         
 
