@@ -26,7 +26,6 @@ function Checkout() {
                             <label htmlFor="#name">Name</label>
                             <input className='textInputShort' type="text" name='name'/>
                         </div>
-                        
 
                         <div className="inputGroupShort">
                             <label htmlFor="#name">Email Address</label>
@@ -68,7 +67,7 @@ function Checkout() {
 
                     <div className="paymentInfoDisplayContainer">
                         <div className="paymentInfoDisplayBox">
-                            <label htmlFor="#name">Payment Method</label>
+                            <label className='paymentMethodLable' htmlFor="#name">Payment Method</label>
                         </div>
 
                         <div className="paymentInfoDisplayBox">
@@ -114,8 +113,6 @@ function Checkout() {
                                 <input className='textInputShort' type="text" name='city'/>
                             </div>
                         </div>
-                            
-                        
                         )
                     }
 
@@ -123,7 +120,68 @@ function Checkout() {
 
 
                 <div className="summary">
+                    <h2 className='summary__heading'>summary</h2>
 
+                        <div className="checkOutBox__item-container">
+                            <div className="checkOutBox__item-container-image-box">
+                                <img src="../assets/product-xx99-mark-two-headphones/mobile/mk2.png" alt="XX99 MK 2 headphones"/>
+                            </div>
+
+                            <div className="checkOutBox__item-container-text-box">
+                                <p className="checkOutBox__item-container-title">XX99 MK II</p>
+                                <p className="checkOutBox__item-container-price">$2,999</p>
+                            </div>
+
+                            <p className='summary__item-count'>1px</p>
+                        </div>
+
+                        <div className="checkOutBox__item-container">
+                            <div className="checkOutBox__item-container-image-box">
+                                <img src="../assets/product-xx99-mark-two-headphones/mobile/mk2.png" alt="XX99 MK 2 headphones"/>
+                            </div>
+
+                            <div className="checkOutBox__item-container-text-box">
+                                <p className="checkOutBox__item-container-title">XX99 MK II</p>
+                                <p className="checkOutBox__item-container-price">$2,999</p>
+                            </div>
+
+                            <p className='summary__item-count'>1px</p>
+                        </div>
+
+                        <div className="checkOutBox__item-container">
+                            <div className="checkOutBox__item-container-image-box">
+                                <img src="../assets/product-xx99-mark-two-headphones/mobile/mk2.png" alt="XX99 MK 2 headphones"/>
+                            </div>
+
+                            <div className="checkOutBox__item-container-text-box last">
+                                <p className="checkOutBox__item-container-title">XX99 MK II</p>
+                                <p className="checkOutBox__item-container-price">$2,999</p>
+                            </div>
+
+                            <p className='summary__item-count'>1px</p>
+                        </div>
+
+                        <div className="summary__money-container first">
+                            <p className='summary__money-container-word'>TOTAL</p>
+                            <p className='summary__money-container-amount'>$ 5,396</p>
+                        </div>
+
+                        <div className="summary__money-container ">
+                            <p className='summary__money-container-word'>TOTAL</p>
+                            <p className='summary__money-container-amount'>$ 5,396</p>
+                        </div>
+
+                        <div className="summary__money-container ">
+                            <p className='summary__money-container-word'>TOTAL</p>
+                            <p className='summary__money-container-amount'>$ 5,396</p>
+                        </div>
+
+                        <div className="summary__money-container">
+                            <p className='summary__money-container-word'>GRAND TOTAL</p>
+                            <p className='summary__money-container-amount orange'>$ 5,446</p>
+                        </div>
+
+                        <button type='submit' name='pay' className='summary__pay-button'>CONTINUE & PAY</button>
                 </div>
             </form>
         </div>

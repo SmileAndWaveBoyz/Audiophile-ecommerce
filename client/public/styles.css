@@ -2344,7 +2344,7 @@ a{
 .fadeDiv{
     position: absolute;
     width: 100%;
-    height: 600vh;
+    height: 310vh;
     z-index: 3;
     background-color: rgb(0, 0, 0);
     z-index: -1;
@@ -2530,6 +2530,7 @@ a{
     cursor: pointer;
 }
 
+
 @media screen and (min-width: 768px) {
     .fadeDiv{
         height: 120vh;
@@ -2549,12 +2550,7 @@ a{
 
 /* Checkout  */
 .checkOutBackground{
-    background: #F1F1F1;
-    padding-top: 1px;
-}
-
-.checkoutFlexContainer{
-    margin: 0 auto;
+    background: #FAFAFA;
 }
 
 .checkout{
@@ -2563,6 +2559,7 @@ a{
     border-radius: 0.8rem;
     background: #FFF;
     padding: 24px 31px 24px 24px;
+    margin-bottom: 3.2rem;
 }
 
 .checkout-heading{
@@ -2588,6 +2585,243 @@ a{
     margin-bottom: 1.6rem;
 }
 
+.inputGroupShort{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2.4rem;
+}
+
+label{
+    color: #000;
+    font-family: Manrope;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.0214rem;
+    margin-bottom: 0.9rem;
+}
+
+.textInputShort{
+    border-radius: 0.8rem;
+    border: 1px solid #CFCFCF;
+    background: #FFF;
+    height: 5.6rem;
+    color: #000;
+    font-family: Manrope;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.25px;
+    opacity: 0.6;
+    background-color: rgb(0, 0, 0, 0);
+    padding-left: 24px;
+}
+
+
+.textInputShort:hover{
+    border: 1px solid #D87D4A;
+}
+
+.checkout-info-heading.shipping{
+    margin-top: 3.2rem;
+}
+
+.inputGroupLong{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2.4rem;
+}
+
+.paymentInfoDisplayContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.paymentInfoDisplayBox{
+    margin-bottom: 1.7rem;
+}
+
+.bigRadioButton{
+    width: 100%;
+    height: 5.6rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.6rem;
+    border-radius: 0.8rem;
+    border: 1px solid #CFCFCF;
+    background: #FFF;
+    transition: all 0.2s;
+    color: #000;
+    font-family: Manrope;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.025rem;
+    cursor: pointer;
+}
+
+.bigRadioButton:hover{
+    border: 1px solid #D87D4A;
+}
+
+.radioSVG{
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+
+.radioSVG .orangeCircle{
+    transition: all 0.3s;
+    opacity: 0;
+}
+
+.radioSVG .orangeCircle.visable{
+    opacity: 1;
+}
+
+.paymentFooterBox{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 48px;
+}
+
+.paymentFooterBox-description{
+    margin-left: 3.2rem;
+    color: #000;
+    font-family: Manrope;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 2.5rem; /* 166.667% */
+    opacity: 0.5;
+}
+
+.shape{
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+}
+
+.summary{
+    width: 100%;
+    height: 61.2rem;
+    border-radius: 0.8rem;
+    background: #FFF;
+    padding: 32px 32px 24px 24px;
+    margin-bottom: 9.7rem;
+}
+
+.summary__heading{
+    color: #000;
+    font-family: Manrope;
+    font-size: 1.8rem;
+    letter-spacing: 1.286px;
+    text-transform: uppercase;
+    margin-bottom: 3.1rem;
+}
+
+
+
+.summary__item-count{
+    color: #000;
+    text-align: right;
+    font-family: Manrope;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 25px; /* 166.667% */
+    opacity: 0.5;
+    margin-right: 0;
+    margin-left: auto;
+}
+
+.summary__money-container{
+    margin-bottom: 0.8rem;
+    margin-top: 0.8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.summary__money-container.first{
+    margin-top: 3.2rem;
+}
+
+.summary__money-container-word{
+    color: #000;
+    font-size: 1.8rem;
+    font-weight: 500;
+    opacity: 0.5;
+    margin: 0;
+}
+
+.summary__money-container-amount{
+    color: #000;
+    text-align: right;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.summary__money-container-amount.orange{
+    color: #D87D4A;
+}
+
+.summary__money-container.last{
+    margin-top: 2.4rem;
+}
+
+.summary__pay-button{
+    color: #FFF;
+    text-align: center;
+    font-family: Manrope;
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    height: 4.8rem;
+    width: 100%;
+    background: #D87D4A;
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+    margin-top: 3.2rem;
+    transition: all 0.2s;
+}
+
+.summary__pay-button:hover{
+    background: rgb(231, 164, 126);
+}
+
+@media screen and (min-width: 768px) {
+    .checkout{
+        width: 68.9rem;
+        padding: 30px 30px 28px 28px;
+    }
+
+    .paymentInfoDisplayContainer{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .paymentInfoDisplayBox{
+        width: 50%;
+    }
+
+    .summary{
+        padding: 32px 32px 33px 33px;
+    }
+}
+
 @media screen and (min-width: 1024px) {
     .checkoutFlexContainer{
         display: flex;
@@ -2603,33 +2837,18 @@ a{
     }
     
     .checkout-heading{
-        color: #000;
         font-size: 3.2rem;
-        font-style: normal;
-        font-weight: 700;
         line-height: 3.6rem; /* 112.5% */
         letter-spacing: 0.1143rem;
-        text-transform: uppercase;
         margin-bottom: 4.1rem;
     }
     
     .checkout-info-heading{
         color: #D87D4A;
-        font-family: Manrope;
         font-size: 1.3rem;
-        font-style: normal;
-        font-weight: 700;
         line-height: 2.5rem; /* 192.308% */
         letter-spacing: 0.0929rem;
-        text-transform: uppercase;
         margin-bottom: 1.6rem;
-    }
-
-    .summary{
-        width: 35rem;
-        height: 61.2rem;
-        border-radius: 0.8rem;
-        background: #FFF;
     }
 
     .inputGroupShort{
@@ -2637,6 +2856,7 @@ a{
         height: 8.1rem;
         display: flex;
         flex-direction: column;
+        margin-bottom: 0rem;
     }
 
     label{
@@ -2652,20 +2872,9 @@ a{
 
     .inputs-container{
         display: flex;
+        flex-direction: row;
         justify-content: space-between;
         margin-bottom: 2.4rem;
-    }
-
-    .textInputShort{
-        border-radius: 0.8rem;
-        border: 1px solid #CFCFCF;
-        background: #FFF;
-        height: 5.6rem;
-    }
-
-    .textInputShort:hover{
-        border-radius: 0.8rem;
-        border: 1px solid #D87D4A;
     }
 
     .checkout-info-heading.shipping{
@@ -2682,6 +2891,7 @@ a{
 
     .paymentInfoDisplayContainer{
         display: flex;
+        flex-direction: row;
         margin-bottom: 0rem;
     }
 
@@ -2750,5 +2960,99 @@ a{
         width: 48px;
         height: 48px;
         flex-shrink: 0;
+    }
+
+    .summary{
+        width: 35rem;
+        height: 61.2rem;
+        border-radius: 0.8rem;
+        background: #FFF;
+        padding: 32px 32px 33px 33px;
+    }
+
+    .summary__heading{
+        color: #000;
+        font-family: Manrope;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 1.286px;
+        text-transform: uppercase;
+        margin-bottom: 3.1rem;
+    }
+
+    .summary__item-count{
+        color: #000;
+        text-align: right;
+        font-family: Manrope;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 25px; /* 166.667% */
+        opacity: 0.5;
+        margin-right: 0;
+        margin-left: auto;
+    }
+
+    .summary__money-container{
+        margin-bottom: 0.8rem;
+        margin-top: 0.8rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .summary__money-container.first{
+        margin-top: 3.2rem;
+    }
+
+    .summary__money-container-word{
+        color: #000;
+        font-size: 1.8rem;
+        font-weight: 500;
+        opacity: 0.5;
+        margin: 0;
+    }
+
+    .summary__money-container-amount{
+        color: #000;
+        text-align: right;
+        font-size: 1.8rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin: 0;
+    }
+
+    .summary__money-container-amount.orange{
+        color: #D87D4A;
+    }
+
+    .summary__money-container.last{
+        margin-top: 2.4rem;
+    }
+
+    .summary__pay-button{
+        color: #FFF;
+        text-align: center;
+        font-family: Manrope;
+        font-size: 1.3rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 0.1rem;
+        text-transform: uppercase;
+        height: 4.8rem;
+        width: 100%;
+        background: #D87D4A;
+        cursor: pointer;
+        border: 0;
+        outline: 0;
+        margin-top: 3.2rem;
+        transition: all 0.2s;
+    }
+
+    .summary__pay-button:hover{
+        background: rgb(231, 164, 126);
     }
 }
