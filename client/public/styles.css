@@ -2682,7 +2682,7 @@ a{
 
     .paymentInfoDisplayContainer{
         display: flex;
-        margin-bottom: 3rem;
+        margin-bottom: 0rem;
     }
 
     .paymentInfoDisplayBox{
@@ -2734,5 +2734,11 @@ a{
         font-weight: 500;
         line-height: 2.5rem; /* 166.667% */
         opacity: 0.5;
+    }
+
+    .shape{
+        width: 48px;
+        height: 48px;
+        flex-shrink: 0;
     }
 }
