@@ -7,6 +7,10 @@ import {Link} from 'react-router-dom';
 function Checkout() {
 
     const [eMoney, setEMoney] = useState(true);
+    const [eMoneyButton, setEMoneyButton] = useState(null);
+    const [cashButton, setCashButton] = useState(null);
+
+
     return (  
         <div className='checkOutBackground'>
         <div className="productPage-blockContainer">
@@ -68,8 +72,22 @@ function Checkout() {
                         </div>
 
                         <div className="paymentInfoDisplayBox">
-                            <button className='bigRadioButton'><svg className='radioSVG' xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9.5" stroke="#CFCFCF"/></svg> e-Money</button>
-                            <button className='bigRadioButton'><svg className='radioSVG' xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9.5" stroke="#CFCFCF"/></svg> Cash on Delivery</button>
+                            <button className='bigRadioButton' onClick={(event) => {setEMoney(true); event.preventDefault(); setEMoneyButton(" visable"); setCashButton(null);}}>
+                                <svg className='radioSVG' xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <circle cx="10" cy="10" r="9.5" stroke="#CFCFCF"/>
+                                    <circle className={'orangeCircle ' + eMoneyButton} cx="10" cy="10" r="5" fill="#D87D4A"/>
+                                </svg> 
+                                e-Money
+                            </button>
+
+                            <button className='bigRadioButton' onClick={(event) => {setEMoney(false); event.preventDefault(); setCashButton(" visable"); setEMoneyButton(null);}}>
+                                <svg className='radioSVG' xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                        <circle cx="10" cy="10" r="9.5" stroke="#CFCFCF"/>
+                                        <circle className={'orangeCircle ' + cashButton} cx="10" cy="10" r="5" fill="#D87D4A"/>
+                                </svg> 
+                                Cash on Delivery
+                            </button>
+
                         </div>
                     </div>
 
@@ -83,7 +101,21 @@ function Checkout() {
                         )
                         : 
                         (
-                            null
+                        
+                        <div className="inputs-container">
+                            <div className="inputGroupShort">
+                                <label htmlFor="#eMoneyNumber">e-Money Number</label>
+                                <input className='textInputShort' type="text" name='name'/>
+                            </div>
+                            
+
+                            <div className="inputGroupShort">
+                                <label htmlFor="#eMoneyPin">e-Money Pin</label>
+                                <input className='textInputShort' type="text" name='city'/>
+                            </div>
+                        </div>
+                            
+                        
                         )
                     }
 
