@@ -1,10 +1,17 @@
 import { Footer } from '../components/Footer';
 import Gear from "../components/Gear";
 import Links from '../components/Links';
-import React from 'react';
+import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
 
 function Xx99ii() {
+
+    const[xx99m2Quantity, setXx99m2Quantity] = useState(0);
+
+    function addToCart(amount) {
+        console.log("name: XX99 MARK II Headphones " + "quantity: " + amount + " price: " + 2999.00);
+    }
+
     return ( 
         <>
             <main>
@@ -24,11 +31,20 @@ function Xx99ii() {
                             <p className='productPage__price'>$ 2,999</p>
                             <div className="productPage__buttons">
                                 <div className="productPage__quantity-buttons">
-                                    <button className='productPage__quantity-buttons-one'>-</button>
-                                    <p className='productPage__quantity-buttons-number'>1</p>
-                                    <button className='productPage__quantity-buttons-two'>+</button>
+                                    <button className='productPage__quantity-buttons-one' onClick={
+                                        () => {
+                                            if (xx99m2Quantity > 0) {
+                                                setXx99m2Quantity(xx99m2Quantity - 1)}
+                                            }
+                                            
+                                        }
+                                        >-</button>
+                                    <p className='productPage__quantity-buttons-number'>{xx99m2Quantity}</p>
+                                    <button className='productPage__quantity-buttons-two' onClick={() => setXx99m2Quantity(xx99m2Quantity + 1)}>+</button>
                                 </div>
-                                <button className='productPage__cart-button'>ADD TO CART</button>
+
+                                <button className='productPage__cart-button' onClick={() => addToCart(xx99m2Quantity)}>ADD TO CART</button>
+
                             </div>
                         </div>
                     </div>

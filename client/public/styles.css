@@ -1607,10 +1607,12 @@ a{
 
 .productPage__quantity-buttons-one{
     margin-left: 15.5px;
+    cursor: pointer;
 }
 
 .productPage__quantity-buttons-two{
     margin-right: 15.5px;
+    cursor: pointer;
 }
 
 .productPage__quantity-buttons-one, .productPage__quantity-buttons-two{
