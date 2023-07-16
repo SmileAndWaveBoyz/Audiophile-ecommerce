@@ -1,10 +1,30 @@
 import { Footer } from '../components/Footer';
 import Gear from "../components/Gear";
 import Links from '../components/Links';
-import React from 'react';
 import {Link} from 'react-router-dom';
+import React, {useState} from 'react';
+import axios from 'axios';
 
 function Xx99i() {
+
+    const [newQuantity, setNewQuantity] = useState(0);
+
+    const addToCart = () => {
+        // Replace 'XX99 MARK II Headphones' with the item name you want to update
+        const itemNameToUpdate = 'XX99 MARK I Headphones';
+    
+        axios
+          .put(`/api/cart/${itemNameToUpdate}`, { newQuantity })
+          .then((response) => {
+            console.log('Item quantity updated successfully:', response.data);
+            // You can update the UI or display a message indicating the success here
+          })
+          .catch((error) => {
+            console.error('Error updating item quantity:', error);
+            // Handle the error or display an error message here
+          });
+      };
+
     return ( 
         <>
             <main>
@@ -21,14 +41,23 @@ function Xx99i() {
                             <h1 className='productPage__heading'>XX99 Mark I Headphones</h1>
                             <p className='productPage__paragraph'>As the gold standard for headphones, the classic XX99 Mark I offers detailed and accurate audio reproduction for audiophiles, mixing engineers, and music aficionados alike in studios and on the go. </p>
                             <p className='productPage__price'>$ 1,750</p>
+
                             <div className="productPage__buttons">
-                                <div className="productPage__quantity-buttons">
-                                    <button className='productPage__quantity-buttons-one'>-</button>
-                                    <p className='productPage__quantity-buttons-number'>1</p>
-                                    <button className='productPage__quantity-buttons-two'>+</button>
+                            <div className="productPage__quantity-buttons">
+                                    <button className='productPage__quantity-buttons-one' onClick={
+                                        () => {
+                                            if (newQuantity > 0) {
+                                                setNewQuantity(newQuantity - 1)}
+                                            }
+                                            
+                                        }
+                                        >-</button>
+                                    <p className='productPage__quantity-buttons-number'>{newQuantity}</p>
+                                    <button className='productPage__quantity-buttons-two' onClick={() => setNewQuantity(newQuantity + 1)}>+</button>
                                 </div>
-                                <button className='productPage__cart-button'>ADD TO CART</button>
+                                <button className='productPage__cart-button' onClick={() => addToCart()}>ADD TO CART</button>
                             </div>
+
                         </div>
                     </div>
 

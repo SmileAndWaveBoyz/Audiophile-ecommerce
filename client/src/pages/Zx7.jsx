@@ -1,10 +1,29 @@
 import { Footer } from '../components/Footer';
 import Gear from "../components/Gear";
 import Links from '../components/Links';
-import React from 'react';
+import React, {useState} from 'react';
+import axios from 'axios';
 import {Link} from 'react-router-dom';
 
 function Zx7() {
+
+    const [newQuantity, setNewQuantity] = useState(0);
+
+    const addToCart = () => {
+        const itemNameToUpdate = 'ZX7 Speaker';
+    
+        axios
+          .put(`/api/cart/${itemNameToUpdate}`, { newQuantity })
+          .then((response) => {
+            console.log('Item quantity updated successfully:', response.data);
+            // You can update the UI or display a message indicating the success here
+          })
+          .catch((error) => {
+            console.error('Error updating item quantity:', error);
+            // Handle the error or display an error message here
+          });
+    };
+
     return ( 
         <>
             <main>
@@ -21,14 +40,24 @@ function Zx7() {
                             <h1 className='productPage__heading'>ZX7 SPEAKER</h1>
                             <p className='productPage__paragraph'>Stream high quality sound wirelessly with minimal to no loss. The ZX7 speaker uses high-end audiophile components that represents the top of the line powered speakers for home or studio use.</p>
                             <p className='productPage__price'>$ 3,500</p>
+
                             <div className="productPage__buttons">
                                 <div className="productPage__quantity-buttons">
-                                    <button className='productPage__quantity-buttons-one'>-</button>
-                                    <p className='productPage__quantity-buttons-number'>1</p>
-                                    <button className='productPage__quantity-buttons-two'>+</button>
+                                    <button className='productPage__quantity-buttons-one' onClick={
+                                        () => {
+                                            if (newQuantity > 0) {
+                                                setNewQuantity(newQuantity - 1)}
+                                            }
+                                            
+                                        }
+                                        >-</button>
+                                    <p className='productPage__quantity-buttons-number'>{newQuantity}</p>
+                                    <button className='productPage__quantity-buttons-two' onClick={() => setNewQuantity(newQuantity + 1)}>+</button>
                                 </div>
-                                <button className='productPage__cart-button'>ADD TO CART</button>
+
+                                <button className='productPage__cart-button' onClick={() => addToCart()}>ADD TO CART</button>
                             </div>
+
                         </div>
                     </div>
 

@@ -2463,6 +2463,7 @@ a{
     background: #F1F1F1;
     width: 9.6rem;
     height: 3.2rem;
+    margin-left: auto;
 }
 
 .checkOutBox__quantity-box button{
@@ -2478,6 +2479,7 @@ a{
     line-height: normal;
     letter-spacing: 0.1rem;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 .checkOutBox__quantity-box p{

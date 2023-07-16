@@ -2,15 +2,29 @@ import { Footer } from '../components/Footer';
 import Gear from "../components/Gear";
 import Links from '../components/Links';
 import React, {useState} from 'react';
+import axios from 'axios';
 import {Link} from 'react-router-dom';
+
 
 function Xx99ii() {
 
-    const[xx99m2Quantity, setXx99m2Quantity] = useState(0);
+    const [newQuantity, setNewQuantity] = useState(0);
 
-    function addToCart(amount) {
-        console.log("name: XX99 MARK II Headphones " + "quantity: " + amount + " price: " + 2999.00);
-    }
+    const addToCart = () => {
+        // Replace 'XX99 MARK II Headphones' with the item name you want to update
+        const itemNameToUpdate = 'XX99 MARK II Headphones';
+    
+        axios
+          .put(`/api/cart/${itemNameToUpdate}`, { newQuantity })
+          .then((response) => {
+            console.log('Item quantity updated successfully:', response.data);
+            // You can update the UI or display a message indicating the success here
+          })
+          .catch((error) => {
+            console.error('Error updating item quantity:', error);
+            // Handle the error or display an error message here
+          });
+    };
 
     return ( 
         <>
@@ -29,23 +43,24 @@ function Xx99ii() {
                             <h1 className='productPage__heading'>XX99 Mark II Headphones</h1>
                             <p className='productPage__paragraph'>The new XX99 Mark II headphones is the pinnacle of pristine audio. It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound.</p>
                             <p className='productPage__price'>$ 2,999</p>
+
                             <div className="productPage__buttons">
                                 <div className="productPage__quantity-buttons">
                                     <button className='productPage__quantity-buttons-one' onClick={
                                         () => {
-                                            if (xx99m2Quantity > 0) {
-                                                setXx99m2Quantity(xx99m2Quantity - 1)}
+                                            if (newQuantity > 0) {
+                                                setNewQuantity(newQuantity - 1)}
                                             }
                                             
                                         }
                                         >-</button>
-                                    <p className='productPage__quantity-buttons-number'>{xx99m2Quantity}</p>
-                                    <button className='productPage__quantity-buttons-two' onClick={() => setXx99m2Quantity(xx99m2Quantity + 1)}>+</button>
+                                    <p className='productPage__quantity-buttons-number'>{newQuantity}</p>
+                                    <button className='productPage__quantity-buttons-two' onClick={() => setNewQuantity(newQuantity + 1)}>+</button>
                                 </div>
 
-                                <button className='productPage__cart-button' onClick={() => addToCart(xx99m2Quantity)}>ADD TO CART</button>
-
+                                <button className='productPage__cart-button' onClick={() => addToCart()}>ADD TO CART</button>
                             </div>
+                            
                         </div>
                     </div>
 
