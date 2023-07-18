@@ -5,10 +5,15 @@ import React, {useState} from 'react';
 import axios from 'axios';
 import {Link} from 'react-router-dom';
 
+import { useSelector, useDispatch } from "react-redux";
+import { setXx99MiiQuantity, selectXx99MiiQuantity } from "./xx99MiiQuantitySlice";
+
 
 function Xx99ii() {
 
-    const [newQuantity, setNewQuantity] = useState(0);
+    const newQuantity = useSelector(selectXx99MiiQuantity);
+    const dispatch = useDispatch();
+
 
     const addToCart = () => {
         // Replace 'XX99 MARK II Headphones' with the item name you want to update
@@ -49,13 +54,13 @@ function Xx99ii() {
                                     <button className='productPage__quantity-buttons-one' onClick={
                                         () => {
                                             if (newQuantity > 0) {
-                                                setNewQuantity(newQuantity - 1)}
+                                                dispatch(setXx99MiiQuantity(newQuantity - 1))}
                                             }
                                             
                                         }
                                         >-</button>
                                     <p className='productPage__quantity-buttons-number'>{newQuantity}</p>
-                                    <button className='productPage__quantity-buttons-two' onClick={() => setNewQuantity(newQuantity + 1)}>+</button>
+                                    <button className='productPage__quantity-buttons-two' onClick={() => dispatch(setXx99MiiQuantity(newQuantity + 1))}>+</button>
                                 </div>
 
                                 <button className='productPage__cart-button' onClick={() => addToCart()}>ADD TO CART</button>
