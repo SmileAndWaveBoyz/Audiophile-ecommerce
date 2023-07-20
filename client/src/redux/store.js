@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit'
-import xx99miiQuantityReducer from '../pages/xx99MiiQuantitySlice';
+import xx99miiQuantityReducer from '../pages/reduxItems';
 
 export const store = configureStore({
   reducer: {

@@ -6,7 +6,7 @@ import axios from 'axios';
 import {Link} from 'react-router-dom';
 
 import { useSelector, useDispatch } from "react-redux";
-import { setXx99MiiQuantity, selectXx99MiiQuantity } from "./xx99MiiQuantitySlice";
+import { setXx99MiiQuantity, selectXx99MiiQuantity } from "./reduxItems";
 
 
 function Xx99ii() {

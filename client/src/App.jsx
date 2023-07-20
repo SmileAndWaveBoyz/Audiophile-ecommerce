@@ -13,9 +13,13 @@ import NavBar from "./components/Navbar"
 import React, {useEffect, useState} from 'react';
 import {Route, Routes, useLocation } from 'react-router-dom';
 import { useNavigate  } from 'react-router-dom';
+
 import axios from 'axios';
+import { useSelector, useDispatch } from "react-redux";
+import { setXx99MiiQuantity, selectXx99MiiQuantity } from "./pages/reduxItems";
 
 function App() {
+
   const [cartDisplayBox, setCartDisplayBox] = useState("none");
   const [cartDisplayFadeOpacity, setCartDisplayFadeOpacity] = useState(0);
   const [cartDisplayFadeZindex, setCartDisplayFadeZindex] = useState(-1);
@@ -35,6 +39,11 @@ function App() {
   }
 
   function cartClick() {
+    toggleCartDisplay()
+    refreshCart();    
+  }
+
+  function toggleCartDisplay() {
     if (cartDisplayBox === "none") {
       setCartDisplayBox("block")
       setCartDisplayFadeOpacity(0.5)
@@ -44,14 +53,12 @@ function App() {
       setCartDisplayFadeOpacity(0.0)
       setCartDisplayFadeZindex(-1)
     }
-
-    refreshCart();    
   }
 
   useEffect(() => {
     console.log(cartItems[0]); // This will show the updated value of cartItems
     if(cartItems.length > 0){
-      setXx99mk2Quantity(cartItems[0].quantity);
+      dispatch(setXx99MiiQuantity((cartItems[0].quantity)));
       setXx99mk1Quantity(cartItems[1].quantity);
       setXx59Quantity(cartItems[2].quantity);
       setZx9Quantity(cartItems[3].quantity);
@@ -65,7 +72,10 @@ function App() {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const[xx99mk2Quantity, setXx99mk2Quantity] = useState(0);
+  const xx99mk2Quantity = useSelector(selectXx99MiiQuantity);
+  const dispatch = useDispatch();
+
+  // const[xx99mk2Quantity, setXx99mk2Quantity] = useState(0); I'm using the redux var for this one 
   const[xx99mk1Quantity, setXx99mk1Quantity] = useState(0);
   const[xx59Quantity, setXx59Quantity] = useState(0);
   const[zx9Quantity, setZx9Quantity] = useState(0);
@@ -79,6 +89,22 @@ function App() {
     setTotal((xx99mk2Quantity * cartItems[0].price) + (xx99mk1Quantity * cartItems[1].price) + (xx59Quantity * cartItems[2].price) + (zx9Quantity * cartItems[3].price) + (zx7Quantity * cartItems[4].price) + (yx1Quantity * cartItems[5].price));
     }
   }, [xx99mk2Quantity, xx99mk1Quantity, xx59Quantity, zx9Quantity, zx7Quantity, yx1Quantity]);
+
+  function updateBackEnd() {
+    const itemNameToUpdate = 'XX99 MARK II Headphones';
+    let newQuantity = xx99mk1Quantity;
+    
+    axios
+      .put(`/api/cart/${itemNameToUpdate}`, { newQuantity })
+      .then((response) => {
+        console.log('Item quantity updated successfully:', response.data);
+        // You can update the UI or display a message indicating the success here
+      })
+      .catch((error) => {
+        console.error('Error updating item quantity:', error);
+        // Handle the error or display an error message here
+      });
+  }
 
   return (
     <>
@@ -113,15 +139,15 @@ function App() {
                                         () => {
                                               console.log("click");
                                               if (xx99mk2Quantity > 0) {
-                                                setXx99mk2Quantity(xx99mk2Quantity - 1)
+                                                dispatch(setXx99MiiQuantity(xx99mk2Quantity - 1))
                                               } else{
-                                                setXx99mk2Quantity(0);
+                                                dispatch(setXx99MiiQuantity(0));
                                               }
                                             }
                                         }
                                         >-</button>
                       <p>{xx99mk2Quantity}</p>
-                      <button onClick={() => setXx99mk2Quantity(xx99mk2Quantity + 1)}>+</button>
+                      <button onClick={() => dispatch(setXx99MiiQuantity(xx99mk2Quantity + 1))}>+</button>
                     </div>
                   </div>
                 ):null
@@ -304,7 +330,7 @@ function App() {
             <p className="checkOutBox__total-text-box-price">${total.toLocaleString()}</p>
           </div>
 
-          <button className="checkOutBox__checkout-button" onClick={() => {navigate('/checkout'); cartClick();}}>CHECKOUT</button>
+          <button className="checkOutBox__checkout-button" onClick={() => {navigate('/checkout'); toggleCartDisplay(); updateBackEnd()}}>CHECKOUT</button>
         </div>
 
         <Routes>
