@@ -10,7 +10,7 @@ import { setXx99MiQuantity, selectXx99MiQuantity} from "./reduxItems";
 
 function Xx99i() {
 
-    const newQuantity = useSelector(selectXx99MiQuantity);
+    const newQuantity = useSelector(selectXx99MiQuantity)
     const dispatch = useDispatch();
 
 

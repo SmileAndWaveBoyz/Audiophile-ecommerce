@@ -16,7 +16,20 @@ import { useNavigate  } from 'react-router-dom';
 
 import axios from 'axios';
 import { useSelector, useDispatch } from "react-redux";
-import { setXx99MiiQuantity, selectXx99MiiQuantity, setXx99MiQuantity, selectXx99MiQuantity} from "./pages/reduxItems";
+import {
+  setXx99MiiQuantity,
+  setXx99MiQuantity,
+  setXx59Quantity,
+  setZx9Quantity,
+  setZx7Quantity,
+  setYx1Quantity,
+  selectXx99MiiQuantity,
+  selectXx99MiQuantity,
+  selectXx59Quantity,
+  selectZx9Quantity,
+  selectZx7Quantity,
+  selectYx1Quantity,
+} from "./pages/reduxItems";
 
 function App() {
   const [cartDisplayBox, setCartDisplayBox] = useState("none");
@@ -56,7 +69,7 @@ function App() {
     if(cartItems.length > 0){
       dispatch(setXx99MiiQuantity(cartItems[0].quantity))
       dispatch(setXx99MiQuantity(cartItems[1].quantity))
-      setXx59Quantity(cartItems[2].quantity)
+      dispatch(setXx59Quantity(cartItems[2].quantity))
       setZx9Quantity(cartItems[3].quantity)
       setZx7Quantity(cartItems[4].quantity)
       setYx1Quantity(cartItems[5].quantity)
@@ -71,9 +84,9 @@ function App() {
   const dispatch = useDispatch();
   const xx99mk2Quantity = useSelector(selectXx99MiiQuantity);
   const xx99mk1Quantity = useSelector(selectXx99MiQuantity);
-  
-  const[xx59Quantity, setXx59Quantity] = useState(0);
-  const[zx9Quantity, setZx9Quantity] = useState(0);
+  const xx59Quantity = useSelector(selectXx59Quantity)
+  const zx9Quantity = useSelector(selectZx9Quantity)
+
   const[zx7Quantity, setZx7Quantity] = useState(0);
   const[yx1Quantity, setYx1Quantity] = useState(0);
 
@@ -184,15 +197,15 @@ function App() {
                                         () => {
                                               console.log("click");
                                               if (xx59Quantity > 0) {
-                                                setXx59Quantity(xx59Quantity - 1)
+                                                dispatch(setXx59Quantity(xx59Quantity - 1))
                                               } else{
-                                                setXx59Quantity(0);
+                                                dispatch(setXx59Quantity(0))
                                               }
                                             }
                                         }
                                         >-</button>
                       <p>{xx59Quantity}</p>
-                      <button onClick={() => setXx59Quantity(xx59Quantity + 1)}>+</button>
+                      <button onClick={() => dispatch(setXx59Quantity(xx59Quantity + 1))}>+</button>
                     </div>
                   </div>
                 ):null
@@ -217,15 +230,15 @@ function App() {
                                         () => {
                                               console.log("click");
                                               if (zx9Quantity > 0) {
-                                                setZx9Quantity(zx9Quantity - 1)
+                                                dispatch(setZx9Quantity(zx9Quantity - 1))
                                               } else{
-                                                setZx9Quantity(0);
+                                                dispatch(setZx9Quantity(0))
                                               }
                                             }
                                         }
                                         >-</button>
                       <p>{zx9Quantity}</p>
-                      <button onClick={() => setZx9Quantity(zx9Quantity + 1)}>+</button>
+                      <button onClick={() => dispatch(setZx9Quantity(zx9Quantity + 1))}>+</button>
                     </div>
                   </div>
                 ):null
