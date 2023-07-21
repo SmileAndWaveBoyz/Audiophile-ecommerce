@@ -1,9 +1,6 @@
-import { configureStore } from '@reduxjs/toolkit'
-import xx99miiQuantityReducer from '../pages/reduxItems';
+import { configureStore } from "@reduxjs/toolkit";
+import reducers from "../pages/reduxItems"; // Import the combined reducers
 
 export const store = configureStore({
-  reducer: {
-    xx99miiQuantity: xx99miiQuantityReducer,
-  },
-})
-
+  reducer: reducers,
+});
