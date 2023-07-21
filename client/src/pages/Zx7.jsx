@@ -2,12 +2,16 @@ import { Footer } from '../components/Footer';
 import Gear from "../components/Gear";
 import Links from '../components/Links';
 import React, {useState} from 'react';
-import axios from 'axios';
 import {Link} from 'react-router-dom';
+
+import axios from 'axios';
+import { useSelector, useDispatch } from "react-redux";
+import { setZx7Quantity, selectZx7Quantity} from "./reduxItems";
 
 function Zx7() {
 
-    const [newQuantity, setNewQuantity] = useState(0);
+    const newQuantity = useSelector(selectZx7Quantity)
+    const dispatch = useDispatch();
 
     const addToCart = () => {
         const itemNameToUpdate = 'ZX7 Speaker';
@@ -45,14 +49,17 @@ function Zx7() {
                                 <div className="productPage__quantity-buttons">
                                     <button className='productPage__quantity-buttons-one' onClick={
                                         () => {
-                                            if (newQuantity > 0) {
-                                                setNewQuantity(newQuantity - 1)}
-                                            }
+                                                if (newQuantity > 0) {
+                                                    dispatch(setZx7Quantity(newQuantity - 1))
+                                                } else{
+                                                    dispatch(setZx7Quantity(0))
+                                                }
+                                            } 
                                             
                                         }
                                         >-</button>
                                     <p className='productPage__quantity-buttons-number'>{newQuantity}</p>
-                                    <button className='productPage__quantity-buttons-two' onClick={() => setNewQuantity(newQuantity + 1)}>+</button>
+                                    <button className='productPage__quantity-buttons-two' onClick={() => dispatch(setZx7Quantity(newQuantity + 1))}>+</button>
                                 </div>
 
                                 <button className='productPage__cart-button' onClick={() => addToCart()}>ADD TO CART</button>

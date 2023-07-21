@@ -70,9 +70,10 @@ function App() {
       dispatch(setXx99MiiQuantity(cartItems[0].quantity))
       dispatch(setXx99MiQuantity(cartItems[1].quantity))
       dispatch(setXx59Quantity(cartItems[2].quantity))
-      setZx9Quantity(cartItems[3].quantity)
-      setZx7Quantity(cartItems[4].quantity)
-      setYx1Quantity(cartItems[5].quantity)
+
+      dispatch(setZx9Quantity(cartItems[3].quantity))
+      dispatch(setZx7Quantity(cartItems[4].quantity))
+      dispatch(setYx1Quantity(cartItems[5].quantity))
 
       setTotal((cartItems[0].quantity * cartItems[0].price) + (cartItems[1].quantity * cartItems[1].price) + (cartItems[2].quantity * cartItems[2].price) + (cartItems[3].quantity * cartItems[3].price) + (cartItems[4].quantity * cartItems[4].price) + (cartItems[5].quantity * cartItems[5].price));
     }
@@ -82,13 +83,12 @@ function App() {
   const navigate = useNavigate();
 
   const dispatch = useDispatch();
-  const xx99mk2Quantity = useSelector(selectXx99MiiQuantity);
-  const xx99mk1Quantity = useSelector(selectXx99MiQuantity);
+  const xx99mk2Quantity = useSelector(selectXx99MiiQuantity)
+  const xx99mk1Quantity = useSelector(selectXx99MiQuantity)
   const xx59Quantity = useSelector(selectXx59Quantity)
   const zx9Quantity = useSelector(selectZx9Quantity)
-
-  const[zx7Quantity, setZx7Quantity] = useState(0);
-  const[yx1Quantity, setYx1Quantity] = useState(0);
+  const zx7Quantity = useSelector(selectZx7Quantity)
+  const yx1Quantity = useSelector(selectYx1Quantity)
 
   const[total, setTotal] = useState(0);
 
@@ -263,15 +263,15 @@ function App() {
                                         () => {
                                               console.log("click");
                                               if (zx7Quantity > 0) {
-                                                setZx7Quantity(zx9Quantity - 1)
+                                                dispatch(setZx7Quantity(zx9Quantity - 1))
                                               } else{
-                                                setZx7Quantity(0);
+                                                dispatch(setZx7Quantity(0))
                                               }
                                             }
                                         }
                                         >-</button>
                       <p>{zx7Quantity}</p>
-                      <button onClick={() => setZx7Quantity(zx7Quantity + 1)}>+</button>
+                      <button onClick={() => dispatch(setZx7Quantity(zx7Quantity + 1))}>+</button>
                     </div>
                   </div>
                 ):null
@@ -296,15 +296,15 @@ function App() {
                                         () => {
                                               console.log("click");
                                               if (yx1Quantity > 0) {
-                                                setYx1Quantity(yx1Quantity - 1)
+                                                dispatch(setYx1Quantity(yx1Quantity - 1))
                                               } else{
-                                                setYx1Quantity(0);
+                                                dispatch(setYx1Quantity(0))
                                               }
                                             }
                                         }
                                         >-</button>
                       <p>{yx1Quantity}</p>
-                      <button onClick={() => setYx1Quantity(yx1Quantity + 1)}>+</button>
+                      <button onClick={() => dispatch(setYx1Quantity(yx1Quantity + 1))}>+</button>
                     </div>
                   </div>
                 ):null

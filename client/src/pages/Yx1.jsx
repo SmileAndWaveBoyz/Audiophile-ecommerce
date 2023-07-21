@@ -2,12 +2,16 @@ import { Footer } from '../components/Footer';
 import Gear from "../components/Gear";
 import Links from '../components/Links';
 import React, {useState} from 'react';
-import axios from 'axios';
 import {Link} from 'react-router-dom';
+
+import axios from 'axios';
+import { useSelector, useDispatch } from "react-redux";
+import { setYx1Quantity, selectYx1Quantity} from "./reduxItems";
 
 function Yx1() {
 
-    const [newQuantity, setNewQuantity] = useState(0);
+    const newQuantity = useSelector(selectYx1Quantity)
+    const dispatch = useDispatch();
 
     const addToCart = () => {
         // Replace 'XX99 MARK II Headphones' with the item name you want to update
@@ -48,13 +52,13 @@ function Yx1() {
                                     <button className='productPage__quantity-buttons-one' onClick={
                                         () => {
                                             if (newQuantity > 0) {
-                                                setNewQuantity(newQuantity - 1)}
+                                                dispatch(setYx1Quantity(newQuantity - 1))}
                                             }
                                             
                                         }
                                         >-</button>
                                     <p className='productPage__quantity-buttons-number'>{newQuantity}</p>
-                                    <button className='productPage__quantity-buttons-two' onClick={() => setNewQuantity(newQuantity + 1)}>+</button>
+                                    <button className='productPage__quantity-buttons-two' onClick={() => dispatch(setYx1Quantity(newQuantity + 1))}>+</button>
                                 </div>
 
                                 <button className='productPage__cart-button' onClick={() => addToCart()}>ADD TO CART</button>
