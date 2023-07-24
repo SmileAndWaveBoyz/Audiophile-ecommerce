@@ -263,7 +263,7 @@ function App() {
                                         () => {
                                               console.log("click");
                                               if (zx7Quantity > 0) {
-                                                dispatch(setZx7Quantity(zx9Quantity - 1))
+                                                dispatch(setZx7Quantity(zx7Quantity - 1))
                                               } else{
                                                 dispatch(setZx7Quantity(0))
                                               }
