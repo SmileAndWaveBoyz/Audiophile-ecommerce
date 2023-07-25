@@ -123,7 +123,7 @@ function App() {
         <div className="fadeDiv" style={{opacity: cartDisplayFadeOpacity, zIndex: cartDisplayFadeZindex}}></div>
         <div className="checkOutBox" style={{display: cartDisplayBox}}>
           <div className="checkOutBox__heading-box">
-            <h2 className="checkOutBox__heading-box-heading">CART (3)</h2>
+            <h2 className="checkOutBox__heading-box-heading">CART ({xx99mk2Quantity + xx99mk1Quantity + xx59Quantity + zx9Quantity + zx7Quantity + yx1Quantity})</h2>
             <button className="checkOutBox__heading-box-remove-button">Remove all</button>
           </div>
           
