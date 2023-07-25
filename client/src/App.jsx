@@ -117,6 +117,15 @@ function App() {
     }
   }, [xx99mk2Quantity, xx99mk1Quantity, xx59Quantity, zx9Quantity, zx7Quantity, yx1Quantity]);
 
+  function removeAllItems() {
+    dispatch(setXx99MiiQuantity(0))
+    dispatch(setXx99MiQuantity(0))
+    dispatch(setXx59Quantity(0))
+    dispatch(setZx9Quantity(0))
+    dispatch(setZx7Quantity(0))
+    dispatch(setYx1Quantity(0))
+  }
+
   return (
     <>
         <NavBar onCartClick={cartClick}/>
@@ -124,7 +133,7 @@ function App() {
         <div className="checkOutBox" style={{display: cartDisplayBox}}>
           <div className="checkOutBox__heading-box">
             <h2 className="checkOutBox__heading-box-heading">CART ({xx99mk2Quantity + xx99mk1Quantity + xx59Quantity + zx9Quantity + zx7Quantity + yx1Quantity})</h2>
-            <button className="checkOutBox__heading-box-remove-button">Remove all</button>
+            <button className="checkOutBox__heading-box-remove-button" onClick={removeAllItems}>Remove all</button>
           </div>
           
           {
