@@ -278,7 +278,7 @@ function App() {
 
                   <div className="checkOutBox__item-container">
                     <div className="checkOutBox__item-container-image-box">
-                      <img src="../assets/product-zx7-speaker/mobile/zx7.png" alt="ZX9 Speakers"/>
+                      <img src="../assets/product-zx7-speaker/mobile/zx7.png" alt="ZX7 Speakers"/>
                     </div>
     
                     <div className="checkOutBox__item-container-text-box">
@@ -340,7 +340,6 @@ function App() {
             </div>
 
             ) : (
-              // Render a loading message or a placeholder here
               <p>Loading...</p>
             )
           }
@@ -367,7 +366,7 @@ function App() {
           <Route path='/earphones' element={<Earphones/>}/>          
           <Route path='/earphones/yx1' element={<Yx1/>}/>          
 
-          <Route path='/checkout' element={<Checkout/>}/>  
+          <Route path='/checkout' element={<Checkout key={0} cartItemsAll = {cartItems} total={total}/>}/>  
         </Routes>
 
 

@@ -4,11 +4,13 @@ import Links from '../components/Links';
 import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
 
-function Checkout() {
+function Checkout(props) {
 
     const [eMoney, setEMoney] = useState(true);
     const [eMoneyButton, setEMoneyButton] = useState(null);
     const [cashButton, setCashButton] = useState(null);
+
+    console.log(props.cartItemsAll);
 
 
     return (  
@@ -121,64 +123,148 @@ function Checkout() {
 
                 <div className="summary">
                     <h2 className='summary__heading'>summary</h2>
+                        {
+                            
+                            (props.cartItemsAll.length > 0) ?
+                            (
+                            <div>
 
-                        <div className="checkOutBox__item-container">
-                            <div className="checkOutBox__item-container-image-box">
-                                <img src="../assets/product-xx99-mark-two-headphones/mobile/mk2.png" alt="XX99 MK 2 headphones"/>
+                                {
+                                    (props.cartItemsAll[0].quantity > 0) ?
+                                    (
+                                        <div className="checkOutBox__item-container">
+                                            <div className="checkOutBox__item-container-image-box">
+                                                <img src="../assets/product-xx99-mark-two-headphones/mobile/mk2.png" alt="XX99 MK 2 headphones"/>
+                                            </div>
+                
+                                            <div className="checkOutBox__item-container-text-box">
+                                                <p className="checkOutBox__item-container-title">XX99 MK II</p>
+                                                <p className="checkOutBox__item-container-price">${props.cartItemsAll[0].price.toLocaleString()}</p>
+                                            </div>
+                
+                                            <p className='summary__item-count'>{props.cartItemsAll[0].quantity}px</p>
+                                        </div>
+                                    ): null
+                                }
+
+                                {
+                                    (props.cartItemsAll[1].quantity > 0) ?
+                                    (
+                                        <div className="checkOutBox__item-container">
+                                            <div className="checkOutBox__item-container-image-box">
+                                                <img src="../assets/product-xx99-mark-two-headphones/mobile/mk1.png" alt="XX99 MK 1 headphones"/>
+                                            </div>
+                
+                                            <div className="checkOutBox__item-container-text-box">
+                                                <p className="checkOutBox__item-container-title">XX99 MK I</p>
+                                                <p className="checkOutBox__item-container-price">${props.cartItemsAll[1].price.toLocaleString()}</p>
+                                            </div>
+                
+                                            <p className='summary__item-count'>{props.cartItemsAll[1].quantity}px</p>
+                                        </div>
+                                    ): null
+                                }
+
+                                {
+                                    (props.cartItemsAll[2].quantity > 0) ?
+                                    (
+                                        <div className="checkOutBox__item-container">
+                                            <div className="checkOutBox__item-container-image-box">
+                                                <img src="../assets/product-xx99-mark-two-headphones/mobile/xx59.png" alt="XX59 headphones"/>
+                                            </div>
+                
+                                            <div className="checkOutBox__item-container-text-box">
+                                                <p className="checkOutBox__item-container-title">XX59</p>
+                                                <p className="checkOutBox__item-container-price">${props.cartItemsAll[2].price.toLocaleString()}</p>
+                                            </div>
+                
+                                            <p className='summary__item-count'>{props.cartItemsAll[2].quantity}px</p>
+                                        </div>
+                                    ): null
+                                }
+
+                                {
+                                    (props.cartItemsAll[3].quantity > 0) ?
+                                    (
+                                        <div className="checkOutBox__item-container">
+                                            <div className="checkOutBox__item-container-image-box">
+                                                <img src="../assets/product-zx9-speaker/mobile/zx9.png" alt="ZX9 Speakers"/>
+                                            </div>
+                
+                                            <div className="checkOutBox__item-container-text-box">
+                                                <p className="checkOutBox__item-container-title">ZX9</p>
+                                                <p className="checkOutBox__item-container-price">${props.cartItemsAll[3].price.toLocaleString()}</p>
+                                            </div>
+                
+                                            <p className='summary__item-count'>{props.cartItemsAll[3].quantity}px</p>
+                                        </div>
+                                    ): null
+                                }
+
+                                {
+                                    (props.cartItemsAll[4].quantity > 0) ?
+                                    (
+                                        <div className="checkOutBox__item-container">
+                                            <div className="checkOutBox__item-container-image-box">
+                                                <img src="../assets/product-zx7-speaker/mobile/zx7.png" alt="ZX7 Speakers"/>
+                                            </div>
+                
+                                            <div className="checkOutBox__item-container-text-box">
+                                                <p className="checkOutBox__item-container-title">ZX7</p>
+                                                <p className="checkOutBox__item-container-price">${props.cartItemsAll[4].price.toLocaleString()}</p>
+                                            </div>
+                
+                                            <p className='summary__item-count'>{props.cartItemsAll[4].quantity}px</p>
+                                        </div>
+                                    ): null
+                                }
+
+                                {
+                                    (props.cartItemsAll[5].quantity > 0) ?
+                                    (
+                                        <div className="checkOutBox__item-container">
+                                            <div className="checkOutBox__item-container-image-box">
+                                                <img src="../assets/product-yx1-earphones/mobile/yx1.png" alt="YX1 Earphones"/>
+                                            </div>
+                
+                                            <div className="checkOutBox__item-container-text-box">
+                                                <p className="checkOutBox__item-container-title">YX1</p>
+                                                <p className="checkOutBox__item-container-price">${props.cartItemsAll[5].price.toLocaleString()}</p>
+                                            </div>
+                
+                                            <p className='summary__item-count'>{props.cartItemsAll[5].quantity}px</p>
+                                        </div>
+                                    ): null
+                                }
+
+
                             </div>
 
-                            <div className="checkOutBox__item-container-text-box">
-                                <p className="checkOutBox__item-container-title">XX99 MK II</p>
-                                <p className="checkOutBox__item-container-price">$2,999</p>
-                            </div>
+                            ) : (
+                                <p>Loading...</p>
+                              )
+                              
 
-                            <p className='summary__item-count'>1px</p>
-                        </div>
-
-                        <div className="checkOutBox__item-container">
-                            <div className="checkOutBox__item-container-image-box">
-                                <img src="../assets/product-xx99-mark-two-headphones/mobile/mk2.png" alt="XX99 MK 2 headphones"/>
-                            </div>
-
-                            <div className="checkOutBox__item-container-text-box">
-                                <p className="checkOutBox__item-container-title">XX99 MK II</p>
-                                <p className="checkOutBox__item-container-price">$2,999</p>
-                            </div>
-
-                            <p className='summary__item-count'>1px</p>
-                        </div>
-
-                        <div className="checkOutBox__item-container">
-                            <div className="checkOutBox__item-container-image-box">
-                                <img src="../assets/product-xx99-mark-two-headphones/mobile/mk2.png" alt="XX99 MK 2 headphones"/>
-                            </div>
-
-                            <div className="checkOutBox__item-container-text-box last">
-                                <p className="checkOutBox__item-container-title">XX99 MK II</p>
-                                <p className="checkOutBox__item-container-price">$2,999</p>
-                            </div>
-
-                            <p className='summary__item-count'>1px</p>
-                        </div>
+                        }
 
                         <div className="summary__money-container first">
                             <p className='summary__money-container-word'>TOTAL</p>
-                            <p className='summary__money-container-amount'>$ 5,396</p>
+                            <p className='summary__money-container-amount'>$ {props.total.toLocaleString()}</p>
                         </div>
 
                         <div className="summary__money-container ">
-                            <p className='summary__money-container-word'>TOTAL</p>
-                            <p className='summary__money-container-amount'>$ 5,396</p>
+                            <p className='summary__money-container-word'>SHIPPING</p>
+                            <p className='summary__money-container-amount'>$ 50</p>
                         </div>
 
                         <div className="summary__money-container ">
-                            <p className='summary__money-container-word'>TOTAL</p>
-                            <p className='summary__money-container-amount'>$ 5,396</p>
+                            <p className='summary__money-container-word'>VAT (INCLUDED)</p>
+                            <p className='summary__money-container-amount'>$ {(props.total * 0.2).toLocaleString()}</p>
                         </div>
 
                         <div className="summary__money-container">
                             <p className='summary__money-container-word'>GRAND TOTAL</p>
-                            <p className='summary__money-container-amount orange'>$ 5,446</p>
+                            <p className='summary__money-container-amount orange'>$ {(props.total + 50).toLocaleString()}</p>
                         </div>
 
                         <button type='submit' name='pay' className='summary__pay-button'>CONTINUE & PAY</button>
