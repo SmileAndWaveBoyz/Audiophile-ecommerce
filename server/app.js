@@ -30,7 +30,7 @@ app.get('/api/cart', async (req, res) => { // This poplates the items variable w
         { new: true }
         
       );
-      console.log("Added");
+      console.log("Updated " + itemName);
   
       if (!item) {
         console.log('Item not found');
