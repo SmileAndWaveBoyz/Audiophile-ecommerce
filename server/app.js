@@ -8,11 +8,11 @@ const Cart = mongoose.model('Item', { name: String, quantity: Number, price: Num
 
 app.use(express.json());
 
-app.get('/api/cart', async (req, res) => {
+app.get('/api/cart', async (req, res) => { // This poplates the items variable with the Items MongoDB database
     try {
       const items = await Cart.find({});
       res.json(items);
-      console.log(items);
+      // console.log(items);
     } catch (err) {
       res.status(500).json({ error: 'Internal Server Error' });
     }

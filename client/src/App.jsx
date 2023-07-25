@@ -37,40 +37,23 @@ function App() {
   const [cartDisplayFadeZindex, setCartDisplayFadeZindex] = useState(-1);
   
   const [cartItems, setCartItems] = useState([]);
-  
 
-  useEffect(() => {
-    refreshCart();
-  }, []);
-
-  function refreshCart() {
+  function refreshCart() { // This pulls the cart items from the backend and puts them in cartItems
       fetch('/api/cart')
         .then((response) => response.json())
         .then((data) => setCartItems(data))
         .catch((error) => console.error('Error fetching cart items:', error));   
   }
 
-  function cartClick() {
-    if (cartDisplayBox === "none") {
-      setCartDisplayBox("block")
-      setCartDisplayFadeOpacity(0.5)
-      setCartDisplayFadeZindex(1)
-    } else{
-      setCartDisplayBox("none")
-      setCartDisplayFadeOpacity(0.0)
-      setCartDisplayFadeZindex(-1)
-    }
-
-    refreshCart();    
-  }
-
   useEffect(() => {
-    console.log(cartItems[0]); // This will show the updated value of cartItems
-    if(cartItems.length > 0){
+    refreshCart();
+  }, []);
+
+  useEffect(() => { // This populates new variables from cartItems into front end redux variables 
+    if(cartItems.length > 0){ 
       dispatch(setXx99MiiQuantity(cartItems[0].quantity))
       dispatch(setXx99MiQuantity(cartItems[1].quantity))
       dispatch(setXx59Quantity(cartItems[2].quantity))
-
       dispatch(setZx9Quantity(cartItems[3].quantity))
       dispatch(setZx7Quantity(cartItems[4].quantity))
       dispatch(setYx1Quantity(cartItems[5].quantity))
@@ -79,9 +62,22 @@ function App() {
     }
   }, [cartItems]);
 
-  const location = useLocation();
-  const navigate = useNavigate();
+  function cartClick() { // This makes the cart appear / disappear when clicked, it also pulls the cart data from the back end with refreshCart. 
+    if (cartDisplayBox === "none") {
+      setCartDisplayBox("block")
+      setCartDisplayFadeOpacity(0.5)
+      setCartDisplayFadeZindex(1)
+    } else{
+      setCartDisplayBox("none")
+      setCartDisplayFadeOpacity(0.0)
+      setCartDisplayFadeZindex(-1)
+      updateBackEnd()
+    }
 
+    refreshCart();    
+  }
+
+  //This popluates new front end variables from Redux
   const dispatch = useDispatch();
   const xx99mk2Quantity = useSelector(selectXx99MiiQuantity)
   const xx99mk1Quantity = useSelector(selectXx99MiQuantity)
@@ -90,9 +86,27 @@ function App() {
   const zx7Quantity = useSelector(selectZx7Quantity)
   const yx1Quantity = useSelector(selectYx1Quantity)
 
+
+  function updateBackEnd() {
+    const itemNameToUpdate = 'YX1 Wireless Earphones';
+    const newQuantity = yx1Quantity;
+    
+    axios
+      .put(`/api/cart/${itemNameToUpdate}`, { newQuantity })
+      .then((response) => {
+        console.log('Item quantity updated successfully:', response.data);
+      })
+      .catch((error) => {
+        console.error('Error updating item quantity:', error);
+      });
+  }
+
+
+  const navigate = useNavigate();
+
   const[total, setTotal] = useState(0);
 
-  useEffect(() => {
+  useEffect(() => { // This just re-calculates the total price every time a front end item quantity changes
     if(cartItems.length > 0){
     setTotal((xx99mk2Quantity * cartItems[0].price) + (xx99mk1Quantity * cartItems[1].price) + (xx59Quantity * cartItems[2].price) + (zx9Quantity * cartItems[3].price) + (zx7Quantity * cartItems[4].price) + (yx1Quantity * cartItems[5].price));
     }

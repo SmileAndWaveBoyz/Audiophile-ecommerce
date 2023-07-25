@@ -13,19 +13,16 @@ function Yx1() {
     const newQuantity = useSelector(selectYx1Quantity)
     const dispatch = useDispatch();
 
-    const addToCart = () => {
-        // Replace 'XX99 MARK II Headphones' with the item name you want to update
+    const addToCart = () => { // This updates the back end 
         const itemNameToUpdate = 'YX1 Wireless Earphones';
     
         axios
           .put(`/api/cart/${itemNameToUpdate}`, { newQuantity })
           .then((response) => {
             console.log('Item quantity updated successfully:', response.data);
-            // You can update the UI or display a message indicating the success here
           })
           .catch((error) => {
             console.error('Error updating item quantity:', error);
-            // Handle the error or display an error message here
           });
     };
 
