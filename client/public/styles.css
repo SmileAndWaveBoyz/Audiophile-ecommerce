@@ -1419,7 +1419,7 @@ a{
 
 @media screen and (min-width: 1024px) {
     .showBlock{
-        width: 144rem;
+        width: 100%;
         height: 56rem;
         margin-bottom: 16rem;
         flex-direction: row;
