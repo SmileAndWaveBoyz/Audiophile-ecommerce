@@ -88,17 +88,22 @@ function App() {
 
 
   function updateBackEnd() {
-    const itemNameToUpdate = 'YX1 Wireless Earphones';
-    const newQuantity = yx1Quantity;
-    
-    axios
-      .put(`/api/cart/${itemNameToUpdate}`, { newQuantity })
-      .then((response) => {
-        console.log('Item quantity updated successfully:', response.data);
-      })
-      .catch((error) => {
-        console.error('Error updating item quantity:', error);
-      });
+    let itemNameToUpdate = ["XX99 MARK II Headphones", "XX99 MARK I Headphones", "XX59 Headphones", "ZX9 Speaker", "ZX7 Speaker", "YX1 Wireless Earphones"];
+    let itemQuantityArray = [xx99mk2Quantity, xx99mk1Quantity, xx59Quantity, zx9Quantity, zx7Quantity, yx1Quantity]
+
+    for (let i = 0; i < itemQuantityArray.length; i++) {
+      let newQuantity = itemQuantityArray[i];
+      axios
+        .put(`/api/cart/${itemNameToUpdate[i]}`, { newQuantity })
+        .then((response) => {
+          console.log('Item quantity updated successfully:', response.data);
+        })
+        .catch((error) => {
+          console.error('Error updating item quantity:', error);
+        });
+    }
+
+
   }
 
 
