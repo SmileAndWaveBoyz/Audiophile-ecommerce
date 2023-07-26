@@ -10,11 +10,14 @@ function Checkout(props) {
     const [eMoneyButton, setEMoneyButton] = useState(null);
     const [cashButton, setCashButton] = useState(null);
 
-    console.log(props.cartItemsAll);
+    function continueAndPayButtonClick() {
+        
+    }
 
 
     return (  
         <div className='checkOutBackground'>
+        <div className="checkOutMask"></div>
         <div className="productPage-blockContainer">
             <Link className='goBackLink' to="/">Go Back</Link>
 
@@ -267,9 +270,40 @@ function Checkout(props) {
                             <p className='summary__money-container-amount orange'>$ {(props.total + 50).toLocaleString()}</p>
                         </div>
 
-                        <button type='submit' name='pay' className='summary__pay-button'>CONTINUE & PAY</button>
+                        <button type='submit' name='pay' className='summary__pay-button' onClick={(e)=> {e.preventDefault(); continueAndPayButtonClick();}}>CONTINUE & PAY</button>
                 </div>
             </form>
+        </div>
+
+        <div className="thankYouBlock">
+            <svg className='cricleTick' xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
+                <circle cx="32" cy="32" r="32" fill="#D87D4A"/>
+                <path d="M20.7539 33.3328L27.5054 40.0843L43.3085 24.2812" stroke="white" stroke-width="4"/>
+            </svg>
+            
+            <h1 className='thankYouHeading'>THANK YOU <br></br> FOR YOUR ORDER</h1>
+            <p className='thankYouBlock-text'>You will receive an email confirmation shortly.</p>
+            <div className="thankYouBlock-info-block">
+                <div className="thankYouBlock-info-block-product-block">
+                    <div className="thankYouBlock-info-block-product-block-item-box">
+                        <div className="thankYouBlock-product-image-mask">
+                            <img className='thankYouBlock-product-image' src="./assets/product-xx99-mark-two-headphones/mobile/mk2.png" alt="" />
+                        </div>
+                        <div className="checkOutBox__item-container-text-box">
+                            <p className="checkOutBox__item-container-title">XX99 MK II</p>
+                            <p className="checkOutBox__item-container-price">$ 2,999</p>
+                        </div>
+                        <p className='summary__item-count'>1px</p>
+                    </div>
+                    <p className='thankYouBlock-info-block-product-block-other-items-text'>and 2 other item(s)</p>
+                </div>
+
+                <div className="thankYouBlock-info-block-total-block">
+                    <h2 className='thankYouBlock-info-block-total-block-total-heading'>GRAND TOTAL</h2>
+                    <p className='thankYouBlock-info-block-total-block-total-price'>$ 5,446</p>
+                </div>
+
+            </div>
         </div>
 
         <Footer/>

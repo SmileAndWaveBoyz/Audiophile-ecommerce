@@ -3078,3 +3078,157 @@ label{
         background: rgb(231, 164, 126);
     }
 }
+
+/*  Thank you for your order */
+.checkOutMask{
+    background-color: rgb(0, 0, 0, 0.5);
+    height: 220vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.thankYouBlock{
+    width: 33.75rem;
+    height: 36.3125rem;
+    border-radius: 0.5rem;
+    background: #FFF;
+    position: absolute;
+    top: 10rem;
+    left: 50%;
+    z-index: 2;
+    transform: translate(-50%);
+    padding: 30px 30px 30px 30px;
+}
+
+.thankYouHeading{
+    color: #000;
+    font-family: Manrope;
+    text-transform: uppercase;
+}
+
+.thankYouBlock-text{
+    color: #000;
+    font-family: Manrope; 
+    opacity: 0.5;
+}
+
+.thankYouBlock-info-block{
+
+}
+
+.thankYouBlock-info-block-product-block{
+    border-radius: 0.8rem;
+    background: #F1F1F1;
+    height: 100%;
+    padding: 24px;
+}
+
+@media screen and (min-width: 1024px) {
+    .checkOutMask{
+        height: 220vh;
+    }
+
+    .thankYouBlock{
+        width: 54rem;
+        height: 58.1rem;
+    }
+
+    .cricleTick{
+        width: 64px;
+        height: 64px;
+        flex-shrink: 0;
+        margin-bottom: 3.3rem;
+    }
+
+    .thankYouHeading{
+        font-size: 3.2rem;
+        line-height: 36px; /* 112.5% */
+        letter-spacing: 1.143px;
+        margin-bottom: 2.4rem;
+    }
+
+    .thankYouBlock-text{
+        font-size: 1.5rem;
+        line-height: 2.5rem; 
+        margin-bottom: 3.3rem;
+    }
+
+    .thankYouBlock-info-block{
+        height: 14rem;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .thankYouBlock-info-block-product-block{
+        width: 44.4rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .thankYouBlock-info-block-total-block{
+        height: 14rem;
+        border-radius: 0rem 0.8rem 0.8rem 0rem;
+        background: #000;
+        width: 19.8rem;
+        padding-left: 32px;
+        padding-top: 41px;
+    }
+
+    .thankYouBlock-info-block-product-block-item-box{
+        width: 100%;
+        height: 6.3rem;
+        border-bottom: 1px solid rgb(0, 0, 0, 0.08);
+        padding-bottom: 1.2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .thankYouBlock-product-image-mask{
+        width: 5rem;
+        height: 5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 27px;
+    }
+
+    .thankYouBlock-product-image{
+        width: 2.8rem;
+        height: 3.2rem;
+    }
+
+    .thankYouBlock-info-block-product-block-other-items-text{
+        color: #000;
+        font-family: Manrope;
+        font-size: 1.2rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: -0.0214rem;
+        opacity: 0.5;
+        margin-top: 1.2rem;
+    }
+
+    .thankYouBlock-info-block-total-block-total-heading{
+        color: #FFF;
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 2.5rem; /* 166.667% */
+        opacity: 0.5;
+    }
+
+    .thankYouBlock-info-block-total-block-total-price{
+        color: #FFF;
+        font-size: 1.8rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-transform: uppercase;
+    }
+}
