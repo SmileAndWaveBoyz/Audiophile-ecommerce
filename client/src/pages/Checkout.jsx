@@ -283,6 +283,7 @@ function Checkout(props) {
             
             <h1 className='thankYouHeading'>THANK YOU <br></br> FOR YOUR ORDER</h1>
             <p className='thankYouBlock-text'>You will receive an email confirmation shortly.</p>
+            
             <div className="thankYouBlock-info-block">
                 <div className="thankYouBlock-info-block-product-block">
                     <div className="thankYouBlock-info-block-product-block-item-box">
@@ -293,7 +294,7 @@ function Checkout(props) {
                             <p className="checkOutBox__item-container-title">XX99 MK II</p>
                             <p className="checkOutBox__item-container-price">$ 2,999</p>
                         </div>
-                        <p className='summary__item-count'>1px</p>
+                        <p className='summary__item-count thank-you'>1px</p>
                     </div>
                     <p className='thankYouBlock-info-block-product-block-other-items-text'>and 2 other item(s)</p>
                 </div>
@@ -302,8 +303,8 @@ function Checkout(props) {
                     <h2 className='thankYouBlock-info-block-total-block-total-heading'>GRAND TOTAL</h2>
                     <p className='thankYouBlock-info-block-total-block-total-price'>$ 5,446</p>
                 </div>
-
             </div>
+            <Link className='thankYouBlock-home-button' to={"/"}>BACK TO HOME</Link>
         </div>
 
         <Footer/>
