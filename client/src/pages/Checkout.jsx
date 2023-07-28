@@ -1,7 +1,7 @@
 import { Footer } from '../components/Footer';
 import Gear from "../components/Gear";
 import Links from '../components/Links';
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {Link} from 'react-router-dom';
 
 function Checkout(props) {
@@ -10,10 +10,19 @@ function Checkout(props) {
     const [eMoneyButton, setEMoneyButton] = useState(null);
     const [cashButton, setCashButton] = useState(null);
 
+    // This just adds all the items quantities into one variable
+    const[quantityOfAllItems, setQuantityOfAllItems] = useState(0);
+    useEffect(() => {
+        let totalQuantity = 0;
+        for (let i = 0; i < props.cartItemsAll.length; i++) {
+          totalQuantity += props.cartItemsAll[i].quantity;   
+        }
+        setQuantityOfAllItems(totalQuantity);
+      }, [props.cartItemsAll]);
+
     function continueAndPayButtonClick() {
         
     }
-
 
     return (  
         <div className='checkOutBackground'>
@@ -285,6 +294,8 @@ function Checkout(props) {
             <p className='thankYouBlock-text'>You will receive an email confirmation shortly.</p>
             
             <div className="thankYouBlock-info-block">
+            {
+            (props.cartItemsAll.length > 0) ?
                 <div className="thankYouBlock-info-block-product-block">
                     <div className="thankYouBlock-info-block-product-block-item-box">
                         <div className="thankYouBlock-product-image-mask">
@@ -296,12 +307,17 @@ function Checkout(props) {
                         </div>
                         <p className='summary__item-count thank-you'>1px</p>
                     </div>
-                    <p className='thankYouBlock-info-block-product-block-other-items-text'>and 2 other item(s)</p>
+                    <p className='thankYouBlock-info-block-product-block-other-items-text'>and {quantityOfAllItems - 1} other item(s)</p>
                 </div>
+                : 
+                <div className="thankYouBlock-info-block-product-block">
+                    <p className='thankYouBlock-info-block-product-block-other-items-text'>Loading...</p>
+                </div>
+            }
 
                 <div className="thankYouBlock-info-block-total-block">
                     <h2 className='thankYouBlock-info-block-total-block-total-heading'>GRAND TOTAL</h2>
-                    <p className='thankYouBlock-info-block-total-block-total-price'>$ 5,446</p>
+                    <p className='thankYouBlock-info-block-total-block-total-price'>$ {(props.total + 50).toLocaleString()}</p>
                 </div>
             </div>
             <Link className='thankYouBlock-home-button' to={"/"}>BACK TO HOME</Link>
