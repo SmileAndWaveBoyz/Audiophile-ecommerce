@@ -10,6 +10,10 @@ function Checkout(props) {
     const [eMoneyButton, setEMoneyButton] = useState(null);
     const [cashButton, setCashButton] = useState(null);
 
+    const [thankDisplayBox, setThankDisplayBox] = useState("none");
+    const [thankDisplayFadeOpacity, setThankDisplayFadeOpacity] = useState(0);
+    const [thankDisplayFadeZindex, setThankDisplayFadeZindex] = useState(-1);
+
     // This just adds all the items quantities into one variable
     const[quantityOfAllItems, setQuantityOfAllItems] = useState(0);
     useEffect(() => {
@@ -21,12 +25,20 @@ function Checkout(props) {
       }, [props.cartItemsAll]);
 
     function continueAndPayButtonClick() {
-        
+        if (thankDisplayBox === "none") {
+            setThankDisplayBox("block")
+            setThankDisplayFadeOpacity(0.5)
+            setThankDisplayFadeZindex(1)
+          } else{
+            setThankDisplayBox("none")
+            setThankDisplayFadeOpacity(0.0)
+            setThankDisplayFadeZindex(-1)
+          }
     }
 
     return (  
         <div className='checkOutBackground'>
-        <div className="checkOutMask"></div>
+        <div className="checkOutMask" style={{opacity: thankDisplayFadeOpacity, zIndex: thankDisplayFadeZindex}}></div>
         <div className="productPage-blockContainer">
             <Link className='goBackLink' to="/">Go Back</Link>
 
@@ -284,7 +296,7 @@ function Checkout(props) {
             </form>
         </div>
 
-        <div className="thankYouBlock">
+        <div className="thankYouBlock" style={{display: thankDisplayBox}}>
             <svg className='cricleTick' xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
                 <circle cx="32" cy="32" r="32" fill="#D87D4A"/>
                 <path d="M20.7539 33.3328L27.5054 40.0843L43.3085 24.2812" stroke="white" stroke-width="4"/>
@@ -320,7 +332,7 @@ function Checkout(props) {
                     <p className='thankYouBlock-info-block-total-block-total-price'>$ {(props.total + 50).toLocaleString()}</p>
                 </div>
             </div>
-            <Link className='thankYouBlock-home-button' to={"/"}>BACK TO HOME</Link>
+            <Link className='thankYouBlock-home-button' to={"/"} onClick={continueAndPayButtonClick}>BACK TO HOME</Link>
         </div>
 
         <Footer/>
