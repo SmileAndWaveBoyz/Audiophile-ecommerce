@@ -24,7 +24,9 @@ function Checkout(props) {
         setQuantityOfAllItems(totalQuantity);
       }, [props.cartItemsAll]);
 
-    function continueAndPayButtonClick() {
+    const [firstItem, setFirstItem] = useState(0);
+
+    function continueAndPayButtonClick() { //This just makes the thank you box show up
         if (thankDisplayBox === "none") {
             setThankDisplayBox("block")
             setThankDisplayFadeOpacity(0.5)
@@ -34,7 +36,17 @@ function Checkout(props) {
             setThankDisplayFadeOpacity(0.0)
             setThankDisplayFadeZindex(-1)
           }
+
+          let theFirstItem = 0;
+          for (let i = 0; i < props.cartItemsAll.length; i++) {
+            if (props.cartItemsAll[i].quantity > 0) {
+                theFirstItem = i;
+                i = props.cartItemsAll.length;
+            }
+          }
+          setFirstItem(theFirstItem);
     }
+
 
     return (  
         <div className='checkOutBackground'>
@@ -315,9 +327,9 @@ function Checkout(props) {
                         </div>
                         <div className="checkOutBox__item-container-text-box">
                             <p className="checkOutBox__item-container-title">XX99 MK II</p>
-                            <p className="checkOutBox__item-container-price">$ 2,999</p>
+                            <p className="checkOutBox__item-container-price">$ {props.cartItemsAll[firstItem].price}</p>
                         </div>
-                        <p className='summary__item-count thank-you'>1px</p>
+                        <p className='summary__item-count thank-you'>{props.cartItemsAll[firstItem].quantity}px</p>
                     </div>
                     <p className='thankYouBlock-info-block-product-block-other-items-text'>and {quantityOfAllItems - 1} other item(s)</p>
                 </div>
