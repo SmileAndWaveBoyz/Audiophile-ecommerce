@@ -1,7 +1,7 @@
 import { Footer } from '../components/Footer';
 import Gear from "../components/Gear";
 import Links from '../components/Links';
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useState, useRef} from 'react';
 import {Link} from 'react-router-dom';
 
 function Checkout(props) {
@@ -44,11 +44,42 @@ function Checkout(props) {
       };
 
       const [firstItem, setFirstItem] = useState(0);
+      const formRef = useRef(null);
 
-      function continueAndPayButtonClick() { //This just makes the thank you box show up
-        if (formData.name && formData.email && formData.phone && formData.address && formData.postCode && formData.city && formData.country) {
-            if (eMoney) {
-                if (formData.eMoneyNumber && formData.eMoneyPin) {
+      function continueAndPayButtonClick(e) { //This makes the thank you box show up and shows the normal HTML error messages if inputs arn't filled in.
+
+        // Trigger the form's native validation
+        const isValid = formRef.current.checkValidity();
+        formRef.current.reportValidity();
+
+        if (isValid) {
+            if (formData.name && formData.email && formData.phone && formData.address && formData.postCode && formData.city && formData.country) {
+                if (eMoney) {
+                    if (formData.eMoneyNumber && formData.eMoneyPin) {
+                        if (thankDisplayBox === "none") {
+                            setThankDisplayBox("block")
+                            setThankDisplayFadeOpacity(0.5)
+                            setThankDisplayFadeZindex(1)
+                          } else{
+                            setThankDisplayBox("none")
+                            setThankDisplayFadeOpacity(0.0)
+                            setThankDisplayFadeZindex(-1)
+                          }
+                
+                          let theFirstItem = 0;
+                          for (let i = 0; i < props.cartItemsAll.length; i++) {
+                            if (props.cartItemsAll[i].quantity > 0) {
+                                theFirstItem = i;
+                                i = props.cartItemsAll.length;
+                            }
+                          }
+                          setFirstItem(theFirstItem);
+                        
+                      console.log('Payment processing...');
+                    } else {
+                      console.log('Please fill in e-Money details before continuing.');
+                    }
+                  } else {
                     if (thankDisplayBox === "none") {
                         setThankDisplayBox("block")
                         setThankDisplayFadeOpacity(0.5)
@@ -67,37 +98,13 @@ function Checkout(props) {
                         }
                       }
                       setFirstItem(theFirstItem);
-                    
-                  console.log('Payment processing...');
-                } else {
-                  console.log('Please fill in e-Money details before continuing.');
-                }
-              } else {
-                if (thankDisplayBox === "none") {
-                    setThankDisplayBox("block")
-                    setThankDisplayFadeOpacity(0.5)
-                    setThankDisplayFadeZindex(1)
-                  } else{
-                    setThankDisplayBox("none")
-                    setThankDisplayFadeOpacity(0.0)
-                    setThankDisplayFadeZindex(-1)
+                    console.log('Payment processing...');
                   }
-        
-                  let theFirstItem = 0;
-                  for (let i = 0; i < props.cartItemsAll.length; i++) {
-                    if (props.cartItemsAll[i].quantity > 0) {
-                        theFirstItem = i;
-                        i = props.cartItemsAll.length;
-                    }
-                  }
-                  setFirstItem(theFirstItem);
-                console.log('Payment processing...');
-              }
-   
-        }else{
-            console.log("Form isn't filled in");
-            console.log(formData);
-        }
+       
+            }
+          } else {
+            console.log('Please fill in all required fields before continuing.');
+          }
       }
 
     return (  
@@ -106,7 +113,7 @@ function Checkout(props) {
         <div className="productPage-blockContainer">
             <Link className='goBackLink' to="/">Go Back</Link>
 
-            <form className="checkoutFlexContainer">
+            <form ref={formRef} className="checkoutFlexContainer">
                 <div className="checkout">
                     <h1 className='checkout-heading'>CHECKOUT</h1>
                     <h3 className='checkout-info-heading'>Billing Details</h3>
@@ -194,13 +201,13 @@ function Checkout(props) {
                         <div className="inputs-container">
                             <div className="inputGroupShort">
                                 <label htmlFor="#eMoneyNumber">e-Money Number</label>
-                                <input className='textInputShort' type="text" name='name'/>
+                                <input className='textInputShort' type="text" name='eMoneyNumber' required onChange={handleInputChange}/>
                             </div>
                             
 
                             <div className="inputGroupShort">
                                 <label htmlFor="#eMoneyPin">e-Money Pin</label>
-                                <input className='textInputShort' type="text" name='city'/>
+                                <input className='textInputShort' type="text" name='eMoneyPin'required onChange={handleInputChange}/>
                             </div>
                         </div>
                         )
