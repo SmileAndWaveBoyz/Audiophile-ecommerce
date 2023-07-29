@@ -47,24 +47,53 @@ function Checkout(props) {
 
       function continueAndPayButtonClick() { //This just makes the thank you box show up
         if (formData.name && formData.email && formData.phone && formData.address && formData.postCode && formData.city && formData.country) {
-            if (thankDisplayBox === "none") {
-                setThankDisplayBox("block")
-                setThankDisplayFadeOpacity(0.5)
-                setThankDisplayFadeZindex(1)
-              } else{
-                setThankDisplayBox("none")
-                setThankDisplayFadeOpacity(0.0)
-                setThankDisplayFadeZindex(-1)
-              }
-    
-              let theFirstItem = 0;
-              for (let i = 0; i < props.cartItemsAll.length; i++) {
-                if (props.cartItemsAll[i].quantity > 0) {
-                    theFirstItem = i;
-                    i = props.cartItemsAll.length;
+            if (eMoney) {
+                if (formData.eMoneyNumber && formData.eMoneyPin) {
+                    if (thankDisplayBox === "none") {
+                        setThankDisplayBox("block")
+                        setThankDisplayFadeOpacity(0.5)
+                        setThankDisplayFadeZindex(1)
+                      } else{
+                        setThankDisplayBox("none")
+                        setThankDisplayFadeOpacity(0.0)
+                        setThankDisplayFadeZindex(-1)
+                      }
+            
+                      let theFirstItem = 0;
+                      for (let i = 0; i < props.cartItemsAll.length; i++) {
+                        if (props.cartItemsAll[i].quantity > 0) {
+                            theFirstItem = i;
+                            i = props.cartItemsAll.length;
+                        }
+                      }
+                      setFirstItem(theFirstItem);
+                    
+                  console.log('Payment processing...');
+                } else {
+                  console.log('Please fill in e-Money details before continuing.');
                 }
+              } else {
+                if (thankDisplayBox === "none") {
+                    setThankDisplayBox("block")
+                    setThankDisplayFadeOpacity(0.5)
+                    setThankDisplayFadeZindex(1)
+                  } else{
+                    setThankDisplayBox("none")
+                    setThankDisplayFadeOpacity(0.0)
+                    setThankDisplayFadeZindex(-1)
+                  }
+        
+                  let theFirstItem = 0;
+                  for (let i = 0; i < props.cartItemsAll.length; i++) {
+                    if (props.cartItemsAll[i].quantity > 0) {
+                        theFirstItem = i;
+                        i = props.cartItemsAll.length;
+                    }
+                  }
+                  setFirstItem(theFirstItem);
+                console.log('Payment processing...');
               }
-              setFirstItem(theFirstItem);   
+   
         }else{
             console.log("Form isn't filled in");
             console.log(formData);
