@@ -323,10 +323,10 @@ function Checkout(props) {
                 <div className="thankYouBlock-info-block-product-block">
                     <div className="thankYouBlock-info-block-product-block-item-box">
                         <div className="thankYouBlock-product-image-mask">
-                            <img className='thankYouBlock-product-image' src="./assets/product-xx99-mark-two-headphones/mobile/mk2.png" alt="" />
+                            <img className='thankYouBlock-product-image' src={props.cartItemsAll[firstItem].mobileImagePath} alt="" />
                         </div>
                         <div className="checkOutBox__item-container-text-box">
-                            <p className="checkOutBox__item-container-title">XX99 MK II</p>
+                            <p className="checkOutBox__item-container-title">{props.cartItemsAll[firstItem].shortName}</p>
                             <p className="checkOutBox__item-container-price">$ {props.cartItemsAll[firstItem].price}</p>
                         </div>
                         <p className='summary__item-count thank-you'>{props.cartItemsAll[firstItem].quantity}px</p>
