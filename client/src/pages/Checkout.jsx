@@ -24,29 +24,52 @@ function Checkout(props) {
         setQuantityOfAllItems(totalQuantity);
       }, [props.cartItemsAll]);
 
-    const [firstItem, setFirstItem] = useState(0);
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        phone: '',
+        address: '',
+        postCode: '',
+        city: '',
+        country: '',
+        eMoneyNumber: '',
+        eMoneyPin: '',
+      });
+    
+      const handleInputChange = (e) => {
+        // Update formData state when inputs change
+        const { name, value } = e.target;
+        setFormData((prevData) => ({ ...prevData, [name]: value }));
+        console.log(name + " " + value);
+      };
 
-    function continueAndPayButtonClick() { //This just makes the thank you box show up
-        if (thankDisplayBox === "none") {
-            setThankDisplayBox("block")
-            setThankDisplayFadeOpacity(0.5)
-            setThankDisplayFadeZindex(1)
-          } else{
-            setThankDisplayBox("none")
-            setThankDisplayFadeOpacity(0.0)
-            setThankDisplayFadeZindex(-1)
-          }
+      const [firstItem, setFirstItem] = useState(0);
 
-          let theFirstItem = 0;
-          for (let i = 0; i < props.cartItemsAll.length; i++) {
-            if (props.cartItemsAll[i].quantity > 0) {
-                theFirstItem = i;
-                i = props.cartItemsAll.length;
-            }
-          }
-          setFirstItem(theFirstItem);
-    }
-
+      function continueAndPayButtonClick() { //This just makes the thank you box show up
+        if (formData.name && formData.email && formData.phone && formData.address && formData.postCode && formData.city && formData.country) {
+            if (thankDisplayBox === "none") {
+                setThankDisplayBox("block")
+                setThankDisplayFadeOpacity(0.5)
+                setThankDisplayFadeZindex(1)
+              } else{
+                setThankDisplayBox("none")
+                setThankDisplayFadeOpacity(0.0)
+                setThankDisplayFadeZindex(-1)
+              }
+    
+              let theFirstItem = 0;
+              for (let i = 0; i < props.cartItemsAll.length; i++) {
+                if (props.cartItemsAll[i].quantity > 0) {
+                    theFirstItem = i;
+                    i = props.cartItemsAll.length;
+                }
+              }
+              setFirstItem(theFirstItem);   
+        }else{
+            console.log("Form isn't filled in");
+            console.log(formData);
+        }
+      }
 
     return (  
         <div className='checkOutBackground'>
@@ -62,43 +85,43 @@ function Checkout(props) {
                     <div className="inputs-container">
                         <div className="inputGroupShort">
                             <label htmlFor="#name">Name</label>
-                            <input className='textInputShort' type="text" name='name'/>
+                            <input className='textInputShort' type="text" name='name'required onChange={handleInputChange}/>
                         </div>
 
                         <div className="inputGroupShort">
                             <label htmlFor="#name">Email Address</label>
-                            <input className='textInputShort' type="email" name='email'/>
+                            <input className='textInputShort' type="email" name='email'required onChange={handleInputChange}/>
                         </div>
                     </div>
 
                     <div className="inputGroupShort">
                             <label htmlFor="#name">Phone Number</label>
-                            <input className='textInputShort' type="text" name='phone'/>
+                            <input className='textInputShort' type="text" name='phone'required onChange={handleInputChange}/>
                     </div>
 
                     <h3 className='checkout-info-heading shipping'>shipping info</h3>
 
                     <div className="inputGroupLong">
                             <label htmlFor="#name">Address</label>
-                            <input className='textInputShort' type="text" name='phone'/>
+                            <input className='textInputShort' type="text" name='address'required onChange={handleInputChange}/>
                     </div>
 
                     <div className="inputs-container">
                         <div className="inputGroupShort">
                             <label htmlFor="#postCode">Post Code</label>
-                            <input className='textInputShort' type="text" name='name'/>
+                            <input className='textInputShort' type="text" name='postCode'required onChange={handleInputChange}/>
                         </div>
                         
 
                         <div className="inputGroupShort">
                             <label htmlFor="#name">City</label>
-                            <input className='textInputShort' type="text" name='city'/>
+                            <input className='textInputShort' type="text" name='city'required onChange={handleInputChange}/>
                         </div>
                     </div>
 
                     <div className="inputGroupShort">
                             <label htmlFor="#name">Country</label>
-                            <input className='textInputShort' type="text" name='county'/>
+                            <input className='textInputShort' type="text" name='country'required onChange={handleInputChange}/>
                     </div>
 
                     <h3 className='checkout-info-heading shipping'>payment details</h3>
