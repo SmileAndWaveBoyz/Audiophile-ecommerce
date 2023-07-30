@@ -20,7 +20,7 @@ function Xx99ii() {
         const itemNameToUpdate = 'XX99 MARK II Headphones';
     
         axios
-          .put(`/api/cart/${itemNameToUpdate}`, { newQuantity })
+          .put(`https://audiophile-api-g3pm.onrender.com/api/cart/${itemNameToUpdate}`, { newQuantity })
           .then((response) => {
             console.log('Item quantity updated successfully:', response.data);
             // You can update the UI or display a message indicating the success here

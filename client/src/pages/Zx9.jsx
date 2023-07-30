@@ -18,7 +18,7 @@ function Zx9() {
         const itemNameToUpdate = 'ZX9 Speaker';
     
         axios
-          .put(`/api/cart/${itemNameToUpdate}`, { newQuantity })
+          .put(`https://audiophile-api-g3pm.onrender.com/api/cart/${itemNameToUpdate}`, { newQuantity })
           .then((response) => {
             console.log('Item quantity updated successfully:', response.data);
             // You can update the UI or display a message indicating the success here

@@ -17,7 +17,7 @@ function Yx1() {
         const itemNameToUpdate = 'YX1 Wireless Earphones';
     
         axios
-          .put(`/api/cart/${itemNameToUpdate}`, { newQuantity })
+          .put(`https://audiophile-api-g3pm.onrender.com/api/cart/${itemNameToUpdate}`, { newQuantity })
           .then((response) => {
             console.log('Item quantity updated successfully:', response.data);
           })

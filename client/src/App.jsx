@@ -94,7 +94,7 @@ function App() {
     for (let i = 0; i < itemQuantityArray.length; i++) {
       let newQuantity = itemQuantityArray[i];
       axios
-        .put(`/api/cart/${itemNameToUpdate[i]}`, { newQuantity })
+        .put(`https://audiophile-api-g3pm.onrender.com/api/cart/${itemNameToUpdate[i]}`, { newQuantity })
         .then((response) => {
           console.log('Item quantity updated successfully:', response.data);
         })
