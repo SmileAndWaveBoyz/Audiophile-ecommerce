@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const cors = require('cors');
 
 const mongoose = require('mongoose');
 // mongoose.connect('mongodb://127.0.0.1:27017/audiophileCart');
@@ -9,6 +10,7 @@ mongoose.connect("mongodb+srv://SmileAndWaveBoyz:Newcross971@cluster0.o6lompz.mo
 const Cart = mongoose.model('Item', { name: String, quantity: Number, price: Number, totalPrice: Number, shortName: String, mobileImagePath: String});
 
 app.use(express.json());
+app.use(cors());
 
 app.get('/api/cart', async (req, res) => { // This poplates the items variable with the Items MongoDB database
     try {

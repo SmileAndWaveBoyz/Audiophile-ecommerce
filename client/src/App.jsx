@@ -39,9 +39,9 @@ function App() {
   const [cartItems, setCartItems] = useState([]);
 
   function refreshCart() { // This pulls the cart items from the backend and puts them in cartItems
-      fetch('/api/cart')
+      fetch('https://audiophile-api-g3pm.onrender.com/api/cart')
         .then((response) => response.json())
-        .then((data) => setCartItems(data))
+        .then((data) => {setCartItems(data); console.log(data);})
         .catch((error) => console.error('Error fetching cart items:', error));   
   }
 
