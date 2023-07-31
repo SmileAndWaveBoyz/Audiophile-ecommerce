@@ -8,7 +8,7 @@ import axios from 'axios';
 import { useSelector, useDispatch } from "react-redux";
 import { setXx99MiQuantity, selectXx99MiQuantity} from "./reduxItems";
 
-function Xx99i() {
+function Xx99i(props) {
 
     const newQuantity = useSelector(selectXx99MiQuantity)
     const dispatch = useDispatch();

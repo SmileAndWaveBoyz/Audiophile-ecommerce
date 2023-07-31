@@ -74,7 +74,7 @@ function App() {
       updateBackEnd()
     }
 
-    refreshCart();    
+    refreshCart(); 
   }
 
   //This popluates new front end variables from Redux
@@ -102,8 +102,6 @@ function App() {
           console.error('Error updating item quantity:', error);
         });
     }
-
-
   }
 
 
@@ -114,6 +112,7 @@ function App() {
   useEffect(() => { // This just re-calculates the total price every time a front end item quantity changes
     if(cartItems.length > 0){
     setTotal((xx99mk2Quantity * cartItems[0].price) + (xx99mk1Quantity * cartItems[1].price) + (xx59Quantity * cartItems[2].price) + (zx9Quantity * cartItems[3].price) + (zx7Quantity * cartItems[4].price) + (yx1Quantity * cartItems[5].price));
+    updateBackEnd();
     }
   }, [xx99mk2Quantity, xx99mk1Quantity, xx59Quantity, zx9Quantity, zx7Quantity, yx1Quantity]);
 
@@ -355,16 +354,16 @@ function App() {
         <Routes>
           <Route path='/' element={<Home/>}/>
           <Route path='/headphones' element={<Headphones/>}/>
-          <Route path='/headphones/xx99mii' element={<Xx99ii/>}/>
-          <Route path='/headphones/xx99mi' element={<Xx99i/>}/>
-          <Route path='/headphones/xx59' element={<Xx59/>}/>
+          <Route path='/headphones/xx99mii' element={<Xx99ii refreshCart={refreshCart}/>}/>
+          <Route path='/headphones/xx99mi' element={<Xx99i refreshCart={refreshCart}/>}/>
+          <Route path='/headphones/xx59' element={<Xx59 refreshCart={refreshCart}/>}/>
 
           <Route path='/speakers' element={<Speakers/>}/>    
-          <Route path='/speakers/zx9' element={<Zx9/>}/>      
-          <Route path='/speakers/zx7' element={<Zx7/>}/>      
+          <Route path='/speakers/zx9' element={<Zx9 refreshCart={refreshCart}/>}/>      
+          <Route path='/speakers/zx7' element={<Zx7 refreshCart={refreshCart}/>}/>      
 
           <Route path='/earphones' element={<Earphones/>}/>          
-          <Route path='/earphones/yx1' element={<Yx1/>}/>          
+          <Route path='/earphones/yx1' element={<Yx1 refreshCart={refreshCart}/>}/>          
 
           <Route path='/checkout' element={<Checkout key={0} cartItemsAll = {cartItems} total={total}/>}/>  
         </Routes>
