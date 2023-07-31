@@ -109,7 +109,7 @@ function App() {
 
   const[total, setTotal] = useState(0);
 
-  useEffect(() => { // This just re-calculates the total price every time a front end item quantity changes
+  useEffect(() => { // This updates the back end and re-calculates the total price every time a front end item quantity changes
     if(cartItems.length > 0){
     setTotal((xx99mk2Quantity * cartItems[0].price) + (xx99mk1Quantity * cartItems[1].price) + (xx59Quantity * cartItems[2].price) + (zx9Quantity * cartItems[3].price) + (zx7Quantity * cartItems[4].price) + (yx1Quantity * cartItems[5].price));
     updateBackEnd();
