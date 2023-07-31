@@ -11,7 +11,7 @@ import Yx1 from "./pages/Yx1";
 import Checkout from "./pages/Checkout";
 import NavBar from "./components/Navbar"
 import React, {useEffect, useState} from 'react';
-import {Route, Routes, useLocation } from 'react-router-dom';
+import {Route, Routes } from 'react-router-dom';
 import { useNavigate  } from 'react-router-dom';
 
 import axios from 'axios';
