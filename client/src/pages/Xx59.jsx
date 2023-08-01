@@ -12,6 +12,7 @@ function Xx59() {
 
     const newQuantity = useSelector(selectXx59Quantity)
     const dispatch = useDispatch();
+    
 
     const addToCart = () => {
         const itemNameToUpdate = 'XX59 Headphones';

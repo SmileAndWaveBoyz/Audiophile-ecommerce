@@ -45,7 +45,7 @@ function Home() {
                 <img src="./assets/home/mobile/image-earphones-yx1.png" alt="" />
                 <div className="YX1Block__text-box">
                 <h3>YX1 EARPHONES</h3>
-                <Link>SEE PRODUCT</Link>
+                <Link to={"/earphones/yx1"}>SEE PRODUCT</Link>
                 </div>
             </div>
 

@@ -41,7 +41,7 @@ function App() {
   function refreshCart() { // This pulls the cart items from the backend and puts them in cartItems
       fetch('https://audiophile-api-g3pm.onrender.com/api/cart')
         .then((response) => response.json())
-        .then((data) => {setCartItems(data); console.log(data);})
+        .then((data) => {setCartItems(data); console.log(data); })
         .catch((error) => console.error('Error fetching cart items:', error));   
   }
 
@@ -57,7 +57,6 @@ function App() {
       dispatch(setZx9Quantity(cartItems[3].quantity))
       dispatch(setZx7Quantity(cartItems[4].quantity))
       dispatch(setYx1Quantity(cartItems[5].quantity))
-
       setTotal((cartItems[0].quantity * cartItems[0].price) + (cartItems[1].quantity * cartItems[1].price) + (cartItems[2].quantity * cartItems[2].price) + (cartItems[3].quantity * cartItems[3].price) + (cartItems[4].quantity * cartItems[4].price) + (cartItems[5].quantity * cartItems[5].price));
     }
   }, [cartItems]);
@@ -67,11 +66,11 @@ function App() {
       setCartDisplayBox("block")
       setCartDisplayFadeOpacity(0.5)
       setCartDisplayFadeZindex(1)
+      
     } else{
       setCartDisplayBox("none")
       setCartDisplayFadeOpacity(0.0)
       setCartDisplayFadeZindex(-1)
-      updateBackEnd()
     }
 
     refreshCart(); 
@@ -89,19 +88,25 @@ function App() {
 
   function updateBackEnd() { // This will update the backend with the front end quantity of all variables
     let itemNameToUpdate = ["XX99 MARK II Headphones", "XX99 MARK I Headphones", "XX59 Headphones", "ZX9 Speaker", "ZX7 Speaker", "YX1 Wireless Earphones"];
-    let itemQuantityArray = [xx99mk2Quantity, xx99mk1Quantity, xx59Quantity, zx9Quantity, zx7Quantity, yx1Quantity]
+    let itemQuantityArray = [xx99mk2Quantity, xx99mk1Quantity, xx59Quantity, zx9Quantity, zx7Quantity, yx1Quantity];
 
-    for (let i = 0; i < itemQuantityArray.length; i++) {
-      let newQuantity = itemQuantityArray[i];
-      axios
-        .put(`https://audiophile-api-g3pm.onrender.com/api/cart/${itemNameToUpdate[i]}`, { newQuantity })
-        .then((response) => {
-          console.log('Item quantity updated successfully:', response.data);
-        })
-        .catch((error) => {
-          console.error('Error updating item quantity:', error);
+    // Create an array of promises for all the backend updates
+    const updatePromises = itemNameToUpdate.map((itemName, index) => {
+      const newQuantity = itemQuantityArray[index];
+      return axios
+        .put(`https://audiophile-api-g3pm.onrender.com/api/cart/${itemName}`, {
+          newQuantity,
         });
-    }
+    });
+
+    // Return a promise that resolves when all backend updates are finished
+    return Promise.all(updatePromises)
+      .then((responses) => {
+        console.log('All item quantities updated successfully:', responses);
+      })
+      .catch((error) => {
+        console.error('Error updating item quantities:', error);
+      });
   }
 
 
@@ -114,16 +119,17 @@ function App() {
     setTotal((xx99mk2Quantity * cartItems[0].price) + (xx99mk1Quantity * cartItems[1].price) + (xx59Quantity * cartItems[2].price) + (zx9Quantity * cartItems[3].price) + (zx7Quantity * cartItems[4].price) + (yx1Quantity * cartItems[5].price));
     updateBackEnd();
     }
+    
   }, [xx99mk2Quantity, xx99mk1Quantity, xx59Quantity, zx9Quantity, zx7Quantity, yx1Quantity]);
 
-  function removeAllItems() {
-    dispatch(setXx99MiiQuantity(0))
-    dispatch(setXx99MiQuantity(0))
-    dispatch(setXx59Quantity(0))
-    dispatch(setZx9Quantity(0))
-    dispatch(setZx7Quantity(0))
-    dispatch(setYx1Quantity(0))
-  }
+async function removeAllItems() {
+  dispatch(setXx99MiiQuantity(0));
+  dispatch(setXx99MiQuantity(0));
+  dispatch(setXx59Quantity(0));
+  dispatch(setZx9Quantity(0));
+  dispatch(setZx7Quantity(0));
+  dispatch(setYx1Quantity(0));
+}
 
   return (
     <>
@@ -348,7 +354,12 @@ function App() {
             <p className="checkOutBox__total-text-box-price">${total.toLocaleString()}</p>
           </div>
 
-          <button className="checkOutBox__checkout-button" onClick={() => {navigate('/checkout'); cartClick();}}>CHECKOUT</button>
+          <button className="checkOutBox__checkout-button" onClick={
+              () => {
+                navigate('/checkout');
+                cartClick();
+              }
+            }>CHECKOUT</button>
         </div>
 
         <Routes>
