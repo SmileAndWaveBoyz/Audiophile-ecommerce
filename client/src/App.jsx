@@ -61,7 +61,7 @@ function App() {
     }
   }, [cartItems]);
 
-  function cartClick() { // This makes the cart appear / disappear when clicked, it also pulls the cart data from the back end with refreshCart. 
+  function cartClick() { // This makes the cart appear / disappear when clicked. 
     if (cartDisplayBox === "none") {
       setCartDisplayBox("block")
       setCartDisplayFadeOpacity(0.5)
@@ -72,8 +72,6 @@ function App() {
       setCartDisplayFadeOpacity(0.0)
       setCartDisplayFadeZindex(-1)
     }
-
-    refreshCart(); 
   }
 
   //This popluates new front end variables from Redux
@@ -118,6 +116,20 @@ function App() {
     if(cartItems.length > 0){
     setTotal((xx99mk2Quantity * cartItems[0].price) + (xx99mk1Quantity * cartItems[1].price) + (xx59Quantity * cartItems[2].price) + (zx9Quantity * cartItems[3].price) + (zx7Quantity * cartItems[4].price) + (yx1Quantity * cartItems[5].price));
     updateBackEnd();
+
+    function updateQuantityForCartItem(itemToUpdate, newQuantity) {
+      return { ...itemToUpdate, quantity: newQuantity };
+    }
+    
+    // Assuming you have the new quantity values for each item
+    const newQuantities = [xx99mk2Quantity, xx99mk1Quantity, xx59Quantity, zx9Quantity, zx7Quantity, yx1Quantity];
+    
+    // Update the cartItems array with the new quantities
+    const updatedCartItems = cartItems.map((item, index) =>
+      updateQuantityForCartItem(item, newQuantities[index])
+    );
+
+    setCartItems(updatedCartItems);
     }
     
   }, [xx99mk2Quantity, xx99mk1Quantity, xx59Quantity, zx9Quantity, zx7Quantity, yx1Quantity]);
@@ -365,16 +377,16 @@ async function removeAllItems() {
         <Routes>
           <Route path='/' element={<Home/>}/>
           <Route path='/headphones' element={<Headphones/>}/>
-          <Route path='/headphones/xx99mii' element={<Xx99ii refreshCart={refreshCart}/>}/>
-          <Route path='/headphones/xx99mi' element={<Xx99i refreshCart={refreshCart}/>}/>
-          <Route path='/headphones/xx59' element={<Xx59 refreshCart={refreshCart}/>}/>
+          <Route path='/headphones/xx99mii' element={<Xx99ii  />}/>
+          <Route path='/headphones/xx99mi' element={<Xx99i/>}/>
+          <Route path='/headphones/xx59' element={<Xx59/>}/>
 
           <Route path='/speakers' element={<Speakers/>}/>    
-          <Route path='/speakers/zx9' element={<Zx9 refreshCart={refreshCart}/>}/>      
-          <Route path='/speakers/zx7' element={<Zx7 refreshCart={refreshCart}/>}/>      
+          <Route path='/speakers/zx9' element={<Zx9/>}/>      
+          <Route path='/speakers/zx7' element={<Zx7/>}/>      
 
           <Route path='/earphones' element={<Earphones/>}/>          
-          <Route path='/earphones/yx1' element={<Yx1 refreshCart={refreshCart}/>}/>          
+          <Route path='/earphones/yx1' element={<Yx1/>}/>          
 
           <Route path='/checkout' element={<Checkout key={0} cartItemsAll = {cartItems} total={total}/>}/>  
         </Routes>
