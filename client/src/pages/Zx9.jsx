@@ -1,10 +1,9 @@
 import { Footer } from '../components/Footer';
 import Gear from "../components/Gear";
 import Links from '../components/Links';
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {Link} from 'react-router-dom';
 
-import axios from 'axios';
 import { useSelector, useDispatch } from "react-redux";
 import { setZx9Quantity, selectZx9Quantity} from "./reduxItems";
 
@@ -12,21 +11,14 @@ function Zx9() {
 
     const newQuantity = useSelector(selectZx9Quantity)
     const dispatch = useDispatch();
+    const[pageQuantity, setPageQuantity] = useState(newQuantity);
+
+    useEffect(()=>{
+        setPageQuantity(newQuantity);
+    },[newQuantity]);
 
     const addToCart = () => {
-        // Replace 'XX99 MARK II Headphones' with the item name you want to update
-        const itemNameToUpdate = 'ZX9 Speaker';
-    
-        axios
-          .put(`https://audiophile-api-g3pm.onrender.com/api/cart/${itemNameToUpdate}`, { newQuantity })
-          .then((response) => {
-            console.log('Item quantity updated successfully:', response.data);
-            // You can update the UI or display a message indicating the success here
-          })
-          .catch((error) => {
-            console.error('Error updating item quantity:', error);
-            // Handle the error or display an error message here
-          });
+        dispatch(setZx9Quantity(pageQuantity));
     };
 
     return ( 
@@ -51,14 +43,14 @@ function Zx9() {
                                 <div className="productPage__quantity-buttons">
                                     <button className='productPage__quantity-buttons-one' onClick={
                                         () => {
-                                            if (newQuantity > 0) {
-                                                dispatch(setZx9Quantity(newQuantity - 1))}
+                                            if (pageQuantity > 0) {
+                                                setPageQuantity(pageQuantity - 1)}
                                             }
                                             
                                         }
                                         >-</button>
-                                    <p className='productPage__quantity-buttons-number'>{newQuantity}</p>
-                                    <button className='productPage__quantity-buttons-two' onClick={() => dispatch(setZx9Quantity(newQuantity + 1))}>+</button>
+                                    <p className='productPage__quantity-buttons-number'>{pageQuantity}</p>
+                                    <button className='productPage__quantity-buttons-two' onClick={() => setPageQuantity(pageQuantity + 1)}>+</button>
                                 </div>
 
                                 <button className='productPage__cart-button' onClick={() => addToCart()}>ADD TO CART</button>

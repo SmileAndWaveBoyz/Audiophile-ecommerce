@@ -1,10 +1,9 @@
 import { Footer } from '../components/Footer';
 import Gear from "../components/Gear";
 import Links from '../components/Links';
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {Link} from 'react-router-dom';
 
-import axios from 'axios';
 import { useSelector, useDispatch } from "react-redux";
 import { setYx1Quantity, selectYx1Quantity} from "./reduxItems";
 
@@ -12,18 +11,14 @@ function Yx1() {
 
     const newQuantity = useSelector(selectYx1Quantity)
     const dispatch = useDispatch();
+    const[pageQuantity, setPageQuantity] = useState(newQuantity);
 
-    const addToCart = () => { // This updates the back end 
-        const itemNameToUpdate = 'YX1 Wireless Earphones';
-    
-        axios
-          .put(`https://audiophile-api-g3pm.onrender.com/api/cart/${itemNameToUpdate}`, { newQuantity })
-          .then((response) => {
-            console.log('Item quantity updated successfully:', response.data);
-          })
-          .catch((error) => {
-            console.error('Error updating item quantity:', error);
-          });
+    useEffect(()=>{
+        setPageQuantity(newQuantity);
+    },[newQuantity]);
+
+    const addToCart = () => {
+        dispatch(setYx1Quantity(pageQuantity));
     };
 
     return ( 
@@ -49,13 +44,13 @@ function Yx1() {
                                     <button className='productPage__quantity-buttons-one' onClick={
                                         () => {
                                             if (newQuantity > 0) {
-                                                dispatch(setYx1Quantity(newQuantity - 1))}
+                                                setPageQuantity(pageQuantity - 1)}
                                             }
                                             
                                         }
                                         >-</button>
-                                    <p className='productPage__quantity-buttons-number'>{newQuantity}</p>
-                                    <button className='productPage__quantity-buttons-two' onClick={() => dispatch(setYx1Quantity(newQuantity + 1))}>+</button>
+                                    <p className='productPage__quantity-buttons-number'>{pageQuantity}</p>
+                                    <button className='productPage__quantity-buttons-two' onClick={() => setPageQuantity(pageQuantity + 1)}>+</button>
                                 </div>
 
                                 <button className='productPage__cart-button' onClick={() => addToCart()}>ADD TO CART</button>
