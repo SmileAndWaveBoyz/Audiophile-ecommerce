@@ -24,7 +24,7 @@ function Earphones() {
                         <div className="showBlock__text-container">
                             <p className='showBlock__text-container-title'>NEW PRODUCT</p>
                             <h2 className='showBlock__text-container-heading' data-aos="flip-down">YX1 WIRELESS EARPHONES</h2>
-                            <p className='showBlock__text-container-paragraph'data-aos="fade-left">Tailor your listening experience with bespoke dynamic drivers from the new YX1 Wireless Earphones. Enjoy incredible high-fidelity sound even in noisy environments with its active noise cancellation feature.</p>
+                            <p className='showBlock__text-container-paragraph'data-aos="fade-up">Tailor your listening experience with bespoke dynamic drivers from the new YX1 Wireless Earphones. Enjoy incredible high-fidelity sound even in noisy environments with its active noise cancellation feature.</p>
                             <Link className='showBlock__text-container-button' to="./yx1">SEE PRODUCT</Link>
                         </div>
                     </div>

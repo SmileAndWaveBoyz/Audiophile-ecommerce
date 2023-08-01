@@ -1036,6 +1036,7 @@ a{
 .homeFooter__nav-bar li{
     margin-bottom: 1.6rem;
     text-align: center;
+    list-style: none;
 }
 
 .homeFooter__nav-bar li a{
