@@ -117,6 +117,7 @@ function App() {
   const navigate = useNavigate();
 
   const[total, setTotal] = useState(0);
+  const[totalQuantity, setTotalQuantity] = useState(0);
 
   useEffect(() => { // This updates the back end and re-calculates the total price every time a front end item quantity changes
     if(cartItems.length > 0){
@@ -137,6 +138,8 @@ function App() {
 
     setCartItems(updatedCartItems);
     }
+
+    setTotalQuantity(xx99mk2Quantity + xx99mk1Quantity + xx59Quantity + zx9Quantity + zx7Quantity + yx1Quantity)
     
   }, [xx99mk2Quantity, xx99mk1Quantity, xx59Quantity, zx9Quantity, zx7Quantity, yx1Quantity]);
 
@@ -152,11 +155,11 @@ async function removeAllItems() {
   return (
     <>
     
-        <NavBar onCartClick={cartClick} />
+        <NavBar onCartClick={cartClick} totalQuantity={totalQuantity}/>
         <div className="fadeDiv" style={{opacity: cartDisplayFadeOpacity, zIndex: cartDisplayFadeZindex}}></div>
         <div className="checkOutBox" style={{display: cartDisplayBox}}>
           <div className="checkOutBox__heading-box">
-            <h2 className="checkOutBox__heading-box-heading">CART ({xx99mk2Quantity + xx99mk1Quantity + xx59Quantity + zx9Quantity + zx7Quantity + yx1Quantity})</h2>
+            <h2 className="checkOutBox__heading-box-heading">CART ({totalQuantity})</h2>
             <button className="checkOutBox__heading-box-remove-button" onClick={removeAllItems}>Remove all</button>
           </div>
           
