@@ -18,11 +18,11 @@ function Speakers() {
                 <div className="blockContainer">
 
                     <div className="showBlock">
-                        <div className="showBlock__image-container">
+                        <div className="showBlock__image-container" data-aos="fade-right">
                             <img className='showBlock__image-container-zx9' src="./assets/product-zx9-speaker/mobile/zx9.png" alt="ZX9 Speaker" />
                         </div>
 
-                        <div className="showBlock__text-container">
+                        <div className="showBlock__text-container" data-aos="fade-left">
                             <p className='showBlock__text-container-title'>NEW PRODUCT</p>
                             <h2 className='showBlock__text-container-heading'>ZX9 speaker</h2>
                             <p className='showBlock__text-container-paragraph'>Upgrade your sound system with the all new ZX9 active speaker. It’s a bookshelf speaker system that offers truly wireless connectivity -- creating new possibilities for more pleasing and practical audio setups.</p>
@@ -31,11 +31,11 @@ function Speakers() {
                     </div>
 
                     <div className="showBlock">
-                        <div className="showBlock__image-container odd">
-                            <img className='showBlock__image-container-zx7' src="./assets/product-zx7-speaker/mobile/zx7.png" alt="ZX7 Speaker" />
+                        <div className="showBlock__image-container odd" data-aos="fade-left">
+                            <img className='showBlock__image-container-zx7' src="./assets/product-zx7-speaker/mobile/zx7.png" alt="ZX7 Speaker"/>
                         </div>
 
-                        <div className="showBlock__text-container">
+                        <div className="showBlock__text-container" data-aos="fade-right">
                             <h2 className='showBlock__text-container-heading'>ZX7 SPEAKER</h2>
                             <p className='showBlock__text-container-paragraph'>Stream high quality sound wirelessly with minimal loss. The ZX7 bookshelf speaker uses high-end audiophile components that represents the top of the line powered speakers for home or studio use.</p>
                             <Link className='showBlock__text-container-button' to="./zx7">SEE PRODUCT</Link>

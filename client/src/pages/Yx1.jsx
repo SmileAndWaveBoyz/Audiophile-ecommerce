@@ -34,11 +34,11 @@ function Yx1() {
 
                     <div className="productPage">
                             <div className="productPage__image-box">
-                                <img className='productPage__image-box-yx1' src="../assets/product-yx1-earphones/mobile/yx1.png" alt="YX1 Earphones" />
+                                <img className='productPage__image-box-yx1' src="../assets/product-yx1-earphones/mobile/yx1.png" alt="YX1 Earphones" data-aos="fade-up"/>
                             </div>
                         
 
-                        <div className="productPage-top-text-container"> 
+                        <div className="productPage-top-text-container" data-aos="fade-down"> 
                             <h3 className='productPage__new-heading'>NEW PRODUCT</h3>
                             <h1 className='productPage__heading'>YX1 WIRELESS EARPHONES</h1>
                             <p className='productPage__paragraph'>Tailor your listening experience with bespoke dynamic drivers from the new YX1 Wireless Earphones. Enjoy incredible high-fidelity sound even in noisy environments with its active noise cancellation feature.</p>
@@ -71,7 +71,7 @@ function Yx1() {
 
 The YX1 Wireless Earphones features customizable controls for volume, music, calls, and voice assistants built into both earbuds. The new 7-hour battery life can be extended up to 28 hours with the charging case, giving you uninterrupted play time. Exquisite craftsmanship with a splash resistant design now available in an all new white and grey color scheme as well as the popular classic black.</p>
                         </div>
-                        <div className="productPage__box-block">
+                        <div className="productPage__box-block" data-aos="flip-right">
                             <h3 className='productPage__feature-heading'>in the box</h3>
                             <div className="productPage__list-container">
                                 <p className='productPage__list-container-item'><strong>2x</strong> Earphone Unit</p> 

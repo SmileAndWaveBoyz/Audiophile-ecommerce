@@ -37,11 +37,11 @@ function Xx59() {
 
                     <div className="productPage">
                             <div className="productPage__image-box">
-                                <img className='productPage__image-box-xx59' src="../assets/product-xx59-headphones/mobile/xx59.png" alt="XX59 Headphones" />
+                                <img className='productPage__image-box-xx59' src="../assets/product-xx59-headphones/mobile/xx59.png" alt="XX59 Headphones" data-aos="fade-up"/>
                             </div>
                         
 
-                        <div className="productPage-top-text-container"> 
+                        <div className="productPage-top-text-container" data-aos="fade-down"> 
                             <h1 className='productPage__heading'>XX59 Headphones</h1>
                             <p className='productPage__paragraph'>Enjoy your audio almost anywhere and customize it to your specific tastes with the XX59 headphones. The stylish yet durable versatile wireless headset is a brilliant companion at home or on the move.</p>
                             <p className='productPage__price'>$ 899</p>
@@ -67,7 +67,7 @@ function Xx59() {
                         </div>
                     </div>
 
-                    <div className="productPage__feature-box-block">
+                    <div className="productPage__feature-box-block" data-aos="flip-right">
                         <div className="productPage__feature-block">
                             <h3 className='productPage__feature-heading'>FEATURES</h3>
                             <p className='productPage__description'>These headphones have been created from durable, high-quality materials tough enough to take anywhere. Its compact folding design fuses comfort and minimalist style making it perfect for travel. Flawless transmission is assured by the latest wireless technology engineered for audio synchronization with videos.

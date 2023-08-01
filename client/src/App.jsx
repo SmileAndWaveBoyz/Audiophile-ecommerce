@@ -13,6 +13,9 @@ import NavBar from "./components/Navbar"
 import React, {useEffect, useState} from 'react';
 import {Route, Routes } from 'react-router-dom';
 import { useNavigate  } from 'react-router-dom';
+import AOS from "aos";
+import "aos/dist/aos.css"
+
 
 import axios from 'axios';
 import { useSelector, useDispatch } from "react-redux";
@@ -47,7 +50,10 @@ function App() {
 
   useEffect(() => {
     refreshCart();
+    AOS.init();
   }, []);
+
+
 
   useEffect(() => { // This populates new variables from cartItems into front end redux variables 
     if(cartItems.length > 0){ 
@@ -145,7 +151,8 @@ async function removeAllItems() {
 
   return (
     <>
-        <NavBar onCartClick={cartClick}/>
+    
+        <NavBar onCartClick={cartClick} />
         <div className="fadeDiv" style={{opacity: cartDisplayFadeOpacity, zIndex: cartDisplayFadeZindex}}></div>
         <div className="checkOutBox" style={{display: cartDisplayBox}}>
           <div className="checkOutBox__heading-box">

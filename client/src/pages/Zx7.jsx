@@ -36,11 +36,11 @@ function Zx7() {
 
                     <div className="productPage">
                             <div className="productPage__image-box">
-                                <img className='productPage__image-box-zx7' src="../assets/product-zx7-speaker/mobile/zx7.png" alt="ZX9 Speaker" />
+                                <img className='productPage__image-box-zx7' src="../assets/product-zx7-speaker/mobile/zx7.png" alt="ZX9 Speaker" data-aos="fade-up"/>
                             </div>
                         
 
-                        <div className="productPage-top-text-container"> 
+                        <div className="productPage-top-text-container" data-aos="fade-down"> 
                             <h1 className='productPage__heading'>ZX7 SPEAKER</h1>
                             <p className='productPage__paragraph'>Stream high quality sound wirelessly with minimal to no loss. The ZX7 speaker uses high-end audiophile components that represents the top of the line powered speakers for home or studio use.</p>
                             <p className='productPage__price'>$ 3,500</p>
@@ -75,7 +75,7 @@ function Zx7() {
 
 The ZX7 speaker is the perfect blend of stylish design and high performance. It houses an encased MDF wooden enclosure which minimises acoustic resonance. Dual connectivity allows pairing through bluetooth or traditional optical and RCA input. Switch input sources and control volume at your finger tips with the included wireless remote. This versatile speaker is equipped to deliver an authentic listening experience.</p>
                         </div>
-                        <div className="productPage__box-block">
+                        <div className="productPage__box-block" data-aos="flip-right">
                             <h3 className='productPage__feature-heading'>in the box</h3>
                             <div className="productPage__list-container">
                                 <p className='productPage__list-container-item'><strong>2x</strong> Speaker Unit</p> 

@@ -38,11 +38,11 @@ function Xx99i(props) {
 
                     <div className="productPage">
                             <div className="productPage__image-box">
-                                <img className='productPage__image-box-xx99mi' src="../assets/product-xx99-mark-one-headphones/mobile/product-page.png" alt="XX99 Mark 1 Headphones" />
+                                <img className='productPage__image-box-xx99mi' src="../assets/product-xx99-mark-one-headphones/mobile/product-page.png" alt="XX99 Mark 1 Headphones" data-aos="fade-up"/>
                             </div>
                         
 
-                        <div className="productPage-top-text-container"> 
+                        <div className="productPage-top-text-container" data-aos="fade-down"> 
                             <h1 className='productPage__heading'>XX99 Mark I Headphones</h1>
                             <p className='productPage__paragraph'>As the gold standard for headphones, the classic XX99 Mark I offers detailed and accurate audio reproduction for audiophiles, mixing engineers, and music aficionados alike in studios and on the go. </p>
                             <p className='productPage__price'>$ 1,750</p>
@@ -73,7 +73,7 @@ function Xx99i(props) {
 
 From the handcrafted microfiber ear cushions to the robust metal headband with inner damping element, the components work together to deliver comfort and uncompromising sound. Its closed-back design delivers up to 27 dB of passive noise cancellation, reducing resonance by reflecting sound to a dedicated absorber. For connectivity, a specially tuned cable is included with a balanced gold connector.</p>
                         </div>
-                        <div className="productPage__box-block">
+                        <div className="productPage__box-block" data-aos="flip-right">
                             <h3 className='productPage__feature-heading'>in the box</h3>
                             <div className="productPage__list-container">
                                 <p className='productPage__list-container-item'><strong>1x</strong> Headphone Unit</p> 

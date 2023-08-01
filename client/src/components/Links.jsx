@@ -3,7 +3,7 @@ import {NavLink, Link, Route, Routes, useLocation } from 'react-router-dom';
 
 function Links() {
     return (  
-    <div className="linksBlock">
+    <div className="linksBlock" data-aos="fade-down">
         <div className="card">
         <img className='card__headphones-image' src="../assets/shared/desktop/image-category-thumbnail-headphones.png" alt="Headphones" />
         <h3>HEADPHONES</h3>

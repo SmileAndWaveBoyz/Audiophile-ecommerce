@@ -37,11 +37,11 @@ function Zx9() {
 
                     <div className="productPage">
                             <div className="productPage__image-box">
-                                <img className='productPage__image-box-zx9' src="../assets/product-zx9-speaker/mobile/zx9.png" alt="ZX9 Speaker" />
+                                <img className='productPage__image-box-zx9' src="../assets/product-zx9-speaker/mobile/zx9.png" alt="ZX9 Speaker" data-aos="fade-up"/>
                             </div>
                         
 
-                        <div className="productPage-top-text-container"> 
+                        <div className="productPage-top-text-container" data-aos="fade-down"> 
                             <h3 className='productPage__new-heading'>NEW PRODUCT</h3>
                             <h1 className='productPage__heading'>ZX9 SPEAKER</h1>
                             <p className='productPage__paragraph'>Upgrade your sound system with the all new ZX9 active speaker. It’s a bookshelf speaker system that offers truly wireless connectivity -- creating new possibilities for more pleasing and practical audio setups.</p>
@@ -74,7 +74,7 @@ function Zx9() {
 
 Discover clear, more natural sounding highs than the competition with ZX9’s signature planar diaphragm tweeter. Equally important is its powerful room-shaking bass courtesy of a 6.5” aluminum alloy bass unit. You’ll be able to enjoy equal sound quality whether in a large room or small den. Furthermore, you will experience new sensations from old songs since it can respond to even the subtle waveforms.</p>
                         </div>
-                        <div className="productPage__box-block">
+                        <div className="productPage__box-block" data-aos="flip-right">
                             <h3 className='productPage__feature-heading'>in the box</h3>
                             <div className="productPage__list-container">
                                 <p className='productPage__list-container-item'><strong>2x</strong> Speaker Unit</p> 
