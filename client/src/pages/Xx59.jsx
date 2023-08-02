@@ -11,14 +11,11 @@ function Xx59() {
 
     const newQuantity = useSelector(selectXx59Quantity)
     const dispatch = useDispatch();
-    const[pageQuantity, setPageQuantity] = useState(newQuantity);
+    const[pageQuantity, setPageQuantity] = useState(1);
 
-    useEffect(()=>{
-        setPageQuantity(newQuantity);
-    },[newQuantity]);
 
     const addToCart = () => {
-        dispatch(setXx59Quantity(pageQuantity));
+        dispatch(setXx59Quantity(newQuantity + pageQuantity));
     };
 
     return ( 

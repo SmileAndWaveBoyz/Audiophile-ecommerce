@@ -11,14 +11,10 @@ function Zx9() {
 
     const newQuantity = useSelector(selectZx9Quantity)
     const dispatch = useDispatch();
-    const[pageQuantity, setPageQuantity] = useState(newQuantity);
-
-    useEffect(()=>{
-        setPageQuantity(newQuantity);
-    },[newQuantity]);
+    const[pageQuantity, setPageQuantity] = useState(1);
 
     const addToCart = () => {
-        dispatch(setZx9Quantity(pageQuantity));
+        dispatch(setZx9Quantity(newQuantity + pageQuantity));
     };
 
     return ( 

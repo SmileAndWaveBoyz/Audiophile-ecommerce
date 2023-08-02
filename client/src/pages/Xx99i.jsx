@@ -11,14 +11,11 @@ function Xx99i(props) {
 
     const newQuantity = useSelector(selectXx99MiQuantity)
     const dispatch = useDispatch();
-    const[pageQuantity, setPageQuantity] = useState(newQuantity);
+    const[pageQuantity, setPageQuantity] = useState(1);
 
-    useEffect(()=>{
-        setPageQuantity(newQuantity);
-    },[newQuantity]);
 
     const addToCart = () => {
-        dispatch(setXx99MiQuantity(pageQuantity));
+        dispatch(setXx99MiQuantity(newQuantity + pageQuantity));
     };
 
     return ( 

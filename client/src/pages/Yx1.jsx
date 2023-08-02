@@ -11,14 +11,10 @@ function Yx1() {
 
     const newQuantity = useSelector(selectYx1Quantity)
     const dispatch = useDispatch();
-    const[pageQuantity, setPageQuantity] = useState(newQuantity);
-
-    useEffect(()=>{
-        setPageQuantity(newQuantity);
-    },[newQuantity]);
+    const[pageQuantity, setPageQuantity] = useState(1);
 
     const addToCart = () => {
-        dispatch(setYx1Quantity(pageQuantity));
+        dispatch(setYx1Quantity(newQuantity + pageQuantity));
     };
 
     return ( 
