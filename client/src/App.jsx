@@ -378,8 +378,10 @@ async function removeAllItems() {
 
           <button className="checkOutBox__checkout-button" onClick={
               () => {
-                navigate('/checkout');
-                cartClick();
+                if(totalQuantity > 0){
+                  navigate('/checkout');
+                  cartClick();
+                }
               }
             }>CHECKOUT</button>
         </div>

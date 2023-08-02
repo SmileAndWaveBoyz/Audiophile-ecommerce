@@ -47,6 +47,7 @@ function Checkout(props) {
       const formRef = useRef(null);
 
       function continueAndPayButtonClick(e) { //This makes the thank you box show up and shows the normal HTML error messages if inputs arn't filled in.
+        window.scrollTo({top: 0, behavior: 'smooth',});
 
         // Trigger the form's native validation
         const isValid = formRef.current.checkValidity();

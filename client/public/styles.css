@@ -2558,6 +2558,11 @@ a{
     outline: 0;
     border: 0;
     cursor: pointer;
+    transition: all 0.2s;
+}
+
+.checkOutBox__checkout-button:hover{
+    background-color: #FBAF85;
 }
 
 
