@@ -56,7 +56,16 @@ function Checkout(props) {
             if (formData.name && formData.email && formData.phone && formData.address && formData.postCode && formData.city && formData.country) {
 
                 try {
-                    const response = await axios.post('http://localhost:5000/api/order', formData);
+                    // Create the order summary string
+                    const orderSummary = props.cartItemsAll
+                    .filter(item => item.quantity > 0)
+                    .map(item => `${item.shortName} x${item.quantity}`)
+                    .join(', ');
+
+                    // Update the formData to include the order summary
+                    const updatedFormData = { ...formData, Order: orderSummary };
+
+                    const response = await axios.post('https://audiophile-api-g3pm.onrender.com/api/order', updatedFormData);
                     console.log(response.data); // Success message from server
                     
                     // Show the thank you box or perform other actions as needed
