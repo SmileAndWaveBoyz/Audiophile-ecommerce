@@ -1,6 +1,5 @@
 import { Footer } from '../components/Footer';
-import Gear from "../components/Gear";
-import Links from '../components/Links';
+import axios from 'axios'; // Import axios for making HTTP requests
 import React, {useEffect, useState, useRef} from 'react';
 import {Link} from 'react-router-dom';
 
@@ -46,7 +45,7 @@ function Checkout(props) {
       const [firstItem, setFirstItem] = useState(0);
       const formRef = useRef(null);
 
-      function continueAndPayButtonClick(e) { //This makes the thank you box show up and shows the normal HTML error messages if inputs arn't filled in.
+      async function continueAndPayButtonClick(e) { //This makes the thank you box show up and shows the normal HTML error messages if inputs arn't filled in.
         window.scrollTo({top: 0, behavior: 'smooth',});
 
         // Trigger the form's native validation
@@ -55,6 +54,17 @@ function Checkout(props) {
 
         if (isValid) {
             if (formData.name && formData.email && formData.phone && formData.address && formData.postCode && formData.city && formData.country) {
+
+                try {
+                    const response = await axios.post('http://localhost:5000/api/order', formData);
+                    console.log(response.data); // Success message from server
+                    
+                    // Show the thank you box or perform other actions as needed
+                } catch (error) {
+                    console.error(error);
+                    // Handle error, show an error message, etc.
+                }
+
                 if (eMoney) {
                     if (formData.eMoneyNumber && formData.eMoneyPin) {
                         if (thankDisplayBox === "none") {
@@ -77,6 +87,7 @@ function Checkout(props) {
                           setFirstItem(theFirstItem);
                         
                       console.log('Payment processing...');
+                      console.log(formData);
                     } else {
                       console.log('Please fill in e-Money details before continuing.');
                     }
@@ -100,6 +111,7 @@ function Checkout(props) {
                       }
                       setFirstItem(theFirstItem);
                     console.log('Payment processing...');
+                    console.log(formData);
                   }
        
             }

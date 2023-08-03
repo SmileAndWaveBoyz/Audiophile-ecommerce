@@ -8,6 +8,19 @@ mongoose.connect("mongodb+srv://SmileAndWaveBoyz:Newcross971@cluster0.o6lompz.mo
 
 
 const Cart = mongoose.model('Item', { name: String, quantity: Number, price: Number, totalPrice: Number, shortName: String, mobileImagePath: String});
+const Orders = mongoose.model('Order', { 
+  name: String,
+  email: String,
+  phone: Number,
+  address: String,
+  postCode: String,
+  city: String,
+  country: String,
+  eMoneyNumber: Number,
+  eMoneyPin: Number,
+  uniqueIdentifier: String,
+  Order: String
+});
 
 app.use(express.json());
 app.use(cors());
@@ -21,6 +34,21 @@ app.get('/api/cart', async (req, res) => { // This poplates the items variable w
       res.status(500).json({ error: 'Internal Server Error' });
     }
   });
+
+  //Receive a new order
+  app.post('/api/order', async (req, res) => {
+    const orderData = req.body;
+
+    try {
+        const newOrder = new Orders(orderData);
+        await newOrder.save(); // Use await to wait for the save operation to complete
+
+        res.status(200).send('Order saved successfully');
+    } catch (err) {
+        console.error(err);
+        res.status(500).send('Error saving order');
+    }
+});
 
   //Update the quantity of one item
   app.put('/api/cart/:itemName', async (req, res) => {
