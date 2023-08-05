@@ -41,13 +41,16 @@ function App() {
   const [cartDisplayFadeZindex, setCartDisplayFadeZindex] = useState(-1);
   
   const [cartItems, setCartItems] = useState([]);
+  let updatedCartItems = []
 
   function refreshItemsFromBackEnd() {
     return fetch('https://audiophile-api-g3pm.onrender.com/api/cart')
       .then((response) => response.json())
       .then((data) => {
         setCartItems(data);
-        console.log(data);
+        updatedCartItems = data;
+        console.log("Updated items from back end");
+        console.log(updatedCartItems);
       })
       .catch((error) => console.error('Error fetching cart items:', error));
   }
@@ -61,11 +64,27 @@ function App() {
   }, []);
 
   function updateCartFromCookies() {
+    if (cookies.cartItems != null) {
     const cartData = cookies.cartItems;
-    console.log("Data from cookies:");
-    console.log(cartData);
-    console.log("Data from back end:");
-    console.log(cartItems);
+    const cartDataArray = Object.keys(cartData).map(itemName => ({
+      name: itemName,
+      quantity: cartData[itemName],
+    }));
+
+
+      for (let i = 0; i < updatedCartItems.length; i++) {
+        console.log("updated Cart Items " + updatedCartItems[i].quantity);
+        console.log("cartData " + cartDataArray[i].quantity);
+
+        updatedCartItems[i].quantity = cartDataArray[i].quantity;
+      }
+
+      console.log("Data from cookies:");
+      console.log(cartDataArray);
+      console.log("Updated cart items:");
+      console.log(updatedCartItems);
+      setCartItems(updatedCartItems);
+    }
   }
 
   useEffect(() => { // This populates new variables from cartItems into front end redux variables 
@@ -115,7 +134,9 @@ function App() {
     cartData['ZX7 Speaker'] = zx7Quantity;
     cartData['YX1 Wireless Earphones'] = yx1Quantity;
 
-    setCookie('cartItems', JSON.stringify(cartData), { path: '/' });
+    // The cookie will expire in 7 days (it's written in milliseconds)
+    setCookie('cartItems', JSON.stringify(cartData), { path: '/', expires: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000) });
+
   }
 
 
