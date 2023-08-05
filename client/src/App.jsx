@@ -15,6 +15,7 @@ import {Route, Routes } from 'react-router-dom';
 import { useNavigate  } from 'react-router-dom';
 import AOS from "aos";
 import "aos/dist/aos.css"
+import { useCookies } from 'react-cookie';
 
 
 import axios from 'axios';
@@ -41,19 +42,31 @@ function App() {
   
   const [cartItems, setCartItems] = useState([]);
 
-  function refreshCart() { // This pulls the cart items from the backend and puts them in cartItems
-      fetch('https://audiophile-api-g3pm.onrender.com/api/cart')
-        .then((response) => response.json())
-        .then((data) => {setCartItems(data); console.log(data); })
-        .catch((error) => console.error('Error fetching cart items:', error));   
+  function refreshItemsFromBackEnd() {
+    return fetch('https://audiophile-api-g3pm.onrender.com/api/cart')
+      .then((response) => response.json())
+      .then((data) => {
+        setCartItems(data);
+        console.log(data);
+      })
+      .catch((error) => console.error('Error fetching cart items:', error));
   }
 
   useEffect(() => {
-    refreshCart();
+    refreshItemsFromBackEnd().then(() => {
+      updateCartFromCookies();
+    });
+
     AOS.init();
   }, []);
 
-
+  function updateCartFromCookies() {
+    const cartData = cookies.cartItems;
+    console.log("Data from cookies:");
+    console.log(cartData);
+    console.log("Data from back end:");
+    console.log(cartItems);
+  }
 
   useEffect(() => { // This populates new variables from cartItems into front end redux variables 
     if(cartItems.length > 0){ 
@@ -89,28 +102,20 @@ function App() {
   const zx7Quantity = useSelector(selectZx7Quantity)
   const yx1Quantity = useSelector(selectYx1Quantity)
 
+  const [cookies, setCookie] = useCookies(['cartItems']);
 
-  function updateBackEnd() { // This will update the backend with the front end quantity of all variables
-    let itemNameToUpdate = ["XX99 MARK II Headphones", "XX99 MARK I Headphones", "XX59 Headphones", "ZX9 Speaker", "ZX7 Speaker", "YX1 Wireless Earphones"];
-    let itemQuantityArray = [xx99mk2Quantity, xx99mk1Quantity, xx59Quantity, zx9Quantity, zx7Quantity, yx1Quantity];
 
-    // Create an array of promises for all the backend updates
-    const updatePromises = itemNameToUpdate.map((itemName, index) => {
-      const newQuantity = itemQuantityArray[index];
-      return axios
-        .put(`https://audiophile-api-g3pm.onrender.com/api/cart/${itemName}`, {
-          newQuantity,
-        });
-    });
+  // Function to update cookies with cart items
+  function updateCookies() {
+    const cartData = {};
+    cartData['XX99 MARK II Headphones'] = xx99mk2Quantity;
+    cartData['XX99 MARK I Headphones'] = xx99mk1Quantity;
+    cartData['XX59 Headphones'] = xx59Quantity;
+    cartData['ZX9 Speaker'] = zx9Quantity;
+    cartData['ZX7 Speaker'] = zx7Quantity;
+    cartData['YX1 Wireless Earphones'] = yx1Quantity;
 
-    // Return a promise that resolves when all backend updates are finished
-    return Promise.all(updatePromises)
-      .then((responses) => {
-        console.log('All item quantities updated successfully:', responses);
-      })
-      .catch((error) => {
-        console.error('Error updating item quantities:', error);
-      });
+    setCookie('cartItems', JSON.stringify(cartData), { path: '/' });
   }
 
 
@@ -122,7 +127,8 @@ function App() {
   useEffect(() => { // This updates the back end and re-calculates the total price every time a front end item quantity changes
     if(cartItems.length > 0){
     setTotal((xx99mk2Quantity * cartItems[0].price) + (xx99mk1Quantity * cartItems[1].price) + (xx59Quantity * cartItems[2].price) + (zx9Quantity * cartItems[3].price) + (zx7Quantity * cartItems[4].price) + (yx1Quantity * cartItems[5].price));
-    updateBackEnd();
+    // updateBackEnd();
+    updateCookies();
 
     function updateQuantityForCartItem(itemToUpdate, newQuantity) {
       return { ...itemToUpdate, quantity: newQuantity };
