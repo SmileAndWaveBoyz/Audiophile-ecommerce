@@ -19,7 +19,7 @@ function Speakers() {
 
                     <div className="showBlock">
                         <div className="showBlock__image-container" data-aos="fade-right">
-                            <img className='showBlock__image-container-zx9' src="./assets/product-zx9-speaker/mobile/zx9.png" alt="ZX9 Speaker" />
+                            <img className='showBlock__image-container-zx9' src="./assets/product-zx9-speaker/mobile/zx9.webp" alt="ZX9 Speaker" />
                         </div>
 
                         <div className="showBlock__text-container" data-aos="fade-up">
@@ -32,7 +32,7 @@ function Speakers() {
 
                     <div className="showBlock">
                         <div className="showBlock__image-container odd" data-aos="fade-up">
-                            <img className='showBlock__image-container-zx7' src="./assets/product-zx7-speaker/mobile/zx7.png" alt="ZX7 Speaker"/>
+                            <img className='showBlock__image-container-zx7' src="./assets/product-zx7-speaker/mobile/zx7.webp" alt="ZX7 Speaker"/>
                         </div>
 
                         <div className="showBlock__text-container" data-aos="fade-right">

@@ -200,7 +200,7 @@ async function removeAllItems() {
 
                   <div className="checkOutBox__item-container">
                     <div className="checkOutBox__item-container-image-box">
-                      <img src="../assets/product-xx99-mark-two-headphones/mobile/mk2.png" alt="XX99 MK 2 headphones"/>
+                      <img src="../assets/product-xx99-mark-two-headphones/mobile/mk2.webp" alt="XX99 MK 2 headphones"/>
                     </div>
     
                     <div className="checkOutBox__item-container-text-box">
@@ -233,7 +233,7 @@ async function removeAllItems() {
 
                   <div className="checkOutBox__item-container">
                     <div className="checkOutBox__item-container-image-box">
-                      <img src="../assets/product-xx99-mark-two-headphones/mobile/mk1.png" alt="XX99 MK 1 headphones"/>
+                      <img src="../assets/product-xx99-mark-two-headphones/mobile/mk1.webp" alt="XX99 MK 1 headphones"/>
                     </div>
     
                     <div className="checkOutBox__item-container-text-box">
@@ -266,7 +266,7 @@ async function removeAllItems() {
 
                   <div className="checkOutBox__item-container">
                     <div className="checkOutBox__item-container-image-box">
-                      <img src="../assets/product-xx99-mark-two-headphones/mobile/xx59.png" alt="XX59 headphones"/>
+                      <img src="../assets/product-xx99-mark-two-headphones/mobile/xx59.webp" alt="XX59 headphones"/>
                     </div>
     
                     <div className="checkOutBox__item-container-text-box">
@@ -299,7 +299,7 @@ async function removeAllItems() {
 
                   <div className="checkOutBox__item-container">
                     <div className="checkOutBox__item-container-image-box">
-                      <img src="../assets/product-zx9-speaker/mobile/zx9.png" alt="ZX9 Speakers"/>
+                      <img src="../assets/product-zx9-speaker/mobile/zx9.webp" alt="ZX9 Speakers"/>
                     </div>
     
                     <div className="checkOutBox__item-container-text-box">
@@ -332,7 +332,7 @@ async function removeAllItems() {
 
                   <div className="checkOutBox__item-container">
                     <div className="checkOutBox__item-container-image-box">
-                      <img src="../assets/product-zx7-speaker/mobile/zx7.png" alt="ZX7 Speakers"/>
+                      <img src="../assets/product-zx7-speaker/mobile/zx7.webp" alt="ZX7 Speakers"/>
                     </div>
     
                     <div className="checkOutBox__item-container-text-box">
@@ -365,7 +365,7 @@ async function removeAllItems() {
 
                   <div className="checkOutBox__item-container">
                     <div className="checkOutBox__item-container-image-box">
-                      <img src="../assets/product-yx1-earphones/mobile/yx1.png" alt="YX1 Earphones"/>
+                      <img src="../assets/product-yx1-earphones/mobile/yx1.webp" alt="YX1 Earphones"/>
                     </div>
     
                     <div className="checkOutBox__item-container-text-box">

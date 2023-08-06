@@ -19,7 +19,7 @@ function Headphones() {
 
                     <div className="showBlock">
                         <div className="showBlock__image-container" data-aos="fade-right">
-                            <img className='showBlock__image-container-mk2' src="../assets/product-xx99-mark-two-headphones/mobile/mk2.png" alt="XX99 Mark II Headphones" />
+                            <img className='showBlock__image-container-mk2' src="../assets/product-xx99-mark-two-headphones/mobile/mk2.webp" alt="XX99 Mark II Headphones" />
                         </div>
 
                         <div className="showBlock__text-container" data-aos="fade-up">
@@ -32,7 +32,7 @@ function Headphones() {
 
                     <div className="showBlock">
                         <div className="showBlock__image-container odd" data-aos="fade-up">
-                            <img className='showBlock__image-container-mk1' src="./assets/product-xx99-mark-two-headphones/mobile/mk1.png" alt="XX99 Mark I Headphones" />
+                            <img className='showBlock__image-container-mk1' src="./assets/product-xx99-mark-two-headphones/mobile/mk1.webp" alt="XX99 Mark I Headphones" />
                         </div>
 
                         <div className="showBlock__text-container" data-aos="fade-right">
@@ -44,7 +44,7 @@ function Headphones() {
 
                     <div className="showBlock">
                         <div className="showBlock__image-container" data-aos="fade-right">
-                            <img className='showBlock__image-container-xx59' src="./assets/product-xx99-mark-two-headphones/mobile/xx59.png" alt="XX59 Headphones" />
+                            <img className='showBlock__image-container-xx59' src="./assets/product-xx99-mark-two-headphones/mobile/xx59.webp" alt="XX59 Headphones" />
                         </div>
 
                         <div className="showBlock__text-container" data-aos="fade-up">

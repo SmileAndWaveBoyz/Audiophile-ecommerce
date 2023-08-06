@@ -25,7 +25,7 @@ function Yx1() {
 
                     <div className="productPage">
                             <div className="productPage__image-box">
-                                <img className='productPage__image-box-yx1' src="../assets/product-yx1-earphones/mobile/yx1.png" alt="YX1 Earphones" data-aos="fade-up"/>
+                                <img className='productPage__image-box-yx1' src="../assets/product-yx1-earphones/mobile/yx1.webp" alt="YX1 Earphones" data-aos="fade-up"/>
                             </div>
                         
 
@@ -76,10 +76,10 @@ The YX1 Wireless Earphones features customizable controls for volume, music, cal
 
                     <div className="productPage-blockContainer-image-box">
                         <div className="productPage-blockContainer-image-box-small-images">
-                            <img className='productPage-image-yx1-buds' src="../assets/shared/mobile/grid-page-six-1.png" alt="A close up the yx1 buds." />
-                            <img className='productPage-image-yx1-charger' src="../assets/shared/mobile/grid-page-six-2.png" alt="YX1s charging" />
+                            <img className='productPage-image-yx1-buds' src="../assets/shared/mobile/grid-page-six-1.webp" alt="A close up the yx1 buds." />
+                            <img className='productPage-image-yx1-charger' src="../assets/shared/mobile/grid-page-six-2.webp" alt="YX1s charging" />
                         </div>
-                        <img className='productPage-image-yx1-case' src="../assets/shared/mobile/grid-page-six-3.png" alt="YX1s next to thier case." />
+                        <img className='productPage-image-yx1-case' src="../assets/shared/mobile/grid-page-six-3.webp" alt="YX1s next to thier case." />
                     </div>
 
                     
@@ -89,7 +89,7 @@ The YX1 Wireless Earphones features customizable controls for volume, music, cal
 
                             <div className="recomendation__block-container">
                                 <div className="recomendation__block-container-image-box">
-                                    <img className='recomendation__block-container-image-box-image xx99mi' src="../assets/product-xx99-mark-two-headphones/mobile/mk1.png" alt="XX99 Mark I Headphones" />
+                                    <img className='recomendation__block-container-image-box-image xx99mi' src="../assets/product-xx99-mark-two-headphones/mobile/mk1.webp" alt="XX99 Mark I Headphones" />
                                 </div>
 
                                 <h3 className='recomendation__block-product-heading'>XX99 MARK I</h3>
@@ -98,7 +98,7 @@ The YX1 Wireless Earphones features customizable controls for volume, music, cal
 
                             <div className="recomendation__block-container">
                                 <div className="recomendation__block-container-image-box">
-                                    <img className='recomendation__block-container-image-box-image xx59' src="../assets/product-xx99-mark-two-headphones/mobile/xx59.png" alt="XX99 Mark I Headphones" />                                
+                                    <img className='recomendation__block-container-image-box-image xx59' src="../assets/product-xx99-mark-two-headphones/mobile/xx59.webp" alt="XX99 Mark I Headphones" />                                
                                 </div>
 
                                 <h3 className='recomendation__block-product-heading'>XX59</h3>
@@ -107,7 +107,7 @@ The YX1 Wireless Earphones features customizable controls for volume, music, cal
 
                             <div className="recomendation__block-container">
                                     <div className="recomendation__block-container-image-box">
-                                        <img className='recomendation__block-container-image-box-image zx9' src="../assets/product-zx9-speaker/mobile/zx9.png" alt="XX99 Mark I Headphones" />                                
+                                        <img className='recomendation__block-container-image-box-image zx9' src="../assets/product-zx9-speaker/mobile/zx9.webp" alt="XX99 Mark I Headphones" />                                
                                     </div>
                                 <h3 className='recomendation__block-product-heading'>ZX9 SPEAKER</h3>
                                 <Link to={"/speakers/zx9"} className="seeProductButton">SEE PRODUCT</Link>

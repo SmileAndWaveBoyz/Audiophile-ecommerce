@@ -26,7 +26,7 @@ function Xx99i(props) {
 
                     <div className="productPage">
                             <div className="productPage__image-box">
-                                <img className='productPage__image-box-xx99mi' src="../assets/product-xx99-mark-one-headphones/mobile/product-page.png" alt="XX99 Mark 1 Headphones" data-aos="fade-up"/>
+                                <img className='productPage__image-box-xx99mi' src="../assets/product-xx99-mark-one-headphones/mobile/product-page.webp" alt="XX99 Mark 1 Headphones" data-aos="fade-up"/>
                             </div>
                         
 
@@ -74,10 +74,10 @@ From the handcrafted microfiber ear cushions to the robust metal headband with i
 
                     <div className="productPage-blockContainer-image-box">
                         <div className="productPage-blockContainer-image-box-small-images">
-                            <img className='productPage-image-mic-stand' src="../assets/shared/mobile/grid-page-two-1.png" alt="A microphone standwith microphone attached, headphones are also hanging from the stand." />
-                            <img className='productPage-image-shoe' src="../assets/shared/mobile/grid-page-two-2.png" alt="A shoe, a watch strap and some headphones." />
+                            <img className='productPage-image-mic-stand' src="../assets/shared/mobile/grid-page-two-1.webp" alt="A microphone standwith microphone attached, headphones are also hanging from the stand." />
+                            <img className='productPage-image-shoe' src="../assets/shared/mobile/grid-page-two-2.webp" alt="A shoe, a watch strap and some headphones." />
                         </div>
-                        <img className='productPage-image-fairy-lights' src="../assets/shared/mobile/grid-page-two-3.png" alt="AKG headphoneswith fairy lightson them." />
+                        <img className='productPage-image-fairy-lights' src="../assets/shared/mobile/grid-page-two-3.webp" alt="AKG headphoneswith fairy lightson them." />
                     </div>
 
                     
@@ -86,7 +86,7 @@ From the handcrafted microfiber ear cushions to the robust metal headband with i
                         <div className="recomendation__block-flex-box">
                             <div className="recomendation__block-container">
                                 <div className="recomendation__block-container-image-box">
-                                    <img className='recomendation__block-container-image-box-image xx99mii' src="../assets/product-xx99-mark-two-headphones/mobile/mk2.png" alt="XX99 Mark II Headphones" />
+                                    <img className='recomendation__block-container-image-box-image xx99mii' src="../assets/product-xx99-mark-two-headphones/mobile/mk2.webp" alt="XX99 Mark II Headphones" />
                                 </div>
 
                                 <h3 className='recomendation__block-product-heading'>XX99 MARK II</h3>
@@ -95,7 +95,7 @@ From the handcrafted microfiber ear cushions to the robust metal headband with i
 
                             <div className="recomendation__block-container">
                                 <div className="recomendation__block-container-image-box">
-                                    <img className='recomendation__block-container-image-box-image xx59' src="../assets/product-xx99-mark-two-headphones/mobile/xx59.png" alt="XX99 Mark I Headphones" />                                
+                                    <img className='recomendation__block-container-image-box-image xx59' src="../assets/product-xx99-mark-two-headphones/mobile/xx59.webp" alt="XX99 Mark I Headphones" />                                
                                 </div>
 
                                 <h3 className='recomendation__block-product-heading'>XX59</h3>
@@ -104,7 +104,7 @@ From the handcrafted microfiber ear cushions to the robust metal headband with i
 
                             <div className="recomendation__block-container">
                                     <div className="recomendation__block-container-image-box">
-                                        <img className='recomendation__block-container-image-box-image zx9' src="../assets/product-zx9-speaker/mobile/zx9.png" alt="XX99 Mark I Headphones" />                                
+                                        <img className='recomendation__block-container-image-box-image zx9' src="../assets/product-zx9-speaker/mobile/zx9.webp" alt="XX99 Mark I Headphones" />                                
                                     </div>
                                 <h3 className='recomendation__block-product-heading'>ZX9 SPEAKER</h3>
                                 <Link to={"/speakers/zx9"} className="seeProductButton">SEE PRODUCT</Link>

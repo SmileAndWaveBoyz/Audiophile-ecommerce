@@ -26,7 +26,7 @@ function Zx7() {
 
                     <div className="productPage">
                             <div className="productPage__image-box">
-                                <img className='productPage__image-box-zx7' src="../assets/product-zx7-speaker/mobile/zx7.png" alt="ZX9 Speaker" data-aos="fade-up"/>
+                                <img className='productPage__image-box-zx7' src="../assets/product-zx7-speaker/mobile/zx7.webp" alt="ZX9 Speaker" data-aos="fade-up"/>
                             </div>
                         
 
@@ -79,10 +79,10 @@ The ZX7 speaker is the perfect blend of stylish design and high performance. It 
 
                     <div className="productPage-blockContainer-image-box">
                         <div className="productPage-blockContainer-image-box-small-images">
-                            <img className='productPage-image-zx7-woofer' src="../assets/shared/mobile/grid-page-five-1.png" alt="A close up of the ZX7 woofer" />
-                            <img className='productPage-image-studio-zx7' src="../assets/shared/mobile/grid-page-five-2.png" alt="A home recording studio with ZX7 speakers" />
+                            <img className='productPage-image-zx7-woofer' src="../assets/shared/mobile/grid-page-five-1.webp" alt="A close up of the ZX7 woofer" />
+                            <img className='productPage-image-studio-zx7' src="../assets/shared/mobile/grid-page-five-2.webp" alt="A home recording studio with ZX7 speakers" />
                         </div>
-                        <img className='productPage-image-zx7-close' src="../assets/shared/mobile/grid-page-five-3.png" alt="ZX7 close up" />
+                        <img className='productPage-image-zx7-close' src="../assets/shared/mobile/grid-page-five-3.webp" alt="ZX7 close up" />
                     </div>
 
                     
@@ -91,7 +91,7 @@ The ZX7 speaker is the perfect blend of stylish design and high performance. It 
                         <div className="recomendation__block-flex-box">
                             <div className="recomendation__block-container">
                                     <div className="recomendation__block-container-image-box">
-                                        <img className='recomendation__block-container-image-box-image zx9' src="../assets/product-zx9-speaker/mobile/zx9.png" alt="XX99 Mark I Headphones" />                                
+                                        <img className='recomendation__block-container-image-box-image zx9' src="../assets/product-zx9-speaker/mobile/zx9.webp" alt="XX99 Mark I Headphones" />                                
                                     </div>
                                 <h3 className='recomendation__block-product-heading'>ZX9 SPEAKER</h3>
                                 <Link to={"/speakers/zx9"} className="seeProductButton">SEE PRODUCT</Link>
@@ -99,7 +99,7 @@ The ZX7 speaker is the perfect blend of stylish design and high performance. It 
 
                             <div className="recomendation__block-container">
                                 <div className="recomendation__block-container-image-box">
-                                    <img className='recomendation__block-container-image-box-image xx99mi' src="../assets/product-xx99-mark-two-headphones/mobile/mk1.png" alt="XX99 Mark I Headphones" />
+                                    <img className='recomendation__block-container-image-box-image xx99mi' src="../assets/product-xx99-mark-two-headphones/mobile/mk1.webp" alt="XX99 Mark I Headphones" />
                                 </div>
 
                                 <h3 className='recomendation__block-product-heading'>XX99 MARK I</h3>
@@ -108,7 +108,7 @@ The ZX7 speaker is the perfect blend of stylish design and high performance. It 
 
                             <div className="recomendation__block-container">
                                 <div className="recomendation__block-container-image-box">
-                                    <img className='recomendation__block-container-image-box-image xx59' src="../assets/product-xx99-mark-two-headphones/mobile/xx59.png" alt="XX99 Mark I Headphones" />                                
+                                    <img className='recomendation__block-container-image-box-image xx59' src="../assets/product-xx99-mark-two-headphones/mobile/xx59.webp" alt="XX99 Mark I Headphones" />                                
                                 </div>
 
                                 <h3 className='recomendation__block-product-heading'>XX59</h3>

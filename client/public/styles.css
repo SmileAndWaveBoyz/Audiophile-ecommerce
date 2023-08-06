@@ -349,6 +349,7 @@ a{
     margin-top: 52px;
     margin-bottom: 5.2rem;
     display: flex;
+    align-items: center;
     flex-direction: column;
 }
 
@@ -755,7 +756,7 @@ a{
     }
     
     .zx9SpeakerBlock img{
-        content: url("./assets/home/tablet/image-speaker-zx7.png");
+        content: url("./assets/home/tablet/image-speaker-zx7.webp");
     }
 }
 
@@ -766,7 +767,7 @@ a{
     }
     
     .zx9SpeakerBlock img{
-        content: url("./assets/home/desktop/image-speaker-zx7.png");
+        content: url("./assets/home/desktop/image-speaker-zx7.webp");
     }
 }
 
@@ -838,7 +839,7 @@ a{
         margin-right: 1.1rem;
         width: 339px;
         height: 320px;
-        content: url("./assets/home/tablet/image-earphones-yx1.png");
+        content: url("./assets/home/tablet/image-earphones-yx1.webp");
     }
     
     .YX1Block__text-box{
@@ -875,7 +876,7 @@ a{
         margin-right: 3rem;
         width: 540px;
         height: 320px;
-        content: url("./assets/home/desktop/image-earphones-yx1.png");
+        content: url("./assets/home/desktop/image-earphones-yx1.webp");
     }
     
     .YX1Block__text-box{
@@ -952,7 +953,7 @@ a{
     }
     
     .gearBlock img{
-        content: url("./assets/shared/tablet/image-best-gear.png");
+        content: url("./assets/shared/tablet/image-best-gear.webp");
         margin-bottom: 6.3rem;
     }
     
@@ -992,7 +993,7 @@ a{
     }
     
     .gearBlock img{
-        content: url("./assets/shared/desktop/image-best-gear.png");
+        content: url("./assets/shared/desktop/image-best-gear.webp");
         margin-bottom: 0rem;
         width: 540px;
         height: 588px;
@@ -1385,27 +1386,27 @@ a{
     }
 
     .showBlock__image-container-mk2{
-        content: url("./assets/product-xx99-mark-two-headphones/tablet/mk2.png");
+        content: url("./assets/product-xx99-mark-two-headphones/tablet/mk2.webp");
     }
 
     .showBlock__image-container-mk1{
-        content: url("./assets/product-xx99-mark-two-headphones/tablet/mk1.png");
+        content: url("./assets/product-xx99-mark-two-headphones/tablet/mk1.webp");
     }
     
     .showBlock__image-container-xx59{
-        content: url("./assets/product-xx99-mark-two-headphones/tablet/xx59.png");
+        content: url("./assets/product-xx99-mark-two-headphones/tablet/xx59.webp");
     }
 
     .showBlock__image-container-zx9{
-        content: url("./assets/product-zx9-speaker/tablet/zx9.png");
+        content: url("./assets/product-zx9-speaker/tablet/zx9.webp");
     }
 
     .showBlock__image-container-zx7{
-        content: url("./assets/product-zx7-speaker/tablet/zx7.png");
+        content: url("./assets/product-zx7-speaker/tablet/zx7.webp");
     }
     
     .showBlock__image-container-yx1{
-        content: url("./assets/product-yx1-earphones/tablet/yx1.png");
+        content: url("./assets/product-yx1-earphones/tablet/yx1.webp");
     }
     
     .showBlock__text-container{
@@ -1461,27 +1462,27 @@ a{
     }
 
     .showBlock__image-container-mk2{
-        content: url("./assets/product-xx99-mark-two-headphones/desktop/mk2.png");
+        content: url("./assets/product-xx99-mark-two-headphones/desktop/mk2.webp");
     }
 
     .showBlock__image-container-mk1{
-        content: url("./assets/product-xx99-mark-two-headphones/desktop/mk1.png");
+        content: url("./assets/product-xx99-mark-two-headphones/desktop/mk1.webp");
     }
     
     .showBlock__image-container-xx59{
-        content: url("./assets/product-xx99-mark-two-headphones/desktop/xx59.png");
+        content: url("./assets/product-xx99-mark-two-headphones/desktop/xx59.webp");
     }
         
     .showBlock__image-container-zx7{
-        content: url("./assets/product-zx7-speaker/desktop/zx7.png");
+        content: url("./assets/product-zx7-speaker/desktop/zx7.webp");
     }
     
     .showBlock__image-container-zx9{
-        content: url("./assets/product-zx9-speaker/desktop/zx9.png");
+        content: url("./assets/product-zx9-speaker/desktop/zx9.webp");
     }
 
     .showBlock__image-container-yx1{
-        content: url("./assets/product-yx1-earphones/desktop/yx1.png");
+        content: url("./assets/product-yx1-earphones/desktop/yx1.webp");
     }
     
     .showBlock__text-container{
@@ -1883,29 +1884,29 @@ a{
     }
 
     .productPage__image-box-xx99mii{
-        content: url("../assets/product-xx99-mark-two-headphones/tablet/mk2.png");
+        content: url("../assets/product-xx99-mark-two-headphones/tablet/mk2.webp");
     }
 
     .productPage__image-box-xx99mi{
-        content: ("../assets/product-xx99-mark-one-headphones/tablet/product-page.png");
+        content: ("../assets/product-xx99-mark-one-headphones/tablet/product-page.webp");
     }
 
     .productPage__image-box-xx59{
-        content: ("../assets/product-xx59-headphones/tablet/xx59.png");
+        content: ("../assets/product-xx59-headphones/tablet/xx59.webp");
     }
     
     .productPage__image-box-zx9{
-        content: ("../assets/product-zx9-speaker/tablet/zx9.png");
+        content: ("../assets/product-zx9-speaker/tablet/zx9.webp");
     }
     
     .productPage__image-box .productPage__image-box-zx7{
-        content: ("../assets/product-zx7-speaker/tablet/zx7.png");
+        content: ("../assets/product-zx7-speaker/tablet/zx7.webp");
         width: 140.624px;
         height: 202px;
     }
 
     .productPage__image-box .productPage__image-box-yx1{
-        content: url("./assets/product-yx1-earphones/tablet/yx1.png");
+        content: url("./assets/product-yx1-earphones/tablet/yx1.webp");
         width: 263px;
         height: 238px;
     }
@@ -1973,86 +1974,86 @@ a{
 
     /* Mark 2 page tablet*/
     .productPage-image-headphone-guy{
-        content: url("../assets/shared/tablet/grid-page-one-1.png");
+        content: url("../assets/shared/tablet/grid-page-one-1.webp");
     }
 
     .productPage-blockContainer-image-box-small-images .productPage-image-table{
-        content: url("../assets/shared/tablet/grid-page-one-2.png");
+        content: url("../assets/shared/tablet/grid-page-one-2.webp");
         margin-top: auto;
     }
 
     .productPage-image-headphone-close{
-        content: url("../assets/shared/tablet/grid-page-one-3.png");
+        content: url("../assets/shared/tablet/grid-page-one-3.webp");
     }
     
     /* Mark 1 page tablet*/
     .productPage-image-mic-stand{
-        content: url("../assets/shared/tablet/grid-page-two-1.png");
+        content: url("../assets/shared/tablet/grid-page-two-1.webp");
     }
 
     .productPage-blockContainer-image-box-small-images .productPage-image-shoe{
-        content: url("../assets/shared/tablet/grid-page-two-2.png");
+        content: url("../assets/shared/tablet/grid-page-two-2.webp");
         margin-top: auto;
     }
 
     .productPage-image-fairy-lights{
-        content: url("../assets/shared/tablet/grid-page-two-3.png");
+        content: url("../assets/shared/tablet/grid-page-two-3.webp");
     }
 
     /*XX59 page tablet  */
     .productPage-image-girl-dancing{
-        content: url("../assets/shared/tablet/grid-page-three-1.png");
+        content: url("../assets/shared/tablet/grid-page-three-1.webp");
     }
 
     .productPage-blockContainer-image-box-small-images .productPage-image-books{
-        content: url("../assets/shared/tablet/grid-page-three-2.png");
+        content: url("../assets/shared/tablet/grid-page-three-2.webp");
         margin-top: auto;
     }
 
     .productPage-image-finger-xx59{
-        content: url("../assets/shared/tablet/grid-page-three-3.png");
+        content: url("../assets/shared/tablet/grid-page-three-3.webp");
     }
 
     /*ZX9 page tablet  */
     .productPage-image-zx9-woofer{
-        content: url("../assets/shared/tablet/grid-page-four-1.png");
+        content: url("../assets/shared/tablet/grid-page-four-1.webp");
     }
 
     .productPage-blockContainer-image-box-small-images .productPage-image-shelf-plants{
-        content: url("../assets/shared/tablet/grid-page-four-2.png");
+        content: url("../assets/shared/tablet/grid-page-four-2.webp");
         margin-top: auto;
     }
 
     .productPage-image-zx9-dual{
-        content: url("../assets/shared/tablet/grid-page-four-3.png");
+        content: url("../assets/shared/tablet/grid-page-four-3.webp");
     }
 
     /*ZX7 page tablet  */
     .productPage-image-zx7-woofer{
-        content: url("../assets/shared/tablet/grid-page-five-1.png");
+        content: url("../assets/shared/tablet/grid-page-five-1.webp");
     }
 
     .productPage-blockContainer-image-box-small-images .productPage-image-studio-zx7{
-        content: url("../assets/shared/tablet/grid-page-five-2.png");
+        content: url("../assets/shared/tablet/grid-page-five-2.webp");
         margin-top: auto;
     }
 
     .productPage-image-zx7-close{
-        content: url("../assets/shared/tablet/grid-page-five-3.png");
+        content: url("../assets/shared/tablet/grid-page-five-3.webp");
     }
 
     /*YX1 page tablet  */
     .productPage-image-yx1-buds{
-        content: url("../assets/shared/tablet/grid-page-six-1.png");
+        content: url("../assets/shared/tablet/grid-page-six-1.webp");
     }
 
     .productPage-blockContainer-image-box-small-images .productPage-image-yx1-charger{
-        content: url("../assets/shared/tablet/grid-page-six-2.png");
+        content: url("../assets/shared/tablet/grid-page-six-2.webp");
         margin-top: auto;
     }
 
     .productPage-image-yx1-case{
-        content: url("../assets/shared/tablet/grid-page-six-3.png");
+        content: url("../assets/shared/tablet/grid-page-six-3.webp");
     }
 
     .recomendation__block{
@@ -2141,29 +2142,29 @@ a{
     }
 
     .productPage__image-box-xx99mii{
-        content: url("../assets/product-xx99-mark-two-headphones/desktop/mk2.png");
+        content: url("../assets/product-xx99-mark-two-headphones/desktop/mk2.webp");
     }
 
     .productPage__image-box-xx99mi{
-        content: url("../assets/product-xx99-mark-one-headphones/desktop/product-page.png");
+        content: url("../assets/product-xx99-mark-one-headphones/desktop/product-page.webp");
     }
 
     .productPage__image-box-xx59{
-        content: ("../assets/product-xx59-headphones/desktop/xx59.png");
+        content: ("../assets/product-xx59-headphones/desktop/xx59.webp");
     }
   
     .productPage__image-box-zx9{
-        content: ("../assets/product-zx9-speaker/desktop/zx9.png");
+        content: ("../assets/product-zx9-speaker/desktop/zx9.webp");
     }
     
     .productPage__image-box .productPage__image-box-zx7{
-        content: ("../assets/product-zx7-speaker/desktop/zx7.png");
+        content: ("../assets/product-zx7-speaker/desktop/zx7.webp");
         width: 268.022px;
         height: 385px;
     }
 
     .productPage__image-box .productPage__image-box-yx1{
-        content: url("../assets/product-yx1-earphones/desktop/yx1.png");
+        content: url("../assets/product-yx1-earphones/desktop/yx1.webp");
         scale: 1.2;
     }
     
@@ -2245,86 +2246,86 @@ a{
 
     /* Mark 2 page desktop*/
     .productPage-image-headphone-guy{
-        content: url("../assets/shared/desktop/grid-page-one-1.png");
+        content: url("../assets/shared/desktop/grid-page-one-1.webp");
     }
 
     .productPage-blockContainer-image-box-small-images .productPage-image-table{
-        content: url("../assets/shared/desktop/grid-page-one-2.png");
+        content: url("../assets/shared/desktop/grid-page-one-2.webp");
         margin-top: auto;
     }
 
     .productPage-image-headphone-close{
-        content: url("../assets/shared/desktop/grid-page-one-3.png");
+        content: url("../assets/shared/desktop/grid-page-one-3.webp");
     }
     
     /* Mark 1 page desktop*/
     .productPage-image-mic-stand{
-        content: url("../assets/shared/desktop/grid-page-two-1.png");
+        content: url("../assets/shared/desktop/grid-page-two-1.webp");
     }
 
     .productPage-blockContainer-image-box-small-images .productPage-image-shoe{
-        content: url("../assets/shared/desktop/grid-page-two-2.png");
+        content: url("../assets/shared/desktop/grid-page-two-2.webp");
         margin-top: auto;
     }
 
     .productPage-image-fairy-lights{
-        content: url("../assets/shared/desktop/grid-page-two-3.png");
+        content: url("../assets/shared/desktop/grid-page-two-3.webp");
     }
 
     /*XX59 page desktop  */
     .productPage-image-girl-dancing{
-        content: url("../assets/shared/desktop/grid-page-three-1.png");
+        content: url("../assets/shared/desktop/grid-page-three-1.webp");
     }
 
     .productPage-blockContainer-image-box-small-images .productPage-image-books{
-        content: url("../assets/shared/desktop/grid-page-three-2.png");
+        content: url("../assets/shared/desktop/grid-page-three-2.webp");
         margin-top: auto;
     }
 
     .productPage-image-finger-xx59{
-        content: url("../assets/shared/desktop/grid-page-three-3.png");
+        content: url("../assets/shared/desktop/grid-page-three-3.webp");
     }
     
     /*ZX9 page desktop  */
     .productPage-image-zx9-woofer{
-        content: url("../assets/shared/desktop/grid-page-four-1.png");
+        content: url("../assets/shared/desktop/grid-page-four-1.webp");
     }
 
     .productPage-blockContainer-image-box-small-images .productPage-image-shelf-plants{
-        content: url("../assets/shared/desktop/grid-page-four-2.png");
+        content: url("../assets/shared/desktop/grid-page-four-2.webp");
         margin-top: auto;
     }
 
     .productPage-image-zx9-dual{
-        content: url("../assets/shared/desktop/grid-page-four-3.png");
+        content: url("../assets/shared/desktop/grid-page-four-3.webp");
     }
 
     /*ZX7 page desktop  */
     .productPage-image-zx7-woofer{
-        content: url("../assets/shared/desktop/grid-page-five-1.png");
+        content: url("../assets/shared/desktop/grid-page-five-1.webp");
     }
 
     .productPage-blockContainer-image-box-small-images .productPage-image-studio-zx7{
-        content: url("../assets/shared/desktop/grid-page-five-2.png");
+        content: url("../assets/shared/desktop/grid-page-five-2.webp");
         margin-top: auto;
     }
 
     .productPage-image-zx7-close{
-        content: url("../assets/shared/desktop/grid-page-five-3.png");
+        content: url("../assets/shared/desktop/grid-page-five-3.webp");
     }
     
     /*YX1 page desktop  */
     .productPage-image-yx1-buds{
-        content: url("../assets/shared/desktop/grid-page-six-1.png");
+        content: url("../assets/shared/desktop/grid-page-six-1.webp");
     }
 
     .productPage-blockContainer-image-box-small-images .productPage-image-yx1-charger{
-        content: url("../assets/shared/desktop/grid-page-six-2.png");
+        content: url("../assets/shared/desktop/grid-page-six-2.webp");
         margin-top: auto;
     }
 
     .productPage-image-yx1-case{
-        content: url("../assets/shared/desktop/grid-page-six-3.png");
+        content: url("../assets/shared/desktop/grid-page-six-3.webp");
     }
 
     .recomendation__block{

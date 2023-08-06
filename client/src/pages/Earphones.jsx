@@ -18,7 +18,7 @@ function Earphones() {
 
                     <div className="showBlock">
                         <div className="showBlock__image-container">
-                            <img className='showBlock__image-container-yx1' src="./assets/product-yx1-earphones/mobile/yx1.png" alt="YX1 Earphones" data-aos="zoom-in"/>
+                            <img className='showBlock__image-container-yx1' src="./assets/product-yx1-earphones/mobile/yx1.webp" alt="YX1 Earphones" data-aos="zoom-in"/>
                         </div>
 
                         <div className="showBlock__text-container">

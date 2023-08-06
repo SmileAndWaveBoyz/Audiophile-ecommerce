@@ -27,7 +27,7 @@ function Xx99ii() {
 
                     <div className="productPage">
                             <div className="productPage__image-box">
-                                <img className='productPage__image-box-xx99mii' src="../assets/product-xx99-mark-two-headphones/mobile/mk2.png" alt="XX99 Mark 2 Headphones" data-aos="fade-up"/>
+                                <img className='productPage__image-box-xx99mii' src="../assets/product-xx99-mark-two-headphones/mobile/mk2.webp" alt="XX99 Mark 2 Headphones" data-aos="fade-up"/>
                             </div>
                         
 
@@ -76,10 +76,10 @@ function Xx99ii() {
 
                     <div className="productPage-blockContainer-image-box">
                         <div className="productPage-blockContainer-image-box-small-images">
-                            <img className='productPage-image-headphone-guy' src="../assets/shared/mobile/grid-page-one-1.png" alt="A man relaxing with headphones" />
-                            <img className='productPage-image-table' src="../assets/shared/mobile/grid-page-one-2.png" alt="A table with headphones and a phone on it" />
+                            <img className='productPage-image-headphone-guy' src="../assets/shared/mobile/grid-page-one-1.webp" alt="A man relaxing with headphones" />
+                            <img className='productPage-image-table' src="../assets/shared/mobile/grid-page-one-2.webp" alt="A table with headphones and a phone on it" />
                         </div>
-                        <img className='productPage-image-headphone-close' src="../assets/shared/mobile/grid-page-one-3.png" alt="A close up of the XX99 Mark II Headphones" />
+                        <img className='productPage-image-headphone-close' src="../assets/shared/mobile/grid-page-one-3.webp" alt="A close up of the XX99 Mark II Headphones" />
                     </div>
 
                     
@@ -88,7 +88,7 @@ function Xx99ii() {
                         <div className="recomendation__block-flex-box">
                             <div className="recomendation__block-container">
                                 <div className="recomendation__block-container-image-box">
-                                    <img className='recomendation__block-container-image-box-image xx99mi' src="../assets/product-xx99-mark-two-headphones/mobile/mk1.png" alt="XX99 Mark I Headphones" />
+                                    <img className='recomendation__block-container-image-box-image xx99mi' src="../assets/product-xx99-mark-two-headphones/mobile/mk1.webp" alt="XX99 Mark I Headphones" />
                                 </div>
 
                                 <h3 className='recomendation__block-product-heading'>XX99 MARK I</h3>
@@ -97,7 +97,7 @@ function Xx99ii() {
 
                             <div className="recomendation__block-container">
                                 <div className="recomendation__block-container-image-box">
-                                    <img className='recomendation__block-container-image-box-image xx59' src="../assets/product-xx99-mark-two-headphones/mobile/xx59.png" alt="XX99 Mark I Headphones" />                                
+                                    <img className='recomendation__block-container-image-box-image xx59' src="../assets/product-xx99-mark-two-headphones/mobile/xx59.webp" alt="XX99 Mark I Headphones" />                                
                                 </div>
 
                                 <h3 className='recomendation__block-product-heading'>XX59</h3>
@@ -106,7 +106,7 @@ function Xx99ii() {
 
                             <div className="recomendation__block-container">
                                     <div className="recomendation__block-container-image-box">
-                                        <img className='recomendation__block-container-image-box-image zx9' src="../assets/product-zx9-speaker/mobile/zx9.png" alt="XX99 Mark I Headphones" />                                
+                                        <img className='recomendation__block-container-image-box-image zx9' src="../assets/product-zx9-speaker/mobile/zx9.webp" alt="XX99 Mark I Headphones" />                                
                                     </div>
                                 <h3 className='recomendation__block-product-heading'>ZX9 SPEAKER</h3>
                                 <Link to={"/speakers/zx9"} className="seeProductButton">SEE PRODUCT</Link>

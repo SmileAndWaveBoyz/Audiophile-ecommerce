@@ -25,7 +25,7 @@ function Zx9() {
 
                     <div className="productPage">
                             <div className="productPage__image-box">
-                                <img className='productPage__image-box-zx9' src="../assets/product-zx9-speaker/mobile/zx9.png" alt="ZX9 Speaker" data-aos="fade-up"/>
+                                <img className='productPage__image-box-zx9' src="../assets/product-zx9-speaker/mobile/zx9.webp" alt="ZX9 Speaker" data-aos="fade-up"/>
                             </div>
                         
 
@@ -76,10 +76,10 @@ Discover clear, more natural sounding highs than the competition with ZX9’s si
 
                     <div className="productPage-blockContainer-image-box">
                         <div className="productPage-blockContainer-image-box-small-images">
-                            <img className='productPage-image-zx9-woofer' src="../assets/shared/mobile/grid-page-four-1.png" alt="A close up of the ZX9 woofer" />
-                            <img className='productPage-image-shelf-plants' src="../assets/shared/mobile/grid-page-four-2.png" alt="A ZX9 being lent on by vinal records next to a shelf with plants." />
+                            <img className='productPage-image-zx9-woofer' src="../assets/shared/mobile/grid-page-four-1.webp" alt="A close up of the ZX9 woofer" />
+                            <img className='productPage-image-shelf-plants' src="../assets/shared/mobile/grid-page-four-2.webp" alt="A ZX9 being lent on by vinal records next to a shelf with plants." />
                         </div>
-                        <img className='productPage-image-zx9-dual' src="../assets/shared/mobile/grid-page-four-3.png" alt="Two ZX9s close up" />
+                        <img className='productPage-image-zx9-dual' src="../assets/shared/mobile/grid-page-four-3.webp" alt="Two ZX9s close up" />
                     </div>
 
                     
@@ -88,7 +88,7 @@ Discover clear, more natural sounding highs than the competition with ZX9’s si
                         <div className="recomendation__block-flex-box">
                             <div className="recomendation__block-container">
                                 <div className="recomendation__block-container-image-box">
-                                    <img className='recomendation__block-container-image-box-image xx99mii' src="../assets/product-xx99-mark-two-headphones/mobile/mk2.png" alt="XX99 Mark II Headphones" />
+                                    <img className='recomendation__block-container-image-box-image xx99mii' src="../assets/product-xx99-mark-two-headphones/mobile/mk2.webp" alt="XX99 Mark II Headphones" />
                                 </div>
 
                                 <h3 className='recomendation__block-product-heading'>XX99 MARK II</h3>
@@ -97,7 +97,7 @@ Discover clear, more natural sounding highs than the competition with ZX9’s si
 
                             <div className="recomendation__block-container">
                                 <div className="recomendation__block-container-image-box">
-                                    <img className='recomendation__block-container-image-box-image xx99mi' src="../assets/product-xx99-mark-two-headphones/mobile/mk1.png" alt="XX99 Mark I Headphones" />
+                                    <img className='recomendation__block-container-image-box-image xx99mi' src="../assets/product-xx99-mark-two-headphones/mobile/mk1.webp" alt="XX99 Mark I Headphones" />
                                 </div>
 
                                 <h3 className='recomendation__block-product-heading'>XX99 MARK I</h3>
@@ -106,7 +106,7 @@ Discover clear, more natural sounding highs than the competition with ZX9’s si
 
                             <div className="recomendation__block-container">
                                 <div className="recomendation__block-container-image-box">
-                                    <img className='recomendation__block-container-image-box-image xx59' src="../assets/product-xx99-mark-two-headphones/mobile/xx59.png" alt="XX99 Mark I Headphones" />                                
+                                    <img className='recomendation__block-container-image-box-image xx59' src="../assets/product-xx99-mark-two-headphones/mobile/xx59.webp" alt="XX99 Mark I Headphones" />                                
                                 </div>
 
                                 <h3 className='recomendation__block-product-heading'>XX59</h3>

@@ -26,7 +26,7 @@ function Xx59() {
 
                     <div className="productPage">
                             <div className="productPage__image-box">
-                                <img className='productPage__image-box-xx59' src="../assets/product-xx59-headphones/mobile/xx59.png" alt="XX59 Headphones" data-aos="fade-up"/>
+                                <img className='productPage__image-box-xx59' src="../assets/product-xx59-headphones/mobile/xx59.webp" alt="XX59 Headphones" data-aos="fade-up"/>
                             </div>
                         
 
@@ -76,10 +76,10 @@ More than a simple pair of headphones, this headset features a pair of built-in 
 
                     <div className="productPage-blockContainer-image-box">
                         <div className="productPage-blockContainer-image-box-small-images">
-                            <img className='productPage-image-girl-dancing' src="../assets/shared/mobile/grid-page-three-1.png" alt="A woman dancing listening to XX59 headphones playing music from a phone." />
-                            <img className='productPage-image-books' src="../assets/shared/mobile/grid-page-three-2.png" alt="XX59 headphones over some books." />
+                            <img className='productPage-image-girl-dancing' src="../assets/shared/mobile/grid-page-three-1.webp" alt="A woman dancing listening to XX59 headphones playing music from a phone." />
+                            <img className='productPage-image-books' src="../assets/shared/mobile/grid-page-three-2.webp" alt="XX59 headphones over some books." />
                         </div>
-                        <img className='productPage-image-finger-xx59' src="../assets/shared/mobile/grid-page-three-3.png" alt="A hand holding the XX59 headphones, they are hanging from one finger" />
+                        <img className='productPage-image-finger-xx59' src="../assets/shared/mobile/grid-page-three-3.webp" alt="A hand holding the XX59 headphones, they are hanging from one finger" />
                     </div>
 
                     
@@ -88,7 +88,7 @@ More than a simple pair of headphones, this headset features a pair of built-in 
                         <div className="recomendation__block-flex-box">
                             <div className="recomendation__block-container">
                                 <div className="recomendation__block-container-image-box">
-                                    <img className='recomendation__block-container-image-box-image xx99mii' src="../assets/product-xx99-mark-two-headphones/mobile/mk2.png" alt="XX99 Mark II Headphones" />
+                                    <img className='recomendation__block-container-image-box-image xx99mii' src="../assets/product-xx99-mark-two-headphones/mobile/mk2.webp" alt="XX99 Mark II Headphones" />
                                 </div>
 
                                 <h3 className='recomendation__block-product-heading'>XX99 MARK II</h3>
@@ -97,7 +97,7 @@ More than a simple pair of headphones, this headset features a pair of built-in 
 
                             <div className="recomendation__block-container">
                                 <div className="recomendation__block-container-image-box">
-                                    <img className='recomendation__block-container-image-box-image xx99mi' src="../assets/product-xx99-mark-two-headphones/mobile/mk1.png" alt="XX99 Mark I Headphones" />
+                                    <img className='recomendation__block-container-image-box-image xx99mi' src="../assets/product-xx99-mark-two-headphones/mobile/mk1.webp" alt="XX99 Mark I Headphones" />
                                 </div>
 
                                 <h3 className='recomendation__block-product-heading'>XX99 MARK I</h3>
@@ -106,7 +106,7 @@ More than a simple pair of headphones, this headset features a pair of built-in 
 
                             <div className="recomendation__block-container">
                                     <div className="recomendation__block-container-image-box">
-                                        <img className='recomendation__block-container-image-box-image zx9' src="../assets/product-zx9-speaker/mobile/zx9.png" alt="XX99 Mark I Headphones" />                                
+                                        <img className='recomendation__block-container-image-box-image zx9' src="../assets/product-zx9-speaker/mobile/zx9.webp" alt="XX99 Mark I Headphones" />                                
                                     </div>
                                 <h3 className='recomendation__block-product-heading'>ZX9 SPEAKER</h3>
                                 <Link to={"/speakers/zx9"} className="seeProductButton">SEE PRODUCT</Link>
