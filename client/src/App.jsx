@@ -394,8 +394,12 @@ async function removeAllItems() {
             </div>
 
             ) : (
+            <div className="loadingDiv">
               <p>Loading...</p>
+              <div class="lds-facebook"><div></div><div></div><div></div></div>
+            </div>
             )
+
           }
 
           <div className="checkOutBox__total-text-box">

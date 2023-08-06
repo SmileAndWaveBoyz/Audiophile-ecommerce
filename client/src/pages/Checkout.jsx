@@ -358,7 +358,8 @@ function Checkout(props) {
                             </div>
 
                             ) : (
-                                <p>Loading...</p>
+                                <div className=""><p>Loading...</p></div>
+                                
                               )
                               
 
