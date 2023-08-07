@@ -80,7 +80,7 @@ function App() {
       console.log(cartDataArray);
       console.log("Updated cart items:");
       console.log(updatedCartItems);
-      setCartItems(updatedCartItems);
+      // setCartItems(updatedCartItems);
     }
   }
 

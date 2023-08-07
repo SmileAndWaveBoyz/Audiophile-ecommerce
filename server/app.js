@@ -27,7 +27,7 @@ app.use(cors());
 
 app.get('/api/cart', async (req, res) => { // This poplates the items variable with the Items MongoDB database
     try {
-      const items = await Cart.find({});
+      const items = await Cart.find({}).sort({ productID: 1 }); // Sort by productID in ascending order
       res.json(items);
       // console.log(items);
     } catch (err) {
