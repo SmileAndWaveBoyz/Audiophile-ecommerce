@@ -60,7 +60,7 @@ function App() {
       updateCartFromCookies();
     });
 
-    AOS.init(); // This just initiates animate on scroll
+    AOS.init(); // This initiates the animate on scroll library
   }, []);
 
   function updateCartFromCookies() {
@@ -76,10 +76,10 @@ function App() {
         updatedCartItems[i].quantity = cartDataArray[i].quantity;
       }
 
-      console.log("Data from cookies:");
-      console.log(cartDataArray);
-      console.log("Updated cart items:");
-      console.log(updatedCartItems);
+      // console.log("Data from cookies:");
+      // console.log(cartDataArray);
+      // console.log("Updated cart items:");
+      // console.log(updatedCartItems);
       setCartItems(updatedCartItems);
     }
   }

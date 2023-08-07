@@ -414,7 +414,7 @@ function Checkout(props) {
                         </div>
                         <p className='summary__item-count thank-you'>{props.cartItemsAll[firstItem].quantity}px</p>
                     </div>
-                    <p className='thankYouBlock-info-block-product-block-other-items-text'>and {quantityOfAllItems - 1} other item(s)</p>
+                    <p className='thankYouBlock-info-block-product-block-other-items-text'>and {quantityOfAllItems - props.cartItemsAll[firstItem].quantity} other item(s)</p>
                 </div>
                 : 
                 <div className="thankYouBlock-info-block-product-block">
