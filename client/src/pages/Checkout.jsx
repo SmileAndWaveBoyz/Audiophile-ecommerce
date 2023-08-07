@@ -127,6 +127,7 @@ function Checkout(props) {
           } else {
             console.log('Please fill in all required fields before continuing.');
           }
+
       }
 
     return (  
@@ -426,7 +427,7 @@ function Checkout(props) {
                     <p className='thankYouBlock-info-block-total-block-total-price'>$ {(props.total + 50).toLocaleString()}</p>
                 </div>
             </div>
-            <Link className='thankYouBlock-home-button' to={"/"} onClick={continueAndPayButtonClick}>BACK TO HOME</Link>
+            <Link className='thankYouBlock-home-button' to={"/"} onClick={props.removeAllItems}>BACK TO HOME</Link>
         </div>
 
         <Footer/>

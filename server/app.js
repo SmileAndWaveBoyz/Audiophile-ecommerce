@@ -18,8 +18,7 @@ const Orders = mongoose.model('Order', {
   country: String,
   eMoneyNumber: Number,
   eMoneyPin: Number,
-  uniqueIdentifier: String,
-  Order: String
+  productID: Number
 });
 
 app.use(express.json());
@@ -29,7 +28,7 @@ app.get('/api/cart', async (req, res) => { // This poplates the items variable w
     try {
       const items = await Cart.find({});
       res.json(items);
-      // console.log(items);
+      console.log(items);
     } catch (err) {
       res.status(500).json({ error: 'Internal Server Error' });
     }

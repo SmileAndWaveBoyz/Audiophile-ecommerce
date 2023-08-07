@@ -50,7 +50,7 @@ function App() {
         setCartItems(data);
         updatedCartItems = data;
         console.log("Updated items from back end");
-        console.log(updatedCartItems);
+
       })
       .catch((error) => console.error('Error fetching cart items:', error));
   }
@@ -60,7 +60,7 @@ function App() {
       updateCartFromCookies();
     });
 
-    AOS.init();
+    AOS.init(); // This just initiates animate on scroll
   }, []);
 
   function updateCartFromCookies() {
@@ -73,9 +73,6 @@ function App() {
 
 
       for (let i = 0; i < updatedCartItems.length; i++) {
-        console.log("updated Cart Items " + updatedCartItems[i].quantity);
-        console.log("cartData " + cartDataArray[i].quantity);
-
         updatedCartItems[i].quantity = cartDataArray[i].quantity;
       }
 
@@ -145,10 +142,9 @@ function App() {
   const[total, setTotal] = useState(0);
   const[totalQuantity, setTotalQuantity] = useState(0);
 
-  useEffect(() => { // This updates the back end and re-calculates the total price every time a front end item quantity changes
+  useEffect(() => { // This updates the cookies and re-calculates the total price every time a front end item quantity changes
     if(cartItems.length > 0){
     setTotal((xx99mk2Quantity * cartItems[0].price) + (xx99mk1Quantity * cartItems[1].price) + (xx59Quantity * cartItems[2].price) + (zx9Quantity * cartItems[3].price) + (zx7Quantity * cartItems[4].price) + (yx1Quantity * cartItems[5].price));
-    // updateBackEnd();
     updateCookies();
 
     function updateQuantityForCartItem(itemToUpdate, newQuantity) {
@@ -431,7 +427,7 @@ async function removeAllItems() {
           <Route path='/earphones' element={<Earphones/>}/>          
           <Route path='/earphones/yx1' element={<Yx1/>}/>          
 
-          <Route path='/checkout' element={<Checkout key={0} cartItemsAll = {cartItems} total={total}/>}/>  
+          <Route path='/checkout' element={<Checkout key={0} cartItemsAll = {cartItems} total={total} removeAllItems={removeAllItems    }/>}/>  
         </Routes>
 
 
