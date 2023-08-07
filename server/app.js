@@ -7,7 +7,7 @@ const mongoose = require('mongoose');
 mongoose.connect("mongodb+srv://SmileAndWaveBoyz:Newcross971@cluster0.o6lompz.mongodb.net/audiophileCart", {useNewUrlParser: true});
 
 
-const Cart = mongoose.model('Item', { name: String, quantity: Number, price: Number, totalPrice: Number, shortName: String, mobileImagePath: String});
+const Cart = mongoose.model('Item', { name: String, quantity: Number, price: Number, totalPrice: Number, shortName: String, mobileImagePath: String, productID: Number});
 const Orders = mongoose.model('Order', { 
   name: String,
   email: String,
@@ -18,7 +18,8 @@ const Orders = mongoose.model('Order', {
   country: String,
   eMoneyNumber: Number,
   eMoneyPin: Number,
-  productID: Number
+  uniqueIdentifier: String,
+  Order: String
 });
 
 app.use(express.json());
@@ -28,7 +29,7 @@ app.get('/api/cart', async (req, res) => { // This poplates the items variable w
     try {
       const items = await Cart.find({});
       res.json(items);
-      console.log(items);
+      // console.log(items);
     } catch (err) {
       res.status(500).json({ error: 'Internal Server Error' });
     }
