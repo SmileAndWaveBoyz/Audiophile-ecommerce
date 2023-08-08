@@ -44,15 +44,26 @@ function App() {
   let updatedCartItems = []
 
   function refreshItemsFromBackEnd() {
-    return fetch('https://audiophile-api-g3pm.onrender.com/api/cart')
-      .then((response) => response.json())
-      .then((data) => {
-        setCartItems(data);
-        updatedCartItems = data;
-        console.log("Updated items from back end");
 
-      })
-      .catch((error) => console.error('Error fetching cart items:', error));
+    // Fetch the JSON data from the file
+    return fetch('/assets/audiophileCart.items.json')
+    .then((response) => response.json())
+    .then((data) => {
+      setCartItems(data); // Set the fetched data to the cartItems state
+      updatedCartItems = data;
+    })
+    .catch((error) => console.error('Error fetching cart items:', error));
+
+    //This is my old function, it gets the product info from the server MongoDB database. I'm using a local JSON instead now.
+    // return fetch('https://audiophile-api-g3pm.onrender.com/api/cart')
+    //   .then((response) => response.json())
+    //   .then((data) => {
+    //     setCartItems(data);
+    //     updatedCartItems = data;
+    //     console.log("Updated items from back end");
+
+    //   })
+    //   .catch((error) => console.error('Error fetching cart items:', error));
   }
 
   useEffect(() => {
