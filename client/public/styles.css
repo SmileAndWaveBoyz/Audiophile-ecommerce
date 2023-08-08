@@ -34,6 +34,11 @@ a{
     margin: 0 auto;
 }
 
+.homeContainer{
+    max-width: 1110px;
+    margin: 0 auto;
+}
+
 .hero{
     max-width: 1110px;
     margin: 0 auto;
@@ -268,20 +273,21 @@ a{
     background-color: rgb(255, 255, 255, 0.2);
     height: 1px;
     margin: 0 auto;
+    width: 100%;
 }
 
 @media screen and (min-width: 768px) {
     .line{
         display: block;
-        width: 689px;
+        /* width: 689px; */
     }
 
     .homeBlock{
         background-image: url("/assets/home/tablet/image-header.jpg");
         border-top: none;
-        background-position: 50% 130%;
+        background-position: 50% 100%;
         background-repeat: no-repeat;
-        background-size: 100%;
+        background-size: 115%;
         height: 67rem;
         justify-content: start;
     }
@@ -309,13 +315,10 @@ a{
 }
 
 @media screen and (min-width: 1024px) {
-    .line{
-        width: 1110px;
-    }
 
     .homeBlock{
         background-image: url("/assets/home/desktop/image-hero.jpg");
-        background-position: 50% 300%;
+        background-position: 50% 0%;
         background-size: 120%;
         height: 65rem;
         display: block;
@@ -482,7 +485,7 @@ a{
 
 /* ZX9 Block  */
 .zx9Block{
-    width: 32.7rem;
+    width: 100%;
     height: 60.0rem;
     border-radius: 15px;
     background: #D87D4A;
@@ -587,7 +590,7 @@ a{
 
 @media screen and (min-width: 768px) {
     .zx9Block{
-        width: 68.9rem;
+        /* width: 68.9rem; */
         height: 72.0rem;
     }
     
@@ -639,7 +642,7 @@ a{
 
 @media screen and (min-width: 1024px) {
     .zx9Block{
-        width: 111.0rem;
+        /* width: 111.0rem; */
         height: 56.0rem;
         flex-direction: row;
         justify-content: space-around;
@@ -693,7 +696,7 @@ a{
 /* zx9SpeakerBlock */
 
 .zx9SpeakerBlock{
-    width: 327px;
+    width: 100%;
     height: 320px;
     margin: 0 auto;
     background: rgb(232,232,232);
@@ -751,7 +754,7 @@ a{
 
 @media screen and (min-width: 768px) {
     .zx9SpeakerBlock{
-        width: 68.9rem;
+        /* width: 68.9rem; */
         height: 32rem;
     }
     
@@ -762,7 +765,7 @@ a{
 
 @media screen and (min-width: 1024px) {
     .zx9SpeakerBlock{
-        width: 111rem;
+        /* width: 111rem; */
         height: 32rem;
     }
     
@@ -773,7 +776,7 @@ a{
 
 /* YX1 Block  */
 .YX1Block{
-    width: 32.7rem;
+    width: 100%;
     height: 42.4rem;
     margin: 0 auto;
     margin-bottom: 2.4rem;
@@ -829,7 +832,7 @@ a{
 
 @media screen and (min-width: 768px) {
     .YX1Block{
-        width: 68.9rem;
+        /* width: 68.9rem; */
         height: 32rem;
         display: flex;
 
@@ -868,7 +871,7 @@ a{
 
 @media screen and (min-width: 1024px) {
     .YX1Block{
-        width: 111rem;
+        /* width: 111rem; */
         height: 32rem;
     }
     
@@ -897,7 +900,7 @@ a{
 
 /* Gear block  */
 .gearBlock{
-    width: 32.7rem;
+    width: 100%;
     height: 69.8rem;
     margin: 0 auto;
     display: flex;
@@ -908,6 +911,10 @@ a{
 
 .gearBlock__text-box{
     order: 2;
+}
+
+.gearBlock__text-box p{
+    /* margin: 0 auto; */
 }
 
 .gearBlock img{
@@ -947,7 +954,7 @@ a{
 
 @media screen and (min-width: 768px) {
     .gearBlock{
-        width: 68.9rem;
+        /* width: 68.9rem; */
         height: 63.3rem;
         margin-bottom: 9.6rem;
     }
@@ -978,7 +985,7 @@ a{
 
 @media screen and (min-width: 1024px) {
     .gearBlock{
-        width: 111rem;
+        /* width: 111rem; */
         height: 58.8rem;
         display: flex;
         flex-direction: row;
@@ -1023,7 +1030,8 @@ a{
 }
 
 .homeFooter-container{
-    max-width: 1110px;
+    /* max-width: 1110px; */
+    width: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -1193,7 +1201,7 @@ a{
 
     .homeFooter-container{
         height: 36.5rem;
-        width: 1110px;
+        /* width: 1110px; */
     }
 
     .homeFooter__rectangle{
@@ -1524,6 +1532,11 @@ a{
 .productPage-blockContainer{
     max-width: 327px;
     margin: 0 auto;
+}
+
+.homeContainer{
+    max-width: 327px;
+    /* min-width: 327px; */
 }
 
 .goBackLink{
@@ -1859,6 +1872,10 @@ a{
         max-width: 689px;
     }
 
+    .homeContainer{
+        max-width: 689px;
+    }
+
     .productPage{
         display: flex;
         justify-content: space-between;
@@ -2120,6 +2137,10 @@ a{
 @media screen and (min-width: 1024px) {
     .productPage-blockContainer{
         max-width: 1110px;
+    }
+
+    .homeContainer{
+        max-width: 980px;
     }
 
     .productPage{
@@ -3424,4 +3445,11 @@ label{
       top: 24px;
       height: 32px;
     }
+  }
+
+  @media screen and (min-width: 1280px) {
+    .homeContainer{
+        max-width: 1110px;
+    }
+
   }

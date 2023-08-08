@@ -3,7 +3,7 @@ import React from 'react';
 
 function Gear() {
     return (       
-        <div className="gearBlock">
+        <div className="gearBlock homeContainer">
             <img src="../assets/shared/mobile/image-best-gear.webp" alt="A person enjoying headphone music" data-aos="fade-up"/>
             <div className="gearBlock__text-box" data-aos="fade-up-right">
             <h3>Bringing you the <strong>best</strong> audio gear</h3>

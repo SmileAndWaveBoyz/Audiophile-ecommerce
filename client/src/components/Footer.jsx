@@ -5,7 +5,7 @@ export function Footer({}) {
   const year = new Date().getFullYear();
 
   return <footer className='homeFooter'>
-      <div className="homeFooter-container">
+      <div className="homeFooter-container homeContainer">
         <div className="homeFooter__rectangle"></div>
 
       <div className="homeFooter-heading-container">
