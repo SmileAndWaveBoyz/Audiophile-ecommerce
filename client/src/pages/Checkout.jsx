@@ -44,9 +44,20 @@ function Checkout(props) {
 
       const [firstItem, setFirstItem] = useState(0);
       const formRef = useRef(null);
+      const [serverResponded, setServerResponded] = useState(false)
 
       async function continueAndPayButtonClick(e) { //This makes the thank you box show up and shows the normal HTML error messages if inputs arn't filled in.
         window.scrollTo({top: 0, behavior: 'smooth',});
+
+        if (thankDisplayBox === "none") {
+            setThankDisplayBox("block")
+            setThankDisplayFadeOpacity(0.5)
+            setThankDisplayFadeZindex(1)
+          } else{
+            setThankDisplayBox("none")
+            setThankDisplayFadeOpacity(0.0)
+            setThankDisplayFadeZindex(-1)
+          }
 
         // Trigger the form's native validation
         const isValid = formRef.current.checkValidity();
@@ -67,10 +78,11 @@ function Checkout(props) {
 
                     const response = await axios.post('https://audiophile-api-g3pm.onrender.com/api/order', updatedFormData);
                     console.log(response.data); // Success message from server
-                    
+                    setServerResponded(true)
                     // Show the thank you box or perform other actions as needed
                 } catch (error) {
                     console.error(error);
+                    setServerResponded(false)
                     // Handle error, show an error message, etc.
                 }
 
@@ -391,6 +403,9 @@ function Checkout(props) {
             </form>
         </div>
 
+        {
+        serverResponded ?
+
         <div className="thankYouBlock" style={{display: thankDisplayBox}}>
             <svg className='cricleTick' xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
                 <circle cx="32" cy="32" r="32" fill="#D87D4A"/>
@@ -429,6 +444,11 @@ function Checkout(props) {
             </div>
             <Link className='thankYouBlock-home-button' to={"/"} onClick={props.removeAllItems}>BACK TO HOME</Link>
         </div>
+        :
+        <div className="thankYouBlock" style={{display: thankDisplayBox}}>
+            <div class="lds-facebook"><div></div><div></div><div></div></div>
+        </div>
+        }
 
         <Footer/>
         </div>
