@@ -49,23 +49,23 @@ function Checkout(props) {
       async function continueAndPayButtonClick(e) { //This makes the thank you box show up and shows the normal HTML error messages if inputs arn't filled in.
         window.scrollTo({top: 0, behavior: 'smooth',});
 
-        if (thankDisplayBox === "none") {
-            setThankDisplayBox("block")
-            setThankDisplayFadeOpacity(0.5)
-            setThankDisplayFadeZindex(1)
-          } else{
-            setThankDisplayBox("none")
-            setThankDisplayFadeOpacity(0.0)
-            setThankDisplayFadeZindex(-1)
-          }
-
+        
         // Trigger the form's native validation
         const isValid = formRef.current.checkValidity();
         formRef.current.reportValidity();
-
+        
         if (isValid) {
             if (formData.name && formData.email && formData.phone && formData.address && formData.postCode && formData.city && formData.country) {
-
+                
+                if (thankDisplayBox === "none") {
+                    setThankDisplayBox("block")
+                    setThankDisplayFadeOpacity(0.5)
+                    setThankDisplayFadeZindex(1)
+                  } else{
+                    setThankDisplayBox("none")
+                    setThankDisplayFadeOpacity(0.0)
+                    setThankDisplayFadeZindex(-1)
+                  }
                 try {
                     // Create the order summary string
                     // const orderSummary = props.cartItemsAll
